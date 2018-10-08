@@ -1,0 +1,22 @@
+﻿using Petrol_Pump_Point_Of_Sale_System.View.Commons;
+using System;
+using System.Windows.Forms;
+using Petrol_Pump_Point_Of_Sale_System.View.Main;
+using Petrol_Pump_Point_Of_Sale_System.View.Products;
+
+namespace Petrol_Pump_Point_Of_Sale_System
+{
+    static class Program
+    {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainView());
+        }
+    }
+}

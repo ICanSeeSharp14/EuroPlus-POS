@@ -1,0 +1,79 @@
+﻿namespace Petrol_Pump_Point_Of_Sale_System.View.Main
+{
+    partial class NavigationView
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.flowNavigation = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowNavigation.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // flowNavigation
+            // 
+            this.flowNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.flowNavigation.Controls.Add(this.flowLayoutPanel1);
+            this.flowNavigation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowNavigation.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowNavigation.Location = new System.Drawing.Point(0, 0);
+            this.flowNavigation.Margin = new System.Windows.Forms.Padding(0);
+            this.flowNavigation.Name = "flowNavigation";
+            this.flowNavigation.Padding = new System.Windows.Forms.Padding(2, 0, 2, 2);
+            this.flowNavigation.Size = new System.Drawing.Size(214, 484);
+            this.flowNavigation.TabIndex = 1;
+            this.flowNavigation.WrapContents = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(2, 0, 2, 2);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 400);
+            this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.WrapContents = false;
+            // 
+            // NavigationView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.flowNavigation);
+            this.Name = "NavigationView";
+            this.Size = new System.Drawing.Size(214, 484);
+            this.flowNavigation.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.FlowLayoutPanel flowNavigation;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+    }
+}

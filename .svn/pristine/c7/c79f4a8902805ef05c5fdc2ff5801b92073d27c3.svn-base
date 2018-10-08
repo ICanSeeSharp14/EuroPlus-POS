@@ -1,0 +1,87 @@
+﻿namespace Petrol_Pump_Point_Of_Sale_System.View.Custom
+{
+    partial class PaginatorView
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.tlpPaginator = new System.Windows.Forms.TableLayoutPanel();
+            this.flatPanel1 = new ITA_UI.Classes.Controls.FlatPanel();
+            this.tlpPaginator.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // tlpPaginator
+            // 
+            this.tlpPaginator.ColumnCount = 6;
+            this.tlpPaginator.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76F));
+            this.tlpPaginator.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24F));
+            this.tlpPaginator.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tlpPaginator.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tlpPaginator.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
+            this.tlpPaginator.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
+            this.tlpPaginator.Controls.Add(this.flatPanel1, 0, 0);
+            this.tlpPaginator.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpPaginator.Location = new System.Drawing.Point(0, 0);
+            this.tlpPaginator.Name = "tlpPaginator";
+            this.tlpPaginator.RowCount = 1;
+            this.tlpPaginator.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpPaginator.Size = new System.Drawing.Size(549, 58);
+            this.tlpPaginator.TabIndex = 0;
+            // 
+            // flatPanel1
+            // 
+            this.flatPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.flatPanel1.ColorAOnDefault = System.Drawing.Color.Transparent;
+            this.flatPanel1.ColorBOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.flatPanel1.ColorCOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.flatPanel1.ColorToneOnDefault = ITSpecialProject.Commons.Enums.ColorCombination.SoloColor;
+            this.flatPanel1.EllipseOnDefault = 0;
+            this.flatPanel1.GradientAngleOnDefault = 45;
+            this.flatPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flatPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flatPanel1.Name = "flatPanel1";
+            this.flatPanel1.Size = new System.Drawing.Size(152, 58);
+            this.flatPanel1.TabIndex = 0;
+            // 
+            // PaginatorView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tlpPaginator);
+            this.Name = "PaginatorView";
+            this.Size = new System.Drawing.Size(549, 58);
+            this.tlpPaginator.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TableLayoutPanel tlpPaginator;
+        private ITA_UI.Classes.Controls.FlatPanel flatPanel1;
+
+    }
+}

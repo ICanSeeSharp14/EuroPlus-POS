@@ -1,0 +1,516 @@
+﻿namespace Petrol_Pump_Point_Of_Sale_System.View.Main
+{
+    partial class MainView
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
+            this.pnlTopMenuContainer = new System.Windows.Forms.Panel();
+            this.pnlControlBox = new System.Windows.Forms.Panel();
+            this.flatButton8 = new ITA_UI.Classes.Controls.FlatButton();
+            this.flatButton7 = new ITA_UI.Classes.Controls.FlatButton();
+            this.flatButton5 = new ITA_UI.Classes.Controls.FlatButton();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.pbIcon = new ITA_UI.Classes.Controls.FlatPictureBox();
+            this.pnlSideNavigation = new ITSpecialProject.Components.FlatNavigationPanel();
+            this.btnHelp = new ITA_UI.Classes.Controls.FlatButton();
+            this.btnSettings = new ITA_UI.Classes.Controls.FlatButton();
+            this.btnReports = new ITA_UI.Classes.Controls.FlatButton();
+            this.btnManage = new ITA_UI.Classes.Controls.FlatButton();
+            this.btnPOS = new ITA_UI.Classes.Controls.FlatButton();
+            this.btnHome = new ITA_UI.Classes.Controls.FlatButton();
+            this.flatButton10 = new ITA_UI.Classes.Controls.FlatButton();
+            this.flatButton9 = new ITA_UI.Classes.Controls.FlatButton();
+            this.SubNavigationContainer = new Petrol_Pump_Point_Of_Sale_System.View.Main.NavigationView();
+            this.pnlTopMenuContainer.SuspendLayout();
+            this.pnlControlBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).BeginInit();
+            this.pnlSideNavigation.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pnlTopMenuContainer
+            // 
+            this.pnlTopMenuContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.pnlTopMenuContainer.Controls.Add(this.pnlControlBox);
+            this.pnlTopMenuContainer.Controls.Add(this.lblTitle);
+            this.pnlTopMenuContainer.Controls.Add(this.pbIcon);
+            this.pnlTopMenuContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTopMenuContainer.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlTopMenuContainer.Location = new System.Drawing.Point(0, 0);
+            this.pnlTopMenuContainer.Name = "pnlTopMenuContainer";
+            this.pnlTopMenuContainer.Size = new System.Drawing.Size(1376, 49);
+            this.pnlTopMenuContainer.TabIndex = 0;
+            // 
+            // pnlControlBox
+            // 
+            this.pnlControlBox.Controls.Add(this.flatButton8);
+            this.pnlControlBox.Controls.Add(this.flatButton7);
+            this.pnlControlBox.Controls.Add(this.flatButton5);
+            this.pnlControlBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlControlBox.Location = new System.Drawing.Point(1273, 0);
+            this.pnlControlBox.Name = "pnlControlBox";
+            this.pnlControlBox.Size = new System.Drawing.Size(103, 49);
+            this.pnlControlBox.TabIndex = 2;
+            // 
+            // flatButton8
+            // 
+            this.flatButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton8.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton8.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton8.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flatButton8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flatButton8.EllipseOnClick = 0;
+            this.flatButton8.EllipseOnDefault = 0;
+            this.flatButton8.EllipseOnHover = 0;
+            this.flatButton8.FlatAppearance.BorderSize = 0;
+            this.flatButton8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flatButton8.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.flatButton8.ForeColor = System.Drawing.Color.White;
+            this.flatButton8.ForeColorOnClick = System.Drawing.Color.White;
+            this.flatButton8.ForeColorOnDefault = System.Drawing.Color.White;
+            this.flatButton8.ForeColorOnHover = System.Drawing.Color.White;
+            this.flatButton8.Location = new System.Drawing.Point(63, 0);
+            this.flatButton8.Margin = new System.Windows.Forms.Padding(0);
+            this.flatButton8.Name = "flatButton8";
+            this.flatButton8.Size = new System.Drawing.Size(46, 49);
+            this.flatButton8.TabIndex = 2;
+            this.flatButton8.Text = "r";
+            this.flatButton8.ToolTip = "";
+            this.flatButton8.UseVisualStyleBackColor = false;
+            // 
+            // flatButton7
+            // 
+            this.flatButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton7.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton7.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton7.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flatButton7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flatButton7.EllipseOnClick = 0;
+            this.flatButton7.EllipseOnDefault = 0;
+            this.flatButton7.EllipseOnHover = 0;
+            this.flatButton7.FlatAppearance.BorderSize = 0;
+            this.flatButton7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flatButton7.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.flatButton7.ForeColor = System.Drawing.Color.White;
+            this.flatButton7.ForeColorOnClick = System.Drawing.Color.White;
+            this.flatButton7.ForeColorOnDefault = System.Drawing.Color.White;
+            this.flatButton7.ForeColorOnHover = System.Drawing.Color.White;
+            this.flatButton7.Location = new System.Drawing.Point(42, 0);
+            this.flatButton7.Margin = new System.Windows.Forms.Padding(0);
+            this.flatButton7.Name = "flatButton7";
+            this.flatButton7.Size = new System.Drawing.Size(21, 49);
+            this.flatButton7.TabIndex = 1;
+            this.flatButton7.Text = "1";
+            this.flatButton7.ToolTip = "";
+            this.flatButton7.UseVisualStyleBackColor = false;
+            // 
+            // flatButton5
+            // 
+            this.flatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton5.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton5.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton5.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flatButton5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flatButton5.EllipseOnClick = 0;
+            this.flatButton5.EllipseOnDefault = 0;
+            this.flatButton5.EllipseOnHover = 0;
+            this.flatButton5.FlatAppearance.BorderSize = 0;
+            this.flatButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flatButton5.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.flatButton5.ForeColor = System.Drawing.Color.White;
+            this.flatButton5.ForeColorOnClick = System.Drawing.Color.White;
+            this.flatButton5.ForeColorOnDefault = System.Drawing.Color.White;
+            this.flatButton5.ForeColorOnHover = System.Drawing.Color.White;
+            this.flatButton5.Location = new System.Drawing.Point(0, 0);
+            this.flatButton5.Margin = new System.Windows.Forms.Padding(0);
+            this.flatButton5.Name = "flatButton5";
+            this.flatButton5.Size = new System.Drawing.Size(42, 49);
+            this.flatButton5.TabIndex = 0;
+            this.flatButton5.Text = "0";
+            this.flatButton5.ToolTip = "";
+            this.flatButton5.UseVisualStyleBackColor = false;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(67, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.lblTitle.Size = new System.Drawing.Size(1309, 49);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "EuroPlus Gasoline Station";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pbIcon
+            // 
+            this.pbIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.pbIcon.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.pbIcon.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.pbIcon.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.pbIcon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pbIcon.EllipseOnClick = 0;
+            this.pbIcon.EllipseOnDefault = 0;
+            this.pbIcon.EllipseOnHover = 0;
+            this.pbIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbIcon.Image")));
+            this.pbIcon.Location = new System.Drawing.Point(0, 0);
+            this.pbIcon.Name = "pbIcon";
+            this.pbIcon.Size = new System.Drawing.Size(67, 49);
+            this.pbIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbIcon.TabIndex = 0;
+            this.pbIcon.TabStop = false;
+            this.pbIcon.ToolTip = "";
+            // 
+            // pnlSideNavigation
+            // 
+            this.pnlSideNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.pnlSideNavigation.Controls.Add(this.btnHelp);
+            this.pnlSideNavigation.Controls.Add(this.btnSettings);
+            this.pnlSideNavigation.Controls.Add(this.btnReports);
+            this.pnlSideNavigation.Controls.Add(this.btnManage);
+            this.pnlSideNavigation.Controls.Add(this.btnPOS);
+            this.pnlSideNavigation.Controls.Add(this.btnHome);
+            this.pnlSideNavigation.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSideNavigation.Location = new System.Drawing.Point(0, 49);
+            this.pnlSideNavigation.Name = "pnlSideNavigation";
+            this.pnlSideNavigation.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.pnlSideNavigation.SelectorBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.pnlSideNavigation.Size = new System.Drawing.Size(107, 729);
+            this.pnlSideNavigation.TabIndex = 1;
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(50)))), ((int)(((byte)(15)))));
+            this.btnHelp.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnHelp.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(50)))), ((int)(((byte)(15)))));
+            this.btnHelp.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHelp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHelp.EllipseOnClick = 0;
+            this.btnHelp.EllipseOnDefault = 0;
+            this.btnHelp.EllipseOnHover = 0;
+            this.btnHelp.FlatAppearance.BorderSize = 0;
+            this.btnHelp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.ForeColor = System.Drawing.Color.White;
+            this.btnHelp.ForeColorOnClick = System.Drawing.Color.White;
+            this.btnHelp.ForeColorOnDefault = System.Drawing.Color.White;
+            this.btnHelp.ForeColorOnHover = System.Drawing.Color.White;
+            this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
+            this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHelp.Location = new System.Drawing.Point(0, 505);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(102, 101);
+            this.btnHelp.TabIndex = 6;
+            this.btnHelp.Text = "Help";
+            this.btnHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnHelp.ToolTip = "";
+            this.btnHelp.UseVisualStyleBackColor = false;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(60)))), ((int)(((byte)(25)))));
+            this.btnSettings.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnSettings.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(60)))), ((int)(((byte)(25)))));
+            this.btnSettings.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSettings.EllipseOnClick = 0;
+            this.btnSettings.EllipseOnDefault = 0;
+            this.btnSettings.EllipseOnHover = 0;
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.White;
+            this.btnSettings.ForeColorOnClick = System.Drawing.Color.White;
+            this.btnSettings.ForeColorOnDefault = System.Drawing.Color.White;
+            this.btnSettings.ForeColorOnHover = System.Drawing.Color.White;
+            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
+            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSettings.Location = new System.Drawing.Point(0, 404);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(102, 101);
+            this.btnSettings.TabIndex = 5;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSettings.ToolTip = "";
+            this.btnSettings.UseVisualStyleBackColor = false;
+            // 
+            // btnReports
+            // 
+            this.btnReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(70)))), ((int)(((byte)(35)))));
+            this.btnReports.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnReports.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(70)))), ((int)(((byte)(35)))));
+            this.btnReports.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnReports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReports.EllipseOnClick = 0;
+            this.btnReports.EllipseOnDefault = 0;
+            this.btnReports.EllipseOnHover = 0;
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            this.btnReports.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnReports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.White;
+            this.btnReports.ForeColorOnClick = System.Drawing.Color.White;
+            this.btnReports.ForeColorOnDefault = System.Drawing.Color.White;
+            this.btnReports.ForeColorOnHover = System.Drawing.Color.White;
+            this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
+            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReports.Location = new System.Drawing.Point(0, 303);
+            this.btnReports.Margin = new System.Windows.Forms.Padding(0);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(102, 101);
+            this.btnReports.TabIndex = 4;
+            this.btnReports.Text = "Reports";
+            this.btnReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnReports.ToolTip = "";
+            this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.flatButton3_Click);
+            // 
+            // btnManage
+            // 
+            this.btnManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnManage.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnManage.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnManage.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnManage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManage.EllipseOnClick = 0;
+            this.btnManage.EllipseOnDefault = 0;
+            this.btnManage.EllipseOnHover = 0;
+            this.btnManage.FlatAppearance.BorderSize = 0;
+            this.btnManage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnManage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManage.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManage.ForeColor = System.Drawing.Color.White;
+            this.btnManage.ForeColorOnClick = System.Drawing.Color.White;
+            this.btnManage.ForeColorOnDefault = System.Drawing.Color.White;
+            this.btnManage.ForeColorOnHover = System.Drawing.Color.White;
+            this.btnManage.Image = ((System.Drawing.Image)(resources.GetObject("btnManage.Image")));
+            this.btnManage.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnManage.Location = new System.Drawing.Point(0, 202);
+            this.btnManage.Margin = new System.Windows.Forms.Padding(0);
+            this.btnManage.Name = "btnManage";
+            this.btnManage.Size = new System.Drawing.Size(102, 101);
+            this.btnManage.TabIndex = 3;
+            this.btnManage.Text = "\r\nManage";
+            this.btnManage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnManage.ToolTip = "";
+            this.btnManage.UseVisualStyleBackColor = false;
+            // 
+            // btnPOS
+            // 
+            this.btnPOS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(90)))), ((int)(((byte)(55)))));
+            this.btnPOS.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnPOS.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(90)))), ((int)(((byte)(55)))));
+            this.btnPOS.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnPOS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPOS.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPOS.EllipseOnClick = 0;
+            this.btnPOS.EllipseOnDefault = 0;
+            this.btnPOS.EllipseOnHover = 0;
+            this.btnPOS.FlatAppearance.BorderSize = 0;
+            this.btnPOS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnPOS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnPOS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPOS.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPOS.ForeColor = System.Drawing.Color.White;
+            this.btnPOS.ForeColorOnClick = System.Drawing.Color.White;
+            this.btnPOS.ForeColorOnDefault = System.Drawing.Color.White;
+            this.btnPOS.ForeColorOnHover = System.Drawing.Color.White;
+            this.btnPOS.Image = ((System.Drawing.Image)(resources.GetObject("btnPOS.Image")));
+            this.btnPOS.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPOS.Location = new System.Drawing.Point(0, 101);
+            this.btnPOS.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPOS.Name = "btnPOS";
+            this.btnPOS.Size = new System.Drawing.Size(102, 101);
+            this.btnPOS.TabIndex = 2;
+            this.btnPOS.Text = "\r\nPOS";
+            this.btnPOS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPOS.ToolTip = "";
+            this.btnPOS.UseVisualStyleBackColor = false;
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(100)))), ((int)(((byte)(65)))));
+            this.btnHome.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnHome.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(100)))), ((int)(((byte)(65)))));
+            this.btnHome.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.EllipseOnClick = 0;
+            this.btnHome.EllipseOnDefault = 0;
+            this.btnHome.EllipseOnHover = 0;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.ForeColorOnClick = System.Drawing.Color.White;
+            this.btnHome.ForeColorOnDefault = System.Drawing.Color.White;
+            this.btnHome.ForeColorOnHover = System.Drawing.Color.White;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(102, 101);
+            this.btnHome.TabIndex = 1;
+            this.btnHome.Text = "\r\nHome";
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnHome.ToolTip = "";
+            this.btnHome.UseVisualStyleBackColor = false;
+            // 
+            // flatButton10
+            // 
+            this.flatButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.flatButton10.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.flatButton10.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.flatButton10.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.flatButton10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flatButton10.EllipseOnClick = 0;
+            this.flatButton10.EllipseOnDefault = 0;
+            this.flatButton10.EllipseOnHover = 0;
+            this.flatButton10.FlatAppearance.BorderSize = 0;
+            this.flatButton10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.flatButton10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.flatButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flatButton10.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.flatButton10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.flatButton10.ForeColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.flatButton10.ForeColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.flatButton10.ForeColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.flatButton10.Location = new System.Drawing.Point(374, 100);
+            this.flatButton10.Margin = new System.Windows.Forms.Padding(0);
+            this.flatButton10.Name = "flatButton10";
+            this.flatButton10.Size = new System.Drawing.Size(214, 50);
+            this.flatButton10.TabIndex = 4;
+            this.flatButton10.Text = "flatButton10";
+            this.flatButton10.ToolTip = "";
+            this.flatButton10.UseVisualStyleBackColor = false;
+            // 
+            // flatButton9
+            // 
+            this.flatButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.flatButton9.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.flatButton9.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.flatButton9.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.flatButton9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flatButton9.EllipseOnClick = 0;
+            this.flatButton9.EllipseOnDefault = 0;
+            this.flatButton9.EllipseOnHover = 0;
+            this.flatButton9.FlatAppearance.BorderSize = 0;
+            this.flatButton9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.flatButton9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.flatButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flatButton9.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.flatButton9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.flatButton9.ForeColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.flatButton9.ForeColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.flatButton9.ForeColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.flatButton9.Location = new System.Drawing.Point(413, 162);
+            this.flatButton9.Margin = new System.Windows.Forms.Padding(0);
+            this.flatButton9.Name = "flatButton9";
+            this.flatButton9.Size = new System.Drawing.Size(214, 50);
+            this.flatButton9.TabIndex = 5;
+            this.flatButton9.Text = "flatButton9";
+            this.flatButton9.ToolTip = "";
+            this.flatButton9.UseVisualStyleBackColor = false;
+            // 
+            // SubNavigationContainer
+            // 
+            this.SubNavigationContainer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SubNavigationContainer.Location = new System.Drawing.Point(107, 49);
+            this.SubNavigationContainer.Name = "SubNavigationContainer";
+            this.SubNavigationContainer.Size = new System.Drawing.Size(182, 729);
+            this.SubNavigationContainer.TabIndex = 2;
+            // 
+            // MainView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1376, 778);
+            this.ControlBox = false;
+            this.Controls.Add(this.flatButton9);
+            this.Controls.Add(this.flatButton10);
+            this.Controls.Add(this.SubNavigationContainer);
+            this.Controls.Add(this.pnlSideNavigation);
+            this.Controls.Add(this.pnlTopMenuContainer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "MainView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.pnlTopMenuContainer.ResumeLayout(false);
+            this.pnlControlBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).EndInit();
+            this.pnlSideNavigation.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel pnlTopMenuContainer;
+        private ITA_UI.Classes.Controls.FlatPictureBox pbIcon;
+        private ITSpecialProject.Components.FlatNavigationPanel pnlSideNavigation;
+        private ITA_UI.Classes.Controls.FlatButton btnHome;
+        private ITA_UI.Classes.Controls.FlatButton btnSettings;
+        private ITA_UI.Classes.Controls.FlatButton btnReports;
+        private ITA_UI.Classes.Controls.FlatButton btnManage;
+        private ITA_UI.Classes.Controls.FlatButton btnPOS;
+        private System.Windows.Forms.Panel pnlControlBox;
+        private ITA_UI.Classes.Controls.FlatButton flatButton5;
+        private System.Windows.Forms.Label lblTitle;
+        private ITA_UI.Classes.Controls.FlatButton btnHelp;
+        private NavigationView SubNavigationContainer;
+        private ITA_UI.Classes.Controls.FlatButton flatButton8;
+        private ITA_UI.Classes.Controls.FlatButton flatButton7;
+        private ITA_UI.Classes.Controls.FlatButton flatButton10;
+        private ITA_UI.Classes.Controls.FlatButton flatButton9;
+
+    }
+}

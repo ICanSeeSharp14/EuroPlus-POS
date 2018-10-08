@@ -1,0 +1,22 @@
+﻿using Petrol_Pump_Point_Of_Sale_System.Models;
+using Petrol_Pump_Point_Of_Sale_System.View.Account;
+using System.Collections.Generic;
+
+namespace Petrol_Pump_Point_Of_Sale_System.View.Main
+{
+    public partial class MainView
+    {
+        private static List<Modules> GetManageModules()
+        {
+            return new List<Modules>
+            {
+                //new Modules { Title = "Menus", Instance = new MenuView() },
+                new Modules { Title = "Consumables", Instance = new AccountView() },
+                new Modules { Title = "Stocks", Instance = new AccountView() },
+                new Modules { Title = "Accounts", Instance = new AccountView() },
+            };
+        }
+
+        
+    }
+}

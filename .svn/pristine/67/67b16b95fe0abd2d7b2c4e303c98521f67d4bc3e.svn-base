@@ -1,0 +1,20 @@
+﻿using Petrol_Pump_Management_System.Enums;
+using System.ComponentModel.DataAnnotations;
+
+namespace Petrol_Pump_Management_System.Entities
+{
+    public class Module
+    {
+        [Key]
+        public int ModuleId { get; set; }
+        public string ModuleName { get; set; }
+        public string ObjectName { get; set; }
+        public string Description { get; set; }
+
+        public ModuleType ModuleType { get; set; }
+           
+        public bool IsActive { get; set; }
+
+
+    }
+}
