@@ -40,27 +40,27 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlAccountDetails = new System.Windows.Forms.Panel();
             this.tlpAccountTab = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.flatButton3 = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
+            this.flatButton2 = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.tcAccounts = new MaterialSkin.Controls.MaterialTabControl();
             this.tpAccountDetails = new System.Windows.Forms.TabPage();
             this.tpAccountAccess = new System.Windows.Forms.TabPage();
             this.tblUserAccess = new ITSpecialProject.Components.FlatTable();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tpAccountActivities = new System.Windows.Forms.TabPage();
-            this.flatButton3 = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
-            this.flatButton2 = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flatButton1 = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.pnlAccountList = new System.Windows.Forms.Panel();
             this.paginatorView1 = new Petrol_Pump_Point_Of_Sale_System.View.Custom.PaginatorView();
             this.flatTextBox1 = new ITA_UI.FlatTextBox();
-            this.flatTable1 = new ITSpecialProject.Components.FlatTable();
+            this.dgvAccounts = new ITSpecialProject.Components.FlatTable();
             this.pnlAccountDetails.SuspendLayout();
             this.tlpAccountTab.SuspendLayout();
             this.tcAccounts.SuspendLayout();
             this.tpAccountAccess.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblUserAccess)).BeginInit();
             this.pnlAccountList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.flatTable1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlAccountDetails
@@ -95,22 +95,63 @@
             this.tlpAccountTab.Size = new System.Drawing.Size(601, 704);
             this.tlpAccountTab.TabIndex = 5;
             // 
-            // tableLayoutPanel1
+            // flatButton3
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tlpAccountTab.SetColumnSpan(this.tableLayoutPanel1, 3);
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 654);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(601, 50);
-            this.tableLayoutPanel1.TabIndex = 4;
+            this.flatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.flatButton3.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.flatButton3.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.flatButton3.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.flatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flatButton3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flatButton3.EllipseOnClick = 0;
+            this.flatButton3.EllipseOnDefault = 0;
+            this.flatButton3.EllipseOnHover = 0;
+            this.flatButton3.FlatAppearance.BorderSize = 0;
+            this.flatButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.flatButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.flatButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flatButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.flatButton3.ForeColor = System.Drawing.Color.White;
+            this.flatButton3.ForeColorOnClick = System.Drawing.Color.White;
+            this.flatButton3.ForeColorOnDefault = System.Drawing.Color.White;
+            this.flatButton3.ForeColorOnHover = System.Drawing.Color.White;
+            this.flatButton3.Location = new System.Drawing.Point(400, 0);
+            this.flatButton3.Margin = new System.Windows.Forms.Padding(0);
+            this.flatButton3.Name = "flatButton3";
+            this.flatButton3.Size = new System.Drawing.Size(201, 50);
+            this.flatButton3.TabIndex = 7;
+            this.flatButton3.Text = "Account Details";
+            this.flatButton3.ToolTip = "";
+            this.flatButton3.UseVisualStyleBackColor = false;
+            // 
+            // flatButton2
+            // 
+            this.flatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.flatButton2.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.flatButton2.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.flatButton2.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.flatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flatButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flatButton2.EllipseOnClick = 0;
+            this.flatButton2.EllipseOnDefault = 0;
+            this.flatButton2.EllipseOnHover = 0;
+            this.flatButton2.FlatAppearance.BorderSize = 0;
+            this.flatButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.flatButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.flatButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flatButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.flatButton2.ForeColor = System.Drawing.Color.White;
+            this.flatButton2.ForeColorOnClick = System.Drawing.Color.White;
+            this.flatButton2.ForeColorOnDefault = System.Drawing.Color.White;
+            this.flatButton2.ForeColorOnHover = System.Drawing.Color.White;
+            this.flatButton2.Location = new System.Drawing.Point(200, 0);
+            this.flatButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.flatButton2.Name = "flatButton2";
+            this.flatButton2.Size = new System.Drawing.Size(200, 50);
+            this.flatButton2.TabIndex = 6;
+            this.flatButton2.Text = "Account Details";
+            this.flatButton2.ToolTip = "";
+            this.flatButton2.UseVisualStyleBackColor = false;
             // 
             // tcAccounts
             // 
@@ -240,63 +281,22 @@
             this.tpAccountActivities.TabIndex = 2;
             this.tpAccountActivities.Text = "Account Activities";
             // 
-            // flatButton3
+            // tableLayoutPanel1
             // 
-            this.flatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.flatButton3.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.flatButton3.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.flatButton3.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.flatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.flatButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flatButton3.EllipseOnClick = 0;
-            this.flatButton3.EllipseOnDefault = 0;
-            this.flatButton3.EllipseOnHover = 0;
-            this.flatButton3.FlatAppearance.BorderSize = 0;
-            this.flatButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.flatButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.flatButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.flatButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
-            this.flatButton3.ForeColor = System.Drawing.Color.White;
-            this.flatButton3.ForeColorOnClick = System.Drawing.Color.White;
-            this.flatButton3.ForeColorOnDefault = System.Drawing.Color.White;
-            this.flatButton3.ForeColorOnHover = System.Drawing.Color.White;
-            this.flatButton3.Location = new System.Drawing.Point(400, 0);
-            this.flatButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.flatButton3.Name = "flatButton3";
-            this.flatButton3.Size = new System.Drawing.Size(201, 50);
-            this.flatButton3.TabIndex = 7;
-            this.flatButton3.Text = "Account Details";
-            this.flatButton3.ToolTip = "";
-            this.flatButton3.UseVisualStyleBackColor = false;
-            // 
-            // flatButton2
-            // 
-            this.flatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.flatButton2.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.flatButton2.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.flatButton2.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.flatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.flatButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flatButton2.EllipseOnClick = 0;
-            this.flatButton2.EllipseOnDefault = 0;
-            this.flatButton2.EllipseOnHover = 0;
-            this.flatButton2.FlatAppearance.BorderSize = 0;
-            this.flatButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.flatButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.flatButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.flatButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
-            this.flatButton2.ForeColor = System.Drawing.Color.White;
-            this.flatButton2.ForeColorOnClick = System.Drawing.Color.White;
-            this.flatButton2.ForeColorOnDefault = System.Drawing.Color.White;
-            this.flatButton2.ForeColorOnHover = System.Drawing.Color.White;
-            this.flatButton2.Location = new System.Drawing.Point(200, 0);
-            this.flatButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.flatButton2.Name = "flatButton2";
-            this.flatButton2.Size = new System.Drawing.Size(200, 50);
-            this.flatButton2.TabIndex = 6;
-            this.flatButton2.Text = "Account Details";
-            this.flatButton2.ToolTip = "";
-            this.flatButton2.UseVisualStyleBackColor = false;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tlpAccountTab.SetColumnSpan(this.tableLayoutPanel1, 3);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 654);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(601, 50);
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // flatButton1
             // 
@@ -331,7 +331,7 @@
             // 
             this.pnlAccountList.Controls.Add(this.paginatorView1);
             this.pnlAccountList.Controls.Add(this.flatTextBox1);
-            this.pnlAccountList.Controls.Add(this.flatTable1);
+            this.pnlAccountList.Controls.Add(this.dgvAccounts);
             this.pnlAccountList.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlAccountList.Location = new System.Drawing.Point(0, 0);
             this.pnlAccountList.Name = "pnlAccountList";
@@ -343,6 +343,7 @@
             // 
             this.paginatorView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             this.paginatorView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.paginatorView1.GetCurrentPage = 1;
             this.paginatorView1.HasRecordCount = false;
             this.paginatorView1.HasRefresh = true;
             this.paginatorView1.Location = new System.Drawing.Point(5, 657);
@@ -370,21 +371,21 @@
             this.flatTextBox1.Size = new System.Drawing.Size(444, 33);
             this.flatTextBox1.TabIndex = 0;
             // 
-            // flatTable1
+            // dgvAccounts
             // 
-            this.flatTable1.AllowUserToAddRows = false;
-            this.flatTable1.AllowUserToDeleteRows = false;
-            this.flatTable1.AllowUserToResizeColumns = false;
-            this.flatTable1.AllowUserToResizeRows = false;
+            this.dgvAccounts.AllowUserToAddRows = false;
+            this.dgvAccounts.AllowUserToDeleteRows = false;
+            this.dgvAccounts.AllowUserToResizeColumns = false;
+            this.dgvAccounts.AllowUserToResizeRows = false;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            this.flatTable1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.flatTable1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.flatTable1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.flatTable1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.flatTable1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.flatTable1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvAccounts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvAccounts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvAccounts.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgvAccounts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAccounts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvAccounts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -392,9 +393,9 @@
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.flatTable1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.flatTable1.ColumnHeadersHeight = 30;
-            this.flatTable1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvAccounts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvAccounts.ColumnHeadersHeight = 30;
+            this.dgvAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11.25F);
@@ -402,17 +403,17 @@
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.flatTable1.DefaultCellStyle = dataGridViewCellStyle8;
-            this.flatTable1.EllipseOnDefault = 0;
-            this.flatTable1.EnableHeadersVisualStyles = false;
-            this.flatTable1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
-            this.flatTable1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
-            this.flatTable1.Location = new System.Drawing.Point(9, 52);
-            this.flatTable1.Margin = new System.Windows.Forms.Padding(0);
-            this.flatTable1.MultiSelect = false;
-            this.flatTable1.Name = "flatTable1";
-            this.flatTable1.ReadOnly = true;
-            this.flatTable1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvAccounts.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvAccounts.EllipseOnDefault = 0;
+            this.dgvAccounts.EnableHeadersVisualStyles = false;
+            this.dgvAccounts.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.dgvAccounts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.dgvAccounts.Location = new System.Drawing.Point(9, 52);
+            this.dgvAccounts.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvAccounts.MultiSelect = false;
+            this.dgvAccounts.Name = "dgvAccounts";
+            this.dgvAccounts.ReadOnly = true;
+            this.dgvAccounts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11.25F);
@@ -420,25 +421,25 @@
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.flatTable1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.flatTable1.RowHeadersWidth = 10;
-            this.flatTable1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvAccounts.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvAccounts.RowHeadersWidth = 10;
+            this.dgvAccounts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.flatTable1.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.flatTable1.RowTemplate.Height = 40;
-            this.flatTable1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.flatTable1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.flatTable1.ShowCellErrors = false;
-            this.flatTable1.ShowCellToolTips = false;
-            this.flatTable1.ShowEditingIcon = false;
-            this.flatTable1.ShowRowErrors = false;
-            this.flatTable1.Size = new System.Drawing.Size(444, 592);
-            this.flatTable1.TabIndex = 1;
+            this.dgvAccounts.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvAccounts.RowTemplate.Height = 40;
+            this.dgvAccounts.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAccounts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAccounts.ShowCellErrors = false;
+            this.dgvAccounts.ShowCellToolTips = false;
+            this.dgvAccounts.ShowEditingIcon = false;
+            this.dgvAccounts.ShowRowErrors = false;
+            this.dgvAccounts.Size = new System.Drawing.Size(444, 592);
+            this.dgvAccounts.TabIndex = 1;
             // 
             // AccountView
             // 
@@ -449,6 +450,7 @@
             this.Controls.Add(this.pnlAccountList);
             this.Name = "AccountView";
             this.Size = new System.Drawing.Size(1073, 712);
+            this.Load += new System.EventHandler(this.AccountView_Load);
             this.pnlAccountDetails.ResumeLayout(false);
             this.tlpAccountTab.ResumeLayout(false);
             this.tcAccounts.ResumeLayout(false);
@@ -456,7 +458,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblUserAccess)).EndInit();
             this.pnlAccountList.ResumeLayout(false);
             this.pnlAccountList.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.flatTable1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -478,7 +480,7 @@
         private System.Windows.Forms.Panel pnlAccountList;
         private Custom.PaginatorView paginatorView1;
         private ITA_UI.FlatTextBox flatTextBox1;
-        private ITSpecialProject.Components.FlatTable flatTable1;
+        private ITSpecialProject.Components.FlatTable dgvAccounts;
 
     }
 }

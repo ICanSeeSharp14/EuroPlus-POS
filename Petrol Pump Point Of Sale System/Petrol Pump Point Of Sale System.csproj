@@ -35,6 +35,12 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_Gas_Station.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BunifuDataViz 1.0.1">
       <HintPath>..\Assets\BunifuDataViz 1.0.1.dll</HintPath>
@@ -222,6 +228,12 @@
     <Compile Include="View\Commons\PumpCardContainerView.Designer.cs">
       <DependentUpon>PumpCardContainerView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Custom\LoadingView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Custom\LoadingView.Designer.cs">
+      <DependentUpon>LoadingView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Products\ProductController.Designer.cs" />
     <Compile Include="View\Products\ProductView.cs">
       <SubType>UserControl</SubType>
@@ -342,6 +354,9 @@
     <EmbeddedResource Include="View\Custom\CompanyLogoView.resx">
       <DependentUpon>CompanyLogoView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Custom\LoadingView.resx">
+      <DependentUpon>LoadingView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Custom\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
@@ -402,11 +417,23 @@
     <Folder Include="Properties\Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Info_48.png" />
-    <Content Include="Assets\Message_48.png" />
-    <Content Include="Assets\Question_48.png" />
-    <Content Include="Assets\Update_48.png" />
-    <Content Include="Assets\Warning_48.png" />
+    <Content Include="Assets\1.png" />
+    <Content Include="Assets\2.png" />
+    <Content Include="Assets\3.png" />
+    <Content Include="Assets\4.png" />
+    <Content Include="Assets\5.png" />
+    <Content Include="Assets\6.png" />
+    <Content Include="Assets\7.png" />
+    <Content Include="Assets\8.png" />
+    <Content Include="icons8_Gas_Station.ico" />
+    <None Include="Resources\8.png" />
+    <None Include="Resources\7.png" />
+    <None Include="Resources\6.png" />
+    <None Include="Resources\5.png" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

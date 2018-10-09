@@ -23,7 +23,9 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
         private bool _isLogout = false;
         private Modules _selectedModule = new Modules();
 
-        private ProductView ShowProductView()
+       
+        private ProductView ShowProductView() 
+           
         {
             return new ProductView();
         }

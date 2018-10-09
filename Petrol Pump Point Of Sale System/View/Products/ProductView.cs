@@ -15,7 +15,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Products
             InitializeComponent();
 
             pgProduct.SetRecordsPerPage(2);
-            //SetTotalPage();
+            SetTotalPage();
 
             InitializeEvents();
 
@@ -23,17 +23,9 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Products
         }
         private void ProductView_Load(object sender, System.EventArgs e)
         {
-            //GetProducts();
-            
-            
-                    var products = _repository.Products
-                        .GetAll(txtSearch.Text,
-                            pgProduct.GetSkipPage,
-                            pgProduct.GetRecordsPerPage);
-                    dgvProductList.DataSource = products;
-            
-            
-    }
+            if (Created)
+                GetProducts();
+        }
 
         private void btnRateHistory_Click(object sender, System.EventArgs e)
         {

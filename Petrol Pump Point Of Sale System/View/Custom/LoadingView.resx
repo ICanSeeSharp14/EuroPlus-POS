@@ -117,29 +117,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="imgLoadingList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="imgLoadingList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABW
+        CAAAAk1TRnQBSQFMAgEBCAEAARgBAAEIAQABEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        AwABMAMAAQEBAAEgBgABMP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wA/AAPAAf8DhgX/
+        NAAD3QH/A5kB/zgAA90B/wOZAf84AAPdAf8DmQH/KAAD6gH/A7IF/wQAA4YB/wOGAf8D4wH/KAAE/wgA
+        A4YB/wOGBf80AAOGAf8DhgX/NAADhgH/A4YF/yQAA4YB/wOGAf8DhgH/BAAE/wPdAf8IAAOGAf8DhgH/
+        GAADhgH/A4YB/wPXAf8IAAT/CAADhgH/A4YB/xgAAaQCoAH/A4YB/wPxAf8IAAT/CAADhgH/A4YB/xgA
+        AaQCoAH/A4YB/wPxAf8IAAT/CAADmQH/A4YB/xgAA4YB/wOGAf8DmQH/FAADmQH/A4YB/xgAA7IB/wOG
+        Af8D6gH/FAADmQH/A4YB/xgAA8AB/wOGBf8UAAOZAf8DhgH/GAADwAH/A4YF/xQAA8AB/wOZAf8YAAT/
+        A+MB//8AIQAE/wwABP8DmQH/A8AB/yQABP8QAAPqBf84AAT/PAADsgX/IAAE/wOGAf8DmQH/CAADhgH/
+        A4YB/wOGAf8gAAT/A4YB/wOZAf8IAAPxAf8DhgH/A4YB/yQAA4YB/wPMAf8IAAT/A4YB/wOGAf8kAAOG
+        Af8D3QH/DAAD1wX/JAADhgH/A90B/wgAA8wB/wOGAf8DhgH/JAADhgH/A90B/wgABP8DhgH/A5kB/yQA
+        AaQCoAX/CAAE/wOGAf8DzAH/JAAE/1AACP/cAAT/A/EB/1gAA8AB/wOGAf8D8QH/NAAE/wPAAf84AAPx
+        Af8DhgH/GAADhgH/A4YB/xwAA4YB/xgAA5YB/wOGAf8YAAOGAf8DhgH/A4YB/xQAA7IB/wOGAf8YAAOG
+        Af8DhgH/A8AB/xQAA9cB/wOGAf8cAAPxAf8IAAPxAf8DsgH/CAADwAH/AaQCoAH/LAAD8QH/CAAD8QH/
+        A90B/xgAA4YB/wOGAf8DwAH/CAAD8QH/DAAE/xgAA9cB/wOGCf8DhgH/A4YB/wPAAf80AAOyAf8DhgH/
+        OAAE/wOGAf88AAOGAf80AAT/A4YB/wOGAf8DmQH/9AADzAH/A4YF//8A9QAI/zgABP8DzAH/OAAE/wPx
+        Af84AAj/NAAE/wOGAf8DhgH/A/EB/zQAAaQCoAH/A4YB/zgAA90B/wOGAf84AAPXAf8DwAH/CAAD1wH/
+        A7IB/yQAA+MB/wOGAf8DhgH/A8AB/yQAAaQCoAH/A4YB/wPxAf8UAAPXAf8DhgH/GAAD3QH/A4YB/xgA
+        A/EB/wPAAf8YAAT/A4YB/xQAA+oB/wOGAf8DhgH/A8AB/xgAA4YB/wgAA4YB/wOGAf8IAAOGAf8DhgX/
+        FAADwAH/A4YF/xQAA/EB/wPXAf8YAAPxAf8DlgH/GAAE/wPxAf8cAAOyAf8UAAPxAf8DhgH/A4YB/wPX
+        Af8YAAPXAf8YAAOGAf8DhgH/uAAD8QH/A+oB/1QABP88AAT/JAAE/wOGAf8BpAKgAf84AAPjBf84AAT/
+        DAAE/wOGAf8DhgH/JAADhgH/A/EB/wgABP8DhgH/A4YB/yAAA4YB/wOGAf8DhgX/CAADhgH/A7IB/yAA
+        A9cB/wOGAf8DhgH/DAADhgH/A+oB/yAABP8DhgH/A5kB/wgABP8DhgH/A8wB/zQABP8DhgH/A8wB/yAA
+        A90B/wOGAf8DhgH/DAADsgH/A/EB/yAABP8DhgH/A8AB/wwAA+MF/yQAA4YB/wPdAf//ABUAA+MB/xgA
+        A5kB/wOGBf8YAAPjAf8YAAPqAf8D1wH/HAAD4wH/GAAE/wPxAf84AAT/A/EB/xgAA5kB/wOGAf8D4wH/
+        EAAD4wH/A4YB/wOGAf8DsgH/FAADmQH/A4YB/wPjAf8UAAOGAf8DhgX/FAADmQH/A4YB/wPjAf8UAAOG
+        Af8DhgH/GAADwAH/A4YB/xgAA4YB/wOGAf8YAAPqAf8DmQH/CAABpAKgAf8Dhgn/A4YB/wOGAf8D8QH/
+        FAAD6gH/A5kB/wgAA8wB/wOGAf8IAAGkAqAB/wOWAf8YAAPqAf8DmQH/CAADzAH/A4YB/wgAA8AB/wGk
+        AqAB/xgABP8DwAH/CAADzAH/A4YB/wgAA8AB/wGkAqAB/ygAA4YB/wOGAf8D6gH/NAADhgH/A4YF/zQA
+        A4YB/wOGBf80AAOGAf8DhgX/NAAE/wPxAf84AAj/OAAI/zgACP//AB0AAUIBTQE+BwABPgMAASgDAAFA
+        AwABMAMAAQEBAAEBBQABgAEBFgAD/4EACP8B/gE/Af4BfwH+AX8B/gF/AeIBPwH2AT8B/gE/Af4BPwHi
+        AWcB4wFnAeMBZwHjAWcB4wHnAeMB5wHjAecB4wLnCP8B+wGPAfsBzwH/Ad8B/wHPAfEBjwHxAY8B+QGP
+        AfkBzwH5AY8B+QGPAfkBjwH7Av8Bzwb/AecC/wHjAf8B5wH/AucB9wHnAeMB5wHjAecB9gFnAf8BZwHj
+        AXcB4AE/Af4BfwH+AX8B/wF/AfwBPwb/Af4BPw7/Af4BfwH+AX8B/gF/Af4BfwH8AT8B/gF/Af4BfwH+
+        AWcB/AE/AeME5wHDAfYBYwHjA+cB9wHDAfcB5wX/AecC/wHfAf8B3wHxAf8B+QH/AfsBjwH5AY8B8AHP
+        AfEBzwHxAY8B/wGPAfEBzwHxAc8B+Qj/AfcB4wH3AecB9wHnAf8B5wHjAcMD4wPnAeYBAwHmAWcB5gFn
+        AeYBZwH+AT8B/gE/Af4BPwH+AT8B/gF/Af4BfwH+AX8B/gF/CP8L
+</value>
   </data>
-  <data name="_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="tmrImageLoader.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>152, 17</value>
+  </metadata>
 </root>

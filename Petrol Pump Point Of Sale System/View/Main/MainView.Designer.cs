@@ -46,6 +46,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.accountView1 = new Petrol_Pump_Point_Of_Sale_System.View.Account.AccountView();
             this.tpManageProduct = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.loadingView1 = new Petrol_Pump_Point_Of_Sale_System.View.Custom.LoadingView();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.tabPage11 = new System.Windows.Forms.TabPage();
@@ -72,6 +73,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.pnlBody.SuspendLayout();
             this.tcMenu.SuspendLayout();
             this.tpManageAccount.SuspendLayout();
+            this.tabPage8.SuspendLayout();
             this.pnlSubNavigation.SuspendLayout();
             this.pnlSideNavigation.SuspendLayout();
             this.SuspendLayout();
@@ -295,6 +297,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             // tabPage8
             // 
             this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.tabPage8.Controls.Add(this.loadingView1);
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
@@ -302,15 +305,24 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.tabPage8.TabIndex = 8;
             this.tabPage8.Text = "tabPage8";
             // 
+            // loadingView1
+            // 
+            this.loadingView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.loadingView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loadingView1.Location = new System.Drawing.Point(3, 3);
+            this.loadingView1.Name = "loadingView1";
+            this.loadingView1.Size = new System.Drawing.Size(1045, 625);
+            this.loadingView1.TabIndex = 0;
+            // 
             // tabPage9
             // 
+            this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage9.Size = new System.Drawing.Size(1051, 631);
             this.tabPage9.TabIndex = 9;
             this.tabPage9.Text = "tabPage9";
-            this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // tabPage10
             // 
@@ -674,6 +686,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.pnlBody.ResumeLayout(false);
             this.tcMenu.ResumeLayout(false);
             this.tpManageAccount.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
             this.pnlSubNavigation.ResumeLayout(false);
             this.pnlSideNavigation.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -716,5 +729,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
         private Account.AccountView accountView1;
         private System.Windows.Forms.Panel pnlSubNavigation;
         private NavigationView navigationView;
+        private Products.ProductView productView;
+        private Custom.LoadingView loadingView1;
     }
 }

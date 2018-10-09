@@ -35,7 +35,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
 
         private void MainView_Load(object sender, EventArgs e)
         {
-            tcMenu.SelectTab(0);
+            tcMenu.SelectedTab = tabPage8;
          
         }
 
@@ -50,3 +50,4 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
         }
     }
 }
+

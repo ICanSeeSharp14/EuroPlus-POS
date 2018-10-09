@@ -60,7 +60,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Products
 
         private void GetProducts()
         {
-            SetTotalPage();
+           
             using (var db = new DbRepository(new DatabaseContext()))
             {
                 var products =  db.Products
