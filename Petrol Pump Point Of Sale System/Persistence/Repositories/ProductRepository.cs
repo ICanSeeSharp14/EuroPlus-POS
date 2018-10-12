@@ -1,24 +1,23 @@
 ﻿using Petrol_Pump_Point_Of_Sale_System.Core.Repositories;
-using Petrol_Pump_Point_Of_Sale_System.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Petrol_Pump_Point_Of_Sale_System.Models;
 
 namespace Petrol_Pump_Point_Of_Sale_System.Persistence.Repositories
 {
     public class ProductRepository : GenericRepository<Product> , IProductRepository
     {
-         private DatabaseContext DatabaseContext
-        {
-            get { return Context as DatabaseContext; }
-        }
 
-        
+        public DatabaseContext DatabaseContext => Context as DatabaseContext;
+       
+
         public ProductRepository(DatabaseContext context) : base(context)
         {
+            
         }
 
         public bool IsProductExist(string productName)
@@ -72,16 +71,15 @@ namespace Petrol_Pump_Point_Of_Sale_System.Persistence.Repositories
 
         }
 
-       
         
-        public IEnumerable<dynamic> GetAll(string filterValue = "", int pageIndex = 1, int pageSize = 50)
+        public  IEnumerable<dynamic> GetAll(string filterValue = "", int pageIndex = 1, int pageSize = 50)
         {
-            return   DatabaseContext
+            return  DatabaseContext
                     .Products
                     .Where(p => p.ProductName.Contains(filterValue) ||
                                 p.ProductCode.Contains(filterValue) &&
                                 p.IsActive)
-                    .OrderBy(p => p.ProductId)
+                    .OrderByDescending(p => p.ProductId)
                     .Select(p => new
                     {
                         Id = p.ProductId,
@@ -91,7 +89,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.Persistence.Repositories
                         SellingPrice = p.SalesRate,
                         PurchasePrice = p.PurchaseRate,
                         p.Unit
-                    }).Skip(pageIndex)
+                    }).Skip((pageIndex - 1) * pageSize)
                     .Take(pageSize)
                     .ToList();
 
@@ -136,5 +134,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.Persistence.Repositories
                                 r.DateTimeModified
                             }).ToListAsync();
         }
+
+        
     }
  }

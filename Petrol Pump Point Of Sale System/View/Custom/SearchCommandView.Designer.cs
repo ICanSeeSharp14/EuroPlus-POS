@@ -1,0 +1,289 @@
+﻿namespace Petrol_Pump_Point_Of_Sale_System.View.Custom
+{
+    partial class SearchCommandView
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.tlpBodyContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlCommandButton = new System.Windows.Forms.Panel();
+            this.tlpCommandContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlSearchBar = new System.Windows.Forms.Panel();
+            this.btnSearch = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
+            this.txtSearch = new ITA_UI.FlatTextBox();
+            this.btnEdit = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
+            this.btnNew = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
+            this.btnDelete = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
+            this.tlpBodyContainer.SuspendLayout();
+            this.pnlCommandButton.SuspendLayout();
+            this.tlpCommandContainer.SuspendLayout();
+            this.pnlSearchBar.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // tlpBodyContainer
+            // 
+            this.tlpBodyContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.tlpBodyContainer.ColumnCount = 3;
+            this.tlpBodyContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 319F));
+            this.tlpBodyContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.81722F));
+            this.tlpBodyContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.18278F));
+            this.tlpBodyContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpBodyContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpBodyContainer.Controls.Add(this.btnSearch, 0, 0);
+            this.tlpBodyContainer.Controls.Add(this.pnlSearchBar, 0, 0);
+            this.tlpBodyContainer.Controls.Add(this.pnlCommandButton, 2, 0);
+            this.tlpBodyContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpBodyContainer.Location = new System.Drawing.Point(0, 0);
+            this.tlpBodyContainer.Name = "tlpBodyContainer";
+            this.tlpBodyContainer.RowCount = 1;
+            this.tlpBodyContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpBodyContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tlpBodyContainer.Size = new System.Drawing.Size(888, 53);
+            this.tlpBodyContainer.TabIndex = 16;
+            // 
+            // pnlCommandButton
+            // 
+            this.pnlCommandButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.pnlCommandButton.Controls.Add(this.tlpCommandContainer);
+            this.pnlCommandButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlCommandButton.Location = new System.Drawing.Point(485, 0);
+            this.pnlCommandButton.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlCommandButton.Name = "pnlCommandButton";
+            this.pnlCommandButton.Padding = new System.Windows.Forms.Padding(4);
+            this.pnlCommandButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.pnlCommandButton.Size = new System.Drawing.Size(403, 53);
+            this.pnlCommandButton.TabIndex = 8;
+            // 
+            // tlpCommandContainer
+            // 
+            this.tlpCommandContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.tlpCommandContainer.ColumnCount = 5;
+            this.tlpCommandContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tlpCommandContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
+            this.tlpCommandContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
+            this.tlpCommandContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
+            this.tlpCommandContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tlpCommandContainer.Controls.Add(this.btnEdit, 3, 0);
+            this.tlpCommandContainer.Controls.Add(this.btnNew, 2, 0);
+            this.tlpCommandContainer.Controls.Add(this.btnDelete, 4, 0);
+            this.tlpCommandContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpCommandContainer.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
+            this.tlpCommandContainer.Location = new System.Drawing.Point(4, 4);
+            this.tlpCommandContainer.Name = "tlpCommandContainer";
+            this.tlpCommandContainer.Padding = new System.Windows.Forms.Padding(3);
+            this.tlpCommandContainer.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tlpCommandContainer.RowCount = 1;
+            this.tlpCommandContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpCommandContainer.Size = new System.Drawing.Size(395, 45);
+            this.tlpCommandContainer.TabIndex = 0;
+            this.tlpCommandContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpCommandContainer_Paint);
+            // 
+            // pnlSearchBar
+            // 
+            this.pnlSearchBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.pnlSearchBar.Controls.Add(this.txtSearch);
+            this.pnlSearchBar.Location = new System.Drawing.Point(5, 14);
+            this.pnlSearchBar.Margin = new System.Windows.Forms.Padding(5, 14, 0, 0);
+            this.pnlSearchBar.Name = "pnlSearchBar";
+            this.pnlSearchBar.Size = new System.Drawing.Size(306, 39);
+            this.pnlSearchBar.TabIndex = 9;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnSearch.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnSearch.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnSearch.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSearch.EllipseOnClick = 2;
+            this.btnSearch.EllipseOnDefault = 2;
+            this.btnSearch.EllipseOnHover = 2;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.ForeColorOnClick = System.Drawing.Color.White;
+            this.btnSearch.ForeColorOnDefault = System.Drawing.Color.White;
+            this.btnSearch.ForeColorOnHover = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(319, 12);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(0, 12, 8, 10);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Padding = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.btnSearch.Size = new System.Drawing.Size(82, 31);
+            this.btnSearch.TabIndex = 37;
+            this.btnSearch.Text = "Find";
+            this.btnSearch.ToolTip = "Click to Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.White;
+            this.txtSearch.BackColorOnEnter = System.Drawing.Color.WhiteSmoke;
+            this.txtSearch.BackColorOnLeave = System.Drawing.Color.White;
+            this.txtSearch.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearch.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtSearch.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.txtSearch.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtSearch.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtSearch.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtSearch.InputValidation = ITA_UI.FlatTextBox.Validation.Alphabet;
+            this.txtSearch.Location = new System.Drawing.Point(0, 0);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceHolder = "Search";
+            this.txtSearch.Required = false;
+            this.txtSearch.RequiredErrorMessage = "Field is Required";
+            this.txtSearch.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
+            this.txtSearch.RequiredForeColorOnLeave = System.Drawing.Color.White;
+            this.txtSearch.RequiredForeColorOnValidate = System.Drawing.Color.White;
+            this.txtSearch.Size = new System.Drawing.Size(310, 27);
+            this.txtSearch.TabIndex = 33;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnEdit.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnEdit.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnEdit.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEdit.EllipseOnClick = 2;
+            this.btnEdit.EllipseOnDefault = 2;
+            this.btnEdit.EllipseOnHover = 2;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.ForeColorOnClick = System.Drawing.Color.White;
+            this.btnEdit.ForeColorOnDefault = System.Drawing.Color.White;
+            this.btnEdit.ForeColorOnHover = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(218, 5);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Padding = new System.Windows.Forms.Padding(4);
+            this.btnEdit.Size = new System.Drawing.Size(85, 35);
+            this.btnEdit.TabIndex = 35;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.ToolTip = "Click to Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnNew.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnNew.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnNew.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNew.EllipseOnClick = 2;
+            this.btnNew.EllipseOnDefault = 2;
+            this.btnNew.EllipseOnHover = 2;
+            this.btnNew.FlatAppearance.BorderSize = 0;
+            this.btnNew.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.ForeColorOnClick = System.Drawing.Color.White;
+            this.btnNew.ForeColorOnDefault = System.Drawing.Color.White;
+            this.btnNew.ForeColorOnHover = System.Drawing.Color.White;
+            this.btnNew.Location = new System.Drawing.Point(129, 5);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Padding = new System.Windows.Forms.Padding(3);
+            this.btnNew.Size = new System.Drawing.Size(85, 35);
+            this.btnNew.TabIndex = 36;
+            this.btnNew.Text = "New";
+            this.btnNew.ToolTip = "Click to Add";
+            this.btnNew.UseVisualStyleBackColor = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnDelete.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnDelete.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnDelete.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelete.EllipseOnClick = 2;
+            this.btnDelete.EllipseOnDefault = 2;
+            this.btnDelete.EllipseOnHover = 2;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.ForeColorOnClick = System.Drawing.Color.White;
+            this.btnDelete.ForeColorOnDefault = System.Drawing.Color.White;
+            this.btnDelete.ForeColorOnHover = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(307, 5);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(83, 35);
+            this.btnDelete.TabIndex = 38;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.ToolTip = "Click to Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // SearchCommandView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.Controls.Add(this.tlpBodyContainer);
+            this.Name = "SearchCommandView";
+            this.Size = new System.Drawing.Size(888, 53);
+            this.tlpBodyContainer.ResumeLayout(false);
+            this.pnlCommandButton.ResumeLayout(false);
+            this.tlpCommandContainer.ResumeLayout(false);
+            this.pnlSearchBar.ResumeLayout(false);
+            this.pnlSearchBar.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TableLayoutPanel tlpBodyContainer;
+        private System.Windows.Forms.Panel pnlCommandButton;
+        private System.Windows.Forms.TableLayoutPanel tlpCommandContainer;
+        private Components.FlatButton btnEdit;
+        private Components.FlatButton btnNew;
+        private Components.FlatButton btnDelete;
+        private Components.FlatButton btnSearch;
+        private System.Windows.Forms.Panel pnlSearchBar;
+        private ITA_UI.FlatTextBox txtSearch;
+    }
+}

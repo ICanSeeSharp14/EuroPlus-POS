@@ -1,0 +1,34 @@
+﻿using Petrol_Pump_Point_Of_Sale_System.Entities;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Petrol_Pump_Point_Of_Sale_System.Models;
+
+namespace Petrol_Pump_Management_System.Entities
+{
+    [Table("UsersAccess")]
+    public class UserAccess
+    {
+
+        [Key]
+        public int UserAccessId { get; set; }
+
+
+        public int ModuleId { get; set; }
+        public int UserRoleId { get; set; }
+        
+        [ForeignKey("UserRoleId")]
+        public virtual UserRole UserRole { get; set; }
+   
+        
+        [ForeignKey("ModuleId")]
+        public virtual Module Module { get; set; }
+        public bool IsView { get; set; }
+        public bool IsSave { get; set; }
+        public bool IsUpdate { get; set; }
+        public bool IsDelete { get; set; }
+        public bool IsAll { get; set; }
+        public DateTime? DateTimeCreated { get; set; }
+        public bool IsActive { get; set; }
+    }
+}

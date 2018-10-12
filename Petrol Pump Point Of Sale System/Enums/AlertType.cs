@@ -1,4 +1,4 @@
-﻿namespace ITSpecialProject.Commons.Enums
+﻿namespace Petrol_Pump_Point_Of_Sale_System.Enums
 {
     public enum AlertType
     {

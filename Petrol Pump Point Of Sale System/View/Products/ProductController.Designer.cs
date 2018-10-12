@@ -13,10 +13,9 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Products
     public partial class ProductView 
     {
         
-        public void Initialize()
+        private void Initialize()
         {
-            
-            GetProducts();  
+            DisplayProducts();  
         }
 
         private bool DisplayControlsOnCreated()
@@ -40,25 +39,25 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Products
          
             pgProduct.PageNavigationButtonClicked += (s, e) =>
             {
-                GetProducts();
+                DisplayProducts();
             };
             pgProduct.RefreshButtonClicked += (s, e) =>
             {
-           
-                GetProducts();
+
+                DisplayProducts();
 
             };
 
             pgProduct.RecordCountChanged += (s, e) =>
             {
                SetTotalPage();
-               GetProducts();
+               DisplayProducts();
             };
 
             
         }
 
-        private void GetProducts()
+        public dynamic GetProducts()
         {
            
             using (var db = new DbRepository(new DatabaseContext()))
@@ -67,9 +66,15 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Products
                                     .GetAll(txtSearch.Text,
                                             pgProduct.GetSkipPage,
                                             pgProduct.GetRecordsPerPage);
-                dgvProductList.DataSource = products;
+                return products;
+               
 
             }
+        }
+
+        public dynamic DisplayProducts()
+        {
+           return  dgvProductList.DataSource = GetProducts();
         }
 
 

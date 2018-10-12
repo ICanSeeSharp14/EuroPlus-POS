@@ -42,24 +42,15 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.tcMenu = new MaterialSkin.Controls.MaterialTabControl();
-            this.tpManageAccount = new System.Windows.Forms.TabPage();
-            this.accountView1 = new Petrol_Pump_Point_Of_Sale_System.View.Account.AccountView();
             this.tpManageProduct = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.loadingView1 = new Petrol_Pump_Point_Of_Sale_System.View.Custom.LoadingView();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.tabPage11 = new System.Windows.Forms.TabPage();
-            this.tabPage12 = new System.Windows.Forms.TabPage();
-            this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.tabPage14 = new System.Windows.Forms.TabPage();
-            this.tabPage15 = new System.Windows.Forms.TabPage();
-            this.tabPage16 = new System.Windows.Forms.TabPage();
-            this.tabPage17 = new System.Windows.Forms.TabPage();
-            this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.productView = new Petrol_Pump_Point_Of_Sale_System.View.Product.ProductView();
+            this.tpManageAccount = new System.Windows.Forms.TabPage();
+            this.accountView3 = new Petrol_Pump_Point_Of_Sale_System.View.Account.AccountView();
+            this.tpHome = new System.Windows.Forms.TabPage();
+            this.tpManageCustomers = new System.Windows.Forms.TabPage();
+            this.tpPointOfSale = new System.Windows.Forms.TabPage();
             this.lblModuleTitle = new System.Windows.Forms.Label();
-            this.pnlSubNavigation = new System.Windows.Forms.Panel();
-            this.navigationView = new Petrol_Pump_Point_Of_Sale_System.View.Main.NavigationView();
+            this.pnlSubNavigation = new Petrol_Pump_Point_Of_Sale_System.View.Main.NavigationView();
             this.pnlSideNavigation = new ITSpecialProject.Components.FlatNavigationPanel();
             this.btnHelp = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnSettings = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
@@ -72,9 +63,8 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).BeginInit();
             this.pnlBody.SuspendLayout();
             this.tcMenu.SuspendLayout();
+            this.tpManageProduct.SuspendLayout();
             this.tpManageAccount.SuspendLayout();
-            this.tabPage8.SuspendLayout();
-            this.pnlSubNavigation.SuspendLayout();
             this.pnlSideNavigation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,7 +78,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.pnlTopMenuContainer.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlTopMenuContainer.Location = new System.Drawing.Point(0, 0);
             this.pnlTopMenuContainer.Name = "pnlTopMenuContainer";
-            this.pnlTopMenuContainer.Size = new System.Drawing.Size(1368, 40);
+            this.pnlTopMenuContainer.Size = new System.Drawing.Size(1376, 40);
             this.pnlTopMenuContainer.TabIndex = 0;
             // 
             // pnlControlBox
@@ -97,7 +87,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.pnlControlBox.Controls.Add(this.btnMaximize);
             this.pnlControlBox.Controls.Add(this.t);
             this.pnlControlBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlControlBox.Location = new System.Drawing.Point(1285, 0);
+            this.pnlControlBox.Location = new System.Drawing.Point(1293, 0);
             this.pnlControlBox.Name = "pnlControlBox";
             this.pnlControlBox.Size = new System.Drawing.Size(83, 40);
             this.pnlControlBox.TabIndex = 2;
@@ -192,12 +182,12 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             // lblTitle
             // 
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(67, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.lblTitle.Size = new System.Drawing.Size(1301, 40);
+            this.lblTitle.Size = new System.Drawing.Size(1309, 40);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "EuroPlus Gasoline Station";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -225,9 +215,9 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 727);
+            this.panel1.Location = new System.Drawing.Point(0, 735);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1368, 43);
+            this.panel1.Size = new System.Drawing.Size(1376, 43);
             this.panel1.TabIndex = 9;
             // 
             // pnlBody
@@ -235,184 +225,99 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.pnlBody.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnlBody.Controls.Add(this.tcMenu);
             this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBody.Location = new System.Drawing.Point(309, 70);
+            this.pnlBody.Location = new System.Drawing.Point(298, 70);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(1059, 657);
-            this.pnlBody.TabIndex = 13;
+            this.pnlBody.Size = new System.Drawing.Size(1078, 665);
+            this.pnlBody.TabIndex = 11;
             // 
             // tcMenu
             // 
-            this.tcMenu.Controls.Add(this.tpManageAccount);
             this.tcMenu.Controls.Add(this.tpManageProduct);
-            this.tcMenu.Controls.Add(this.tabPage8);
-            this.tcMenu.Controls.Add(this.tabPage9);
-            this.tcMenu.Controls.Add(this.tabPage10);
-            this.tcMenu.Controls.Add(this.tabPage11);
-            this.tcMenu.Controls.Add(this.tabPage12);
-            this.tcMenu.Controls.Add(this.tabPage13);
-            this.tcMenu.Controls.Add(this.tabPage14);
-            this.tcMenu.Controls.Add(this.tabPage15);
-            this.tcMenu.Controls.Add(this.tabPage16);
-            this.tcMenu.Controls.Add(this.tabPage17);
-            this.tcMenu.Controls.Add(this.tabPage18);
+            this.tcMenu.Controls.Add(this.tpManageAccount);
+            this.tcMenu.Controls.Add(this.tpHome);
+            this.tcMenu.Controls.Add(this.tpManageCustomers);
+            this.tcMenu.Controls.Add(this.tpPointOfSale);
             this.tcMenu.Depth = 0;
             this.tcMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcMenu.Location = new System.Drawing.Point(0, 0);
             this.tcMenu.MouseState = MaterialSkin.MouseState.HOVER;
             this.tcMenu.Name = "tcMenu";
             this.tcMenu.SelectedIndex = 0;
-            this.tcMenu.Size = new System.Drawing.Size(1059, 657);
-            this.tcMenu.TabIndex = 3;
-            // 
-            // tpManageAccount
-            // 
-            this.tpManageAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.tpManageAccount.Controls.Add(this.accountView1);
-            this.tpManageAccount.Location = new System.Drawing.Point(4, 22);
-            this.tpManageAccount.Name = "tpManageAccount";
-            this.tpManageAccount.Padding = new System.Windows.Forms.Padding(3);
-            this.tpManageAccount.Size = new System.Drawing.Size(1051, 631);
-            this.tpManageAccount.TabIndex = 3;
-            this.tpManageAccount.Text = "tabPage1";
-            // 
-            // accountView1
-            // 
-            this.accountView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.accountView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.accountView1.Location = new System.Drawing.Point(3, 3);
-            this.accountView1.Name = "accountView1";
-            this.accountView1.Size = new System.Drawing.Size(1045, 625);
-            this.accountView1.TabIndex = 1;
+            this.tcMenu.Size = new System.Drawing.Size(1078, 665);
+            this.tcMenu.TabIndex = 1;
             // 
             // tpManageProduct
             // 
-            this.tpManageProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.tpManageProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tpManageProduct.Controls.Add(this.productView);
             this.tpManageProduct.Location = new System.Drawing.Point(4, 22);
+            this.tpManageProduct.Margin = new System.Windows.Forms.Padding(0);
             this.tpManageProduct.Name = "tpManageProduct";
-            this.tpManageProduct.Padding = new System.Windows.Forms.Padding(3);
-            this.tpManageProduct.Size = new System.Drawing.Size(1051, 631);
-            this.tpManageProduct.TabIndex = 6;
-            this.tpManageProduct.Text = "tabPage6";
+            this.tpManageProduct.Size = new System.Drawing.Size(1070, 639);
+            this.tpManageProduct.TabIndex = 1;
+            this.tpManageProduct.Text = "Manage Product";
+            this.tpManageProduct.Click += new System.EventHandler(this.tpManageAccount_Click);
             // 
-            // tabPage8
+            // productView
             // 
-            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.tabPage8.Controls.Add(this.loadingView1);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1051, 631);
-            this.tabPage8.TabIndex = 8;
-            this.tabPage8.Text = "tabPage8";
+            this.productView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.productView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.productView.Location = new System.Drawing.Point(0, 0);
+            this.productView.Name = "productView";
+            this.productView.Size = new System.Drawing.Size(1070, 639);
+            this.productView.TabIndex = 9;
+            this.productView.Load += new System.EventHandler(this.productView_Load);
             // 
-            // loadingView1
+            // tpManageAccount
             // 
-            this.loadingView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.loadingView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.loadingView1.Location = new System.Drawing.Point(3, 3);
-            this.loadingView1.Name = "loadingView1";
-            this.loadingView1.Size = new System.Drawing.Size(1045, 625);
-            this.loadingView1.TabIndex = 0;
+            this.tpManageAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tpManageAccount.Controls.Add(this.accountView3);
+            this.tpManageAccount.Location = new System.Drawing.Point(4, 22);
+            this.tpManageAccount.Margin = new System.Windows.Forms.Padding(0);
+            this.tpManageAccount.Name = "tpManageAccount";
+            this.tpManageAccount.Padding = new System.Windows.Forms.Padding(3);
+            this.tpManageAccount.Size = new System.Drawing.Size(1070, 639);
+            this.tpManageAccount.TabIndex = 2;
+            this.tpManageAccount.Text = "Manage Account";
             // 
-            // tabPage9
+            // accountView3
             // 
-            this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(1051, 631);
-            this.tabPage9.TabIndex = 9;
-            this.tabPage9.Text = "tabPage9";
+            this.accountView3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accountView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.accountView3.Location = new System.Drawing.Point(3, 3);
+            this.accountView3.Name = "accountView3";
+            this.accountView3.Size = new System.Drawing.Size(1064, 633);
+            this.accountView3.TabIndex = 0;
             // 
-            // tabPage10
+            // tpHome
             // 
-            this.tabPage10.Location = new System.Drawing.Point(4, 22);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(1051, 631);
-            this.tabPage10.TabIndex = 10;
-            this.tabPage10.Text = "tabPage10";
-            this.tabPage10.UseVisualStyleBackColor = true;
+            this.tpHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tpHome.Location = new System.Drawing.Point(4, 22);
+            this.tpHome.Name = "tpHome";
+            this.tpHome.Padding = new System.Windows.Forms.Padding(3);
+            this.tpHome.Size = new System.Drawing.Size(1070, 639);
+            this.tpHome.TabIndex = 3;
+            this.tpHome.Text = "Home";
             // 
-            // tabPage11
+            // tpManageCustomers
             // 
-            this.tabPage11.Location = new System.Drawing.Point(4, 22);
-            this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(1051, 631);
-            this.tabPage11.TabIndex = 11;
-            this.tabPage11.Text = "tabPage11";
-            this.tabPage11.UseVisualStyleBackColor = true;
+            this.tpManageCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tpManageCustomers.Location = new System.Drawing.Point(4, 22);
+            this.tpManageCustomers.Name = "tpManageCustomers";
+            this.tpManageCustomers.Padding = new System.Windows.Forms.Padding(3);
+            this.tpManageCustomers.Size = new System.Drawing.Size(1070, 639);
+            this.tpManageCustomers.TabIndex = 4;
+            this.tpManageCustomers.Text = "Manage Customers";
             // 
-            // tabPage12
+            // tpPointOfSale
             // 
-            this.tabPage12.Location = new System.Drawing.Point(4, 22);
-            this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(1051, 631);
-            this.tabPage12.TabIndex = 12;
-            this.tabPage12.Text = "tabPage12";
-            this.tabPage12.UseVisualStyleBackColor = true;
-            // 
-            // tabPage13
-            // 
-            this.tabPage13.Location = new System.Drawing.Point(4, 22);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(1051, 631);
-            this.tabPage13.TabIndex = 13;
-            this.tabPage13.Text = "tabPage13";
-            this.tabPage13.UseVisualStyleBackColor = true;
-            // 
-            // tabPage14
-            // 
-            this.tabPage14.Location = new System.Drawing.Point(4, 22);
-            this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(1051, 631);
-            this.tabPage14.TabIndex = 14;
-            this.tabPage14.Text = "tabPage14";
-            this.tabPage14.UseVisualStyleBackColor = true;
-            // 
-            // tabPage15
-            // 
-            this.tabPage15.Location = new System.Drawing.Point(4, 22);
-            this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage15.Size = new System.Drawing.Size(1051, 631);
-            this.tabPage15.TabIndex = 15;
-            this.tabPage15.Text = "tabPage15";
-            this.tabPage15.UseVisualStyleBackColor = true;
-            // 
-            // tabPage16
-            // 
-            this.tabPage16.Location = new System.Drawing.Point(4, 22);
-            this.tabPage16.Name = "tabPage16";
-            this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage16.Size = new System.Drawing.Size(1051, 631);
-            this.tabPage16.TabIndex = 16;
-            this.tabPage16.Text = "tabPage16";
-            this.tabPage16.UseVisualStyleBackColor = true;
-            // 
-            // tabPage17
-            // 
-            this.tabPage17.Location = new System.Drawing.Point(4, 22);
-            this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage17.Size = new System.Drawing.Size(1051, 631);
-            this.tabPage17.TabIndex = 17;
-            this.tabPage17.Text = "tabPage17";
-            this.tabPage17.UseVisualStyleBackColor = true;
-            // 
-            // tabPage18
-            // 
-            this.tabPage18.Location = new System.Drawing.Point(4, 22);
-            this.tabPage18.Name = "tabPage18";
-            this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage18.Size = new System.Drawing.Size(1051, 631);
-            this.tabPage18.TabIndex = 18;
-            this.tabPage18.Text = "tabPage18";
-            this.tabPage18.UseVisualStyleBackColor = true;
+            this.tpPointOfSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tpPointOfSale.Location = new System.Drawing.Point(4, 22);
+            this.tpPointOfSale.Name = "tpPointOfSale";
+            this.tpPointOfSale.Padding = new System.Windows.Forms.Padding(3);
+            this.tpPointOfSale.Size = new System.Drawing.Size(1070, 639);
+            this.tpPointOfSale.TabIndex = 5;
+            this.tpPointOfSale.Text = "POS";
             // 
             // lblModuleTitle
             // 
@@ -420,35 +325,23 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.lblModuleTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblModuleTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
             this.lblModuleTitle.ForeColor = System.Drawing.Color.White;
-            this.lblModuleTitle.Location = new System.Drawing.Point(309, 40);
+            this.lblModuleTitle.Location = new System.Drawing.Point(298, 40);
             this.lblModuleTitle.Margin = new System.Windows.Forms.Padding(0);
             this.lblModuleTitle.Name = "lblModuleTitle";
             this.lblModuleTitle.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.lblModuleTitle.Size = new System.Drawing.Size(1059, 30);
-            this.lblModuleTitle.TabIndex = 14;
+            this.lblModuleTitle.Size = new System.Drawing.Size(1078, 30);
+            this.lblModuleTitle.TabIndex = 12;
             this.lblModuleTitle.Text = "Title";
             this.lblModuleTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlSubNavigation
             // 
-            this.pnlSubNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.pnlSubNavigation.Controls.Add(this.navigationView);
+            this.pnlSubNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.pnlSubNavigation.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSubNavigation.Location = new System.Drawing.Point(107, 40);
-            this.pnlSubNavigation.Margin = new System.Windows.Forms.Padding(0);
             this.pnlSubNavigation.Name = "pnlSubNavigation";
-            this.pnlSubNavigation.Size = new System.Drawing.Size(202, 687);
+            this.pnlSubNavigation.Size = new System.Drawing.Size(191, 695);
             this.pnlSubNavigation.TabIndex = 10;
-            // 
-            // navigationView
-            // 
-            this.navigationView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.navigationView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationView.Location = new System.Drawing.Point(0, 0);
-            this.navigationView.Name = "navigationView";
-            this.navigationView.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.navigationView.Size = new System.Drawing.Size(202, 687);
-            this.navigationView.TabIndex = 0;
             // 
             // pnlSideNavigation
             // 
@@ -464,7 +357,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.pnlSideNavigation.Name = "pnlSideNavigation";
             this.pnlSideNavigation.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.pnlSideNavigation.SelectorBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
-            this.pnlSideNavigation.Size = new System.Drawing.Size(107, 687);
+            this.pnlSideNavigation.Size = new System.Drawing.Size(107, 695);
             this.pnlSideNavigation.TabIndex = 1;
             // 
             // btnHelp
@@ -591,7 +484,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.btnManage.Name = "btnManage";
             this.btnManage.Size = new System.Drawing.Size(102, 101);
             this.btnManage.TabIndex = 3;
-            this.btnManage.Text = "\r\nManage";
+            this.btnManage.Text = "Manage";
             this.btnManage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnManage.ToolTip = "";
             this.btnManage.UseVisualStyleBackColor = false;
@@ -624,7 +517,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.btnPOS.Name = "btnPOS";
             this.btnPOS.Size = new System.Drawing.Size(102, 101);
             this.btnPOS.TabIndex = 2;
-            this.btnPOS.Text = "\r\nPOS";
+            this.btnPOS.Text = "POS";
             this.btnPOS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPOS.ToolTip = "";
             this.btnPOS.UseVisualStyleBackColor = false;
@@ -657,7 +550,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(102, 101);
             this.btnHome.TabIndex = 1;
-            this.btnHome.Text = "\r\nHome";
+            this.btnHome.Text = "Home";
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnHome.ToolTip = "";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -667,7 +560,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1368, 770);
+            this.ClientSize = new System.Drawing.Size(1376, 778);
             this.ControlBox = false;
             this.Controls.Add(this.pnlBody);
             this.Controls.Add(this.lblModuleTitle);
@@ -685,9 +578,8 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).EndInit();
             this.pnlBody.ResumeLayout(false);
             this.tcMenu.ResumeLayout(false);
+            this.tpManageProduct.ResumeLayout(false);
             this.tpManageAccount.ResumeLayout(false);
-            this.tabPage8.ResumeLayout(false);
-            this.pnlSubNavigation.ResumeLayout(false);
             this.pnlSideNavigation.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -710,26 +602,18 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
         private FlatButton btnExit;
         private FlatButton btnMaximize;
         private System.Windows.Forms.Panel panel1;
+        private NavigationView pnlSubNavigation;
         private System.Windows.Forms.Panel pnlBody;
         private System.Windows.Forms.Label lblModuleTitle;
         private MaterialSkin.Controls.MaterialTabControl tcMenu;
-        private System.Windows.Forms.TabPage tpManageAccount;
         private System.Windows.Forms.TabPage tpManageProduct;
-        private System.Windows.Forms.TabPage tabPage8;
-        private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.TabPage tabPage10;
-        private System.Windows.Forms.TabPage tabPage11;
-        private System.Windows.Forms.TabPage tabPage12;
-        private System.Windows.Forms.TabPage tabPage13;
-        private System.Windows.Forms.TabPage tabPage14;
-        private System.Windows.Forms.TabPage tabPage15;
-        private System.Windows.Forms.TabPage tabPage16;
-        private System.Windows.Forms.TabPage tabPage17;
-        private System.Windows.Forms.TabPage tabPage18;
+        private System.Windows.Forms.TabPage tpManageAccount;
+        private Product.ProductView productView;
+        private System.Windows.Forms.TabPage tpHome;
+        private System.Windows.Forms.TabPage tpManageCustomers;
+        private Account.AccountView accountView2;
         private Account.AccountView accountView1;
-        private System.Windows.Forms.Panel pnlSubNavigation;
-        private NavigationView navigationView;
-        private Products.ProductView productView;
-        private Custom.LoadingView loadingView1;
+        private Account.AccountView accountView3;
+        private System.Windows.Forms.TabPage tpPointOfSale;
     }
 }

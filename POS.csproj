@@ -1,0 +1,852 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{BDD07DE4-89E1-45E9-BC66-9A3AE1C4F632}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>POS</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include="packages\EntityFramework.6.1.3\content\App.config.transform" />
+    <None Include="packages\EntityFramework.6.1.3\content\Web.config.transform" />
+    <None Include="packages\EntityFramework.6.1.3\EntityFramework.6.1.3.nupkg" />
+    <None Include="packages\EntityFramework.6.1.3\tools\EntityFramework.psd1" />
+    <None Include="packages\EntityFramework.6.1.3\tools\EntityFramework.psm1" />
+    <None Include="packages\EntityFramework.6.1.3\tools\init.ps1" />
+    <None Include="packages\EntityFramework.6.1.3\tools\install.ps1" />
+    <None Include="packages\MaterialSkin.0.2.1\MaterialSkin.0.2.1.nupkg" />
+    <None Include="packages\repositories.config" />
+    <None Include="Petrol Pump Point Of Sale System\App.config" />
+    <None Include="Petrol Pump Point Of Sale System\Assets\Frameworks\MaterialSkin.0.2.1.nupkg" />
+    <None Include="Petrol Pump Point Of Sale System\bin\Debug\Petrol Pump Point Of Sale System.exe.config" />
+    <None Include="Petrol Pump Point Of Sale System\bin\Debug\Petrol Pump Point Of Sale System.vshost.exe.config" />
+    <None Include="Petrol Pump Point Of Sale System\bin\Debug\Petrol Pump Point Of Sale System.vshost.exe.manifest" />
+    <None Include="Petrol Pump Point Of Sale System\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Petrol Pump Point Of Sale System\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol Pump Point Of Sale System.csproj.GenerateResource.Cache" />
+    <None Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol Pump Point Of Sale System.csprojResolveAssemblyReference.cache" />
+    <None Include="Petrol Pump Point Of Sale System\packages.config" />
+    <None Include="Petrol Pump Point Of Sale System\Petrol Pump Point Of Sale System.csproj.DotSettings" />
+    <None Include="Petrol Pump Point Of Sale System\Properties\Settings.settings" />
+    <None Include="WorkingProject\packages\EntityFramework.6.1.3\content\App.config.transform" />
+    <None Include="WorkingProject\packages\EntityFramework.6.1.3\content\Web.config.transform" />
+    <None Include="WorkingProject\packages\EntityFramework.6.1.3\EntityFramework.6.1.3.nupkg" />
+    <None Include="WorkingProject\packages\EntityFramework.6.1.3\tools\EntityFramework.psd1" />
+    <None Include="WorkingProject\packages\EntityFramework.6.1.3\tools\EntityFramework.psm1" />
+    <None Include="WorkingProject\packages\EntityFramework.6.1.3\tools\init.ps1" />
+    <None Include="WorkingProject\packages\EntityFramework.6.1.3\tools\install.ps1" />
+    <None Include="WorkingProject\packages\MaterialSkin.0.2.1\MaterialSkin.0.2.1.nupkg" />
+    <None Include="WorkingProject\Petrol Pump Point Of Sale System\App.config" />
+    <None Include="WorkingProject\Petrol Pump Point Of Sale System\Assets\Frameworks\MaterialSkin.0.2.1.nupkg" />
+    <None Include="WorkingProject\Petrol Pump Point Of Sale System\bin\Debug\Petrol Pump Point Of Sale System.exe.config" />
+    <None Include="WorkingProject\Petrol Pump Point Of Sale System\bin\Debug\Petrol Pump Point Of Sale System.vshost.exe.config" />
+    <None Include="WorkingProject\Petrol Pump Point Of Sale System\bin\Debug\Petrol Pump Point Of Sale System.vshost.exe.manifest" />
+    <None Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol Pump Point Of Sale System.csproj.GenerateResource.Cache" />
+    <None Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol Pump Point Of Sale System.csprojResolveAssemblyReference.cache" />
+    <None Include="WorkingProject\Petrol Pump Point Of Sale System\packages.config" />
+    <None Include="WorkingProject\Petrol Pump Point Of Sale System\Properties\Settings.settings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll" />
+    <Content Include="packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.xml" />
+    <Content Include="packages\EntityFramework.6.1.3\lib\net40\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll" />
+    <Content Include="packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.xml" />
+    <Content Include="packages\EntityFramework.6.1.3\lib\net45\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.1.3\tools\about_EntityFramework.help.txt" />
+    <Content Include="packages\EntityFramework.6.1.3\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="packages\EntityFramework.6.1.3\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="packages\EntityFramework.6.1.3\tools\migrate.exe" />
+    <Content Include="packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll" />
+    <Content Include="Petrol Pump Point Of Sale System\Assets\1.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Assets\2.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Assets\3.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Assets\4.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Assets\5.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Assets\6.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Assets\7.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Assets\8.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Assets\Info_48.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Assets\Message_48.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Assets\Question_48.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Assets\Update_48.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Assets\Warning_48.png" />
+    <Content Include="Petrol Pump Point Of Sale System\bin\Debug\BunifuDataViz 1.0.1.dll" />
+    <Content Include="Petrol Pump Point Of Sale System\bin\Debug\Bunifu_UI_v1.5.3.dll" />
+    <Content Include="Petrol Pump Point Of Sale System\bin\Debug\EntityFramework.dll" />
+    <Content Include="Petrol Pump Point Of Sale System\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Petrol Pump Point Of Sale System\bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="Petrol Pump Point Of Sale System\bin\Debug\EntityFramework.xml" />
+    <Content Include="Petrol Pump Point Of Sale System\bin\Debug\MaterialSkin.dll" />
+    <Content Include="Petrol Pump Point Of Sale System\bin\Debug\Petrol Pump Point Of Sale System.exe" />
+    <Content Include="Petrol Pump Point Of Sale System\bin\Debug\Petrol Pump Point Of Sale System.pdb" />
+    <Content Include="Petrol Pump Point Of Sale System\bin\Debug\Petrol Pump Point Of Sale System.vshost.exe" />
+    <Content Include="Petrol Pump Point Of Sale System\icons8_Gas_Station.ico" />
+    <Content Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol Pump Point Of Sale System.csproj.FileListAbsolute.txt" />
+    <Content Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol Pump Point Of Sale System.exe" />
+    <Content Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol Pump Point Of Sale System.pdb" />
+    <Content Include="Petrol Pump Point Of Sale System\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Petrol Pump Point Of Sale System\Petrol Pump Point Of Sale System.csproj" />
+    <Content Include="Petrol Pump Point Of Sale System\Properties\Resources\Blue_Gas Station_52px.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Properties\Resources\Gray_Gas Station_52px.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Resources\1.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Resources\2.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Resources\3.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Resources\4.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Resources\5.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Resources\6.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Resources\7.png" />
+    <Content Include="Petrol Pump Point Of Sale System\Resources\8.png" />
+    <Content Include="WorkingProject\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll" />
+    <Content Include="WorkingProject\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll" />
+    <Content Include="WorkingProject\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.xml" />
+    <Content Include="WorkingProject\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.xml" />
+    <Content Include="WorkingProject\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll" />
+    <Content Include="WorkingProject\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll" />
+    <Content Include="WorkingProject\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.xml" />
+    <Content Include="WorkingProject\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.xml" />
+    <Content Include="WorkingProject\packages\EntityFramework.6.1.3\tools\about_EntityFramework.help.txt" />
+    <Content Include="WorkingProject\packages\EntityFramework.6.1.3\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="WorkingProject\packages\EntityFramework.6.1.3\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="WorkingProject\packages\EntityFramework.6.1.3\tools\migrate.exe" />
+    <Content Include="WorkingProject\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System.sln" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\Assets\Info_48.png" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\Assets\Message_48.png" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\Assets\Question_48.png" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\Assets\Update_48.png" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\Assets\Warning_48.png" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\bin\Debug\Bunifu_UI_v1.5.3.dll" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\bin\Debug\EntityFramework.dll" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\bin\Debug\EntityFramework.xml" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\bin\Debug\MaterialSkin.dll" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\bin\Debug\Petrol Pump Point Of Sale System.exe" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\bin\Debug\Petrol Pump Point Of Sale System.pdb" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\bin\Debug\Petrol Pump Point Of Sale System.vshost.exe" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol Pump Point Of Sale System.csproj.FileListAbsolute.txt" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol Pump Point Of Sale System.exe" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol Pump Point Of Sale System.pdb" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\Petrol Pump Point Of Sale System.csproj" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\Properties\Resources\Blue_Gas Station_52px.png" />
+    <Content Include="WorkingProject\Petrol Pump Point Of Sale System\Properties\Resources\Gray_Gas Station_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Petrol Pump Point Of Sale System\Classes\Gradient.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Classes\Helpers\ColorHelper.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Classes\Helpers\EnumHelper.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Classes\Helpers\FontHelper.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Classes\Helpers\TransitionHelper.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Enums\AlertType.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Enums\ColorCombination.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Enums\Command.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Enums\DialogButton.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Enums\DialogButtons.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Enums\DialogType.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Enums\DragState.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Enums\ModuleType.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Enums\PaymentType.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Enums\SalesType.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Enums\StreamType.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Enums\UserType.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Helper\DbHelper.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Helper\EnumHelper.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Helper\FontHelper.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Commons\Helper\MessageHelper.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Components\FlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Components\FlatCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Components\FlatComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Components\FlatGlowButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Components\FlatGradientButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Components\FlatNavigationPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Components\FlatPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Components\FlatPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Components\FlatRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Components\FlatTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Components\FlatTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Controllers\Controller.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Controllers\IController.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Controllers\LoginController.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Core\IModule.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Core\Repositories\ICustomerRepository.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Core\Repositories\IDbRepository.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Core\Repositories\IGenericMethod.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Core\Repositories\IGenericRepository.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Core\Repositories\IProductRepository.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Core\Repositories\IRoleRepository.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Core\Repositories\ISaleRepository.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Core\Repositories\IUserRepository.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Dialogs\FlatMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Dialogs\FlatMessageBox.Designer.cs">
+      <DependentUpon>FlatMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Dialogs\MessageAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Dialogs\MessageAlert.Designer.cs">
+      <DependentUpon>MessageAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Enums\AlertType.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Enums\ColorCombination.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Enums\DialogButton.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Enums\DialogButtons.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Enums\DialogType.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Enums\DragState.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Enums\StreamType.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Extensions\ExtensionMethods.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Interfaces\IColor.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Interfaces\IEllipse.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Interfaces\IFont.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Interfaces\IGradient.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Managers\AppManager.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Migrations\201809230633374_InitialCommit.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Migrations\201809230633374_InitialCommit.Designer.cs">
+      <DependentUpon>201809230633374_InitialCommit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Migrations\201810030604569_UpdateDatabase.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Migrations\201810030604569_UpdateDatabase.Designer.cs">
+      <DependentUpon>201810030604569_UpdateDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\Migrations\Configuration.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\Customer.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\DatabaseContext.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\DatabaseModelExtension.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\Employee.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\Expense.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\Liquidation.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\ModelManager.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\Module.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\Position.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\Product.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\ProductRateHistory.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\Pump.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\PurchaseInvoice.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\PurchaseOrder.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\PurchaseOrderDetails.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\PurchaseReturn.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\Salary.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\Sale.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\SalesInvoice.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\User.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\UserAccess.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\UserRole.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Models\Vendor.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Persistence\Repositories\CustomerRepository.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Persistence\Repositories\DbRepository.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Persistence\Repositories\GenericRepository.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Persistence\Repositories\ProductRepository.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Persistence\Repositories\RoleRepository.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Persistence\Repositories\UserRepository.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Program.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Properties\AssemblyInfo.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Properties\Resources.Designer.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\Properties\Settings.Designer.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\View\Account\AccountCardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Account\AccountCardView.Designer.cs">
+      <DependentUpon>AccountCardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Account\AccountController.Designer.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\View\Account\AccountView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Account\AccountView.Designer.cs">
+      <DependentUpon>AccountView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Commons\Controllers\LoginController.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\View\Commons\DefaultView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Commons\DefaultView.Designer.cs">
+      <DependentUpon>DefaultView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Commons\LoginController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Commons\PumpCardContainerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Commons\PumpCardContainerView.Designer.cs">
+      <DependentUpon>PumpCardContainerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Commons\PumpItemView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Commons\PumpItemView.Designer.cs">
+      <DependentUpon>PumpItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Commons\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Commons\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Customers\CustomerController.Designer.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\View\Customers\CustomerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Customers\CustomerView.Designer.cs">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Custom\CompanyLogoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Custom\CompanyLogoView.Designer.cs">
+      <DependentUpon>CompanyLogoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Custom\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Custom\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Custom\PaginatorController.Designer.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\View\Custom\PaginatorView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Custom\PaginatorView.Designer.cs">
+      <DependentUpon>PaginatorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Custom\PreloaderView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Custom\PreloaderView.Designer.cs">
+      <DependentUpon>PreloaderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Custom\PreLoading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Custom\PreLoading.Designer.cs">
+      <DependentUpon>PreLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\IView.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\View\Main\MainController.Designer.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\View\Main\MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Main\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Main\Modules.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\View\Main\NavigationController.Designer.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\View\Main\NavigationView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Main\NavigationView.Designer.cs">
+      <DependentUpon>NavigationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\POS\PointOfSaleView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\POS\PointOfSaleView.Designer.cs">
+      <DependentUpon>PointOfSaleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\POS\PumpCardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\POS\PumpCardView.Designer.cs">
+      <DependentUpon>PumpCardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Products\ProductController.Designer.cs" />
+    <Compile Include="Petrol Pump Point Of Sale System\View\Product\ProductView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\Product\ProductView.Designer.cs">
+      <DependentUpon>ProductView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\SaleItemView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Petrol Pump Point Of Sale System\View\SaleItemView.Designer.cs">
+      <DependentUpon>SaleItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Classes\Gradient.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Classes\Helpers\ColorHelper.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Classes\Helpers\EnumHelper.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Classes\Helpers\FontHelper.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Classes\Helpers\TransitionHelper.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Enums\AlertType.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Enums\ColorCombination.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Enums\Command.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Enums\DialogButton.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Enums\DialogButtons.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Enums\DialogType.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Enums\DragState.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Enums\ModuleType.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Enums\PaymentType.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Enums\SalesType.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Enums\StreamType.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Enums\UserType.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Helper\DbHelper.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Helper\EnumHelper.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Helper\FontHelper.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Helper\MessageHelper.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Components\FlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Components\FlatCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Components\FlatComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Components\FlatGlowButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Components\FlatGradientButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Components\FlatNavigationPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Components\FlatPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Components\FlatPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Components\FlatRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Components\FlatTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Components\FlatTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Controllers\Controller.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Controllers\IController.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Controllers\LoginController.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Core\IModule.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Core\Repositories\IDbRepository.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Core\Repositories\IGenericMethod.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Core\Repositories\IGenericRepository.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Core\Repositories\IProductRepository.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Core\Repositories\IRoleRepository.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Core\Repositories\ISaleRepository.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Core\Repositories\IUserRepository.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Dialogs\FlatMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Dialogs\FlatMessageBox.Designer.cs">
+      <DependentUpon>FlatMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Dialogs\MessageAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Dialogs\MessageAlert.Designer.cs">
+      <DependentUpon>MessageAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Enums\AlertType.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Enums\ColorCombination.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Enums\DialogButton.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Enums\DialogButtons.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Enums\DialogType.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Enums\DragState.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Enums\StreamType.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Extensions\ExtensionMethods.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Interfaces\IColor.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Interfaces\IEllipse.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Interfaces\IFont.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Interfaces\IGradient.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Managers\AppManager.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Migrations\201809230633374_InitialCommit.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Migrations\201809230633374_InitialCommit.Designer.cs">
+      <DependentUpon>201809230633374_InitialCommit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Migrations\Configuration.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\Customer.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\DatabaseContext.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\Employee.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\Expense.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\Liquidation.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\ModelManager.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\Module.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\Position.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\Product.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\ProductRateHistory.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\Pump.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\PurchaseInvoice.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\PurchaseOrder.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\PurchaseOrderDetails.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\PurchaseReturn.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\Salary.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\Sale.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\SalesInvoice.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\User.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\UserAccess.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\UserRole.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Models\Vendor.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Persistence\Repositories\DbRepository.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Persistence\Repositories\GenericRepository.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Persistence\Repositories\ProductRepository.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Persistence\Repositories\RoleRepository.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Persistence\Repositories\UserRepository.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Program.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Properties\Resources.Designer.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\Properties\Settings.Designer.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Account\AccountCardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Account\AccountCardView.Designer.cs">
+      <DependentUpon>AccountCardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Account\AccountView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Account\AccountView.Designer.cs">
+      <DependentUpon>AccountView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Commons\PumpCardContainerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Commons\PumpCardContainerView.Designer.cs">
+      <DependentUpon>PumpCardContainerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Commons\PumpItemView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Commons\PumpItemView.Designer.cs">
+      <DependentUpon>PumpItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Commons\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Commons\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\CompanyLogoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\CompanyLogoView.Designer.cs">
+      <DependentUpon>CompanyLogoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\PaginatorController.Designer.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\PaginatorView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\PaginatorView.Designer.cs">
+      <DependentUpon>PaginatorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\PreloaderView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\PreloaderView.Designer.cs">
+      <DependentUpon>PreloaderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\PreLoading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\PreLoading.Designer.cs">
+      <DependentUpon>PreLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\IView.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Main\MainController.Designer.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Main\MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Main\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Main\Modules.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Main\NavigationController.Designer.cs" />
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Main\NavigationView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Main\NavigationView.Designer.cs">
+      <DependentUpon>NavigationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\POS\PointOfSaleView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\POS\PointOfSaleView.Designer.cs">
+      <DependentUpon>PointOfSaleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\POS\PumpCardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\POS\PumpCardView.Designer.cs">
+      <DependentUpon>PumpCardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Product\ProductView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\Product\ProductView.Designer.cs">
+      <DependentUpon>ProductView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\SaleItemView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingProject\Petrol Pump Point Of Sale System\View\SaleItemView.Designer.cs">
+      <DependentUpon>SaleItemView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\Dialogs\FlatMessageBox.resx">
+      <DependentUpon>FlatMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\Dialogs\MessageAlert.resx">
+      <DependentUpon>MessageAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\Migrations\201809230633374_InitialCommit.resx">
+      <DependentUpon>201809230633374_InitialCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\Migrations\201810030604569_UpdateDatabase.resx">
+      <DependentUpon>201810030604569_UpdateDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.Dialogs.FlatMessageBox.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.Dialogs.MessageAlert.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.Migrations.InitialCommit.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.Properties.Resources.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Account.AccountCardView.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Account.AccountView.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Commons.PumpCardContainerView.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Commons.PumpCardView.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Commons.PumpItemView.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Commons.SplashScreenView.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Custom.CompanyLogoView.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Custom.LoginView.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Custom.PaginatorView.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Custom.PreloaderView.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Custom.PreLoading.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Main.MainView.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Main.NavigationView.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.POS.PointOfSaleView.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Product.ProductView.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.SaleItemView.resources" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\Properties\Resources.resx" />
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\Account\AccountCardView.resx">
+      <DependentUpon>AccountCardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\Account\AccountView.resx">
+      <DependentUpon>AccountView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\Commons\DefaultView.resx">
+      <DependentUpon>DefaultView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\Commons\PumpCardContainerView.resx">
+      <DependentUpon>PumpCardContainerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\Commons\PumpItemView.resx">
+      <DependentUpon>PumpItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\Commons\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\Customers\CustomerView.resx">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\Custom\CompanyLogoView.resx">
+      <DependentUpon>CompanyLogoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\Custom\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\Custom\PaginatorView.resx">
+      <DependentUpon>PaginatorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\Custom\PreloaderView.resx">
+      <DependentUpon>PreloaderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\Custom\PreLoading.resx">
+      <DependentUpon>PreLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\Main\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\Main\NavigationView.resx">
+      <DependentUpon>NavigationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\POS\PointOfSaleView.resx">
+      <DependentUpon>PointOfSaleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\POS\PumpCardView.resx">
+      <DependentUpon>PumpCardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\Product\ProductView.resx">
+      <DependentUpon>ProductView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Petrol Pump Point Of Sale System\View\SaleItemView.resx">
+      <DependentUpon>SaleItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\Dialogs\FlatMessageBox.resx">
+      <DependentUpon>FlatMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\Dialogs\MessageAlert.resx">
+      <DependentUpon>MessageAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\Migrations\201809230633374_InitialCommit.resx">
+      <DependentUpon>201809230633374_InitialCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.Dialogs.FlatMessageBox.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.Dialogs.MessageAlert.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.Migrations.InitialCommit.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.Properties.Resources.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Account.AccountCardView.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Account.AccountView.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Commons.PumpCardContainerView.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Commons.PumpCardView.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Commons.PumpItemView.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Commons.SplashScreenView.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Custom.CompanyLogoView.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Custom.LoginView.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Custom.PaginatorView.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Custom.PreloaderView.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Custom.PreLoading.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Main.MainView.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Main.NavigationView.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.POS.PointOfSaleView.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.Product.ProductView.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\obj\Debug\Petrol_Pump_Point_Of_Sale_System.View.SaleItemView.resources" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\Properties\Resources.resx" />
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\Account\AccountCardView.resx">
+      <DependentUpon>AccountCardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\Account\AccountView.resx">
+      <DependentUpon>AccountView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\Commons\PumpCardContainerView.resx">
+      <DependentUpon>PumpCardContainerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\Commons\PumpItemView.resx">
+      <DependentUpon>PumpItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\Commons\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\CompanyLogoView.resx">
+      <DependentUpon>CompanyLogoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\PaginatorView.resx">
+      <DependentUpon>PaginatorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\PreloaderView.resx">
+      <DependentUpon>PreloaderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\Custom\PreLoading.resx">
+      <DependentUpon>PreLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\Main\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\Main\NavigationView.resx">
+      <DependentUpon>NavigationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\POS\PointOfSaleView.resx">
+      <DependentUpon>PointOfSaleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\POS\PumpCardView.resx">
+      <DependentUpon>PumpCardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\Product\ProductView.resx">
+      <DependentUpon>ProductView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingProject\Petrol Pump Point Of Sale System\View\SaleItemView.resx">
+      <DependentUpon>SaleItemView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\" />
+    <Folder Include=".svn\" />
+    <Folder Include=".vs\" />
+    <Folder Include="Petrol Pump Point Of Sale System\bin\Release\" />
+    <Folder Include="Petrol Pump Point Of Sale System\Classes\Controls\" />
+    <Folder Include="Petrol Pump Point Of Sale System\Commons\Extensions\" />
+    <Folder Include="Petrol Pump Point Of Sale System\Monostates\" />
+    <Folder Include="Petrol Pump Point Of Sale System\Persistence\Configurations\" />
+    <Folder Include="WorkingProject\Petrol Pump Point Of Sale System\Classes\Controls\" />
+    <Folder Include="WorkingProject\Petrol Pump Point Of Sale System\Commons\Extensions\" />
+    <Folder Include="WorkingProject\Petrol Pump Point Of Sale System\Monostates\" />
+    <Folder Include="WorkingProject\Petrol Pump Point Of Sale System\Persistence\Configurations\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

@@ -15,7 +15,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
         public MainView()
         {
             InitializeComponent();
-             Initialize();
+           Initialize();
         }
 
         private void flatButton3_Click(object sender, EventArgs e)
@@ -25,18 +25,17 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            
+            Home();
         }
 
         private void btnPOS_Click(object sender, EventArgs e)
         {
             POS();
         }
-
+        
         private void MainView_Load(object sender, EventArgs e)
         {
-            tcMenu.SelectedTab = tabPage8;
-         
+
         }
 
         private void btnManage_Click(object sender, EventArgs e)
@@ -44,10 +43,14 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             Manage();
         }
 
-        private void btnAccount_Click(object sender, EventArgs e)
+        private void tpManageAccount_Click(object sender, EventArgs e)
         {
-            //SetSelectedButtonProperties(btnAccount);
+
+        }
+
+        private void productView_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
-

@@ -176,5 +176,10 @@ namespace Petrol_Pump_Point_Of_Sale_System.Dialogs
         }
 
         #endregion
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

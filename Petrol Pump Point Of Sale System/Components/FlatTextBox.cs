@@ -13,6 +13,7 @@ namespace ITA_UI
     public class FlatTextBox : TextBox, IColorOnEnter, IColorOnLeave, IFontOnEnter, IFontOnLeave
     {
         #region Properties
+        
 
         [Category("Custom")]
         public string PlaceHolder
@@ -22,10 +23,26 @@ namespace ITA_UI
             {
                 _placeHolder = value;
 
-                SendMessage(Handle, EM_SETCUEBANNER, 0, value);
+                SendMessage(Handle, EmSetcuebanner, 0, value);
             }
         }
 
+        [Category("Custom")]
+        public string RequiredErrorMessage { get; set; }
+
+        [Category("Custom")]
+        public bool Required
+        {
+            get
+            {
+                return _required;
+            }
+            set { _required = value; }
+        }
+
+ 
+
+        [Category("Custom")]
         #endregion
 
         #region Initialization
@@ -34,7 +51,7 @@ namespace ITA_UI
         private Color _foreColorOnLeave;
         private Font _fontOnLeave;
         private string _placeHolder;
-
+        private bool _required = false;
         [DllImport("user32")]
         private static extern IntPtr GetWindowDC(IntPtr hwnd);
 
@@ -43,12 +60,13 @@ namespace ITA_UI
             [MarshalAs(UnmanagedType.LPWStr)] string lParam);
 
 
-        private const int WM_NCPAINT = 0x85;
-        private const int EM_SETCUEBANNER = 0x1501;
+        private const int WmNcpaint = 0x85;
+        private const int EmSetcuebanner = 0x1501;
 
 
         public FlatTextBox()
         {
+         
             InitDefaultProperties();
 
             InitCustomProperties();
@@ -74,15 +92,23 @@ namespace ITA_UI
             FontOnLeave = FontHelper.RegularFont;
 
             InputValidation = Validation.None;
+            Required = true;
+            BackColorOnRequired = ColorHelper.FlatRedLight;
+            RequiredForeColorOnLeave = ColorHelper.FlatBlackNormal;
+            BorderColorOnRequired = ColorHelper.FlatRedDark;
+            RequiredErrorMessage = this.Name +   "is Required";
+            SendMessage(Handle, EmSetcuebanner, 0, PlaceHolder);
+            RequiredFontStyle = FontHelper.LightFont;
+            RequiredForeColorOnValidate = ColorHelper.FlatWhiteNormal;
+          
 
-            SendMessage(Handle, EM_SETCUEBANNER, 0, PlaceHolder);
         }
 
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
 
-            if (m.Msg == WM_NCPAINT && Focused)
+            if (m.Msg == WmNcpaint && Focused)
             {
                 var dc = GetWindowDC(Handle);
                 using (var g = Graphics.FromHdc(dc))
@@ -102,8 +128,13 @@ namespace ITA_UI
         protected override void OnLeave(EventArgs e)
         {
             base.OnLeave(e);
-
+           
             SetPropertiesOnLeave();
+
+            if (Required && Text == "")
+            {
+                ValidateOnLeave();
+            }
         }
 
         private void SetPropertiesOnEnter()
@@ -111,6 +142,7 @@ namespace ITA_UI
             SetBackColorOnEnter();
             SetForeColorOnEnter();
             SetFontOnEnter();
+            
         }
 
         private void SetPropertiesOnLeave()
@@ -118,6 +150,7 @@ namespace ITA_UI
             SetBackColorOnLeave();
             SetForeColorOnLeave();
             SetFontOnLeave();
+
         }
 
         #endregion
@@ -128,9 +161,49 @@ namespace ITA_UI
 
         [Category("Custom")] public Color BackColorOnEnter { get; set; }
 
+        [Category("Custom")] public Color BackColorOnRequired { get; set; }
+        [Category("Custom")] public Color RequiredForeColorOnLeave { get; set; }
+        [Category("Custom")] public Color RequiredForeColorOnValidate { get; set; }
+        [Category("Custom")] public Font RequiredFontStyle { get; set; }
+
+        [Category("Custom")] public Color BorderColorOnRequired { get; set; }
+
+        public void SetRequiredFontStyle()
+        {
+            Font = RequiredFontStyle;
+        }
+        public void SetRequiredForeColorOnValidate()
+        {
+
+            ForeColor = RequiredForeColorOnValidate;
+        }
+
         public void SetBackColorOnEnter()
         {
             BackColor = BackColorOnEnter;
+        }
+
+        public void SetRequiredBackColor()
+        {
+            BackColor = BackColorOnRequired;
+        }
+        public void SetRequiredProperty()
+        {
+            
+                BackColor = BackColorOnRequired;
+                SendMessage(Handle, EmSetcuebanner, 0, RequiredErrorMessage);
+                BorderColor = BorderColorOnRequired;
+                ForeColor = RequiredForeColorOnLeave;
+                SetRequiredFontStyle();
+        }
+
+      
+        
+
+        public void ValidateOnLeave()
+        {
+            SetRequiredProperty();
+            SetRequiredForeColorOnValidate();
         }
 
         [Category("Custom")] public Color ForeColorOnEnter { get; set; }

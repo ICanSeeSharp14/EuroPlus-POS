@@ -13,6 +13,11 @@ namespace Petrol_Pump_Point_Of_Sale_System.Commons.Helper
             return "input required.";
         }
 
+        public static string NoSelectedRecord()
+        {
+            return "No selected record found. Select record first.";
+        }
+
         public static string InvalidTextRange(int minimum, int maximum)
         {
             return @"input must have a range between {minimum} to {maximum} characters.";

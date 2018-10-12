@@ -32,15 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>icons8_Gas_Station.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
-    <NoWin32Manifest>true</NoWin32Manifest>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BunifuDataViz 1.0.1">
       <HintPath>..\Assets\BunifuDataViz 1.0.1.dll</HintPath>
@@ -49,12 +40,12 @@
       <HintPath>..\Assets\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
@@ -78,6 +69,7 @@
     <Compile Include="Classes\Helpers\EnumHelper.cs" />
     <Compile Include="Classes\Helpers\FontHelper.cs" />
     <Compile Include="Classes\Helpers\TransitionHelper.cs" />
+    <Compile Include="Commons\Helper\ControlHelper.cs" />
     <Compile Include="Components\FlatButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -111,6 +103,7 @@
     <Compile Include="Components\FlatTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Core\Filter.cs" />
     <Compile Include="Dialogs\FlatMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,14 +155,11 @@
     <Compile Include="Dialogs\MessageAlert.Designer.cs">
       <DependentUpon>MessageAlert.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201810030604569_UpdateDatabase.cs" />
-    <Compile Include="Migrations\201810030604569_UpdateDatabase.Designer.cs">
-      <DependentUpon>201810030604569_UpdateDatabase.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Expense.cs" />
+    <Compile Include="Models\IDatabaseContext.cs" />
     <Compile Include="Models\Liquidation.cs" />
     <Compile Include="Models\ModelManager.cs" />
     <Compile Include="Models\Module.cs" />
@@ -216,29 +206,24 @@
     <Compile Include="View\Account\AccountView.Designer.cs">
       <DependentUpon>AccountView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Commons\DefaultView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Commons\DefaultView.Designer.cs">
-      <DependentUpon>DefaultView.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Commons\PumpCardContainerView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\Commons\PumpCardContainerView.Designer.cs">
       <DependentUpon>PumpCardContainerView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Custom\LoadingView.cs">
+    <Compile Include="View\Custom\SearchCommandController.Designer.cs" />
+    <Compile Include="View\Custom\SearchCommandView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Custom\LoadingView.Designer.cs">
-      <DependentUpon>LoadingView.cs</DependentUpon>
+    <Compile Include="View\Custom\SearchCommandView.Designer.cs">
+      <DependentUpon>SearchCommandView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Products\ProductController.Designer.cs" />
-    <Compile Include="View\Products\ProductView.cs">
+    <Compile Include="View\Product\ProductController.Designer.cs" />
+    <Compile Include="View\Product\ProductView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Products\ProductView.Designer.cs">
+    <Compile Include="View\Product\ProductView.Designer.cs">
       <DependentUpon>ProductView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\POS\PumpCardView.cs">
@@ -330,17 +315,11 @@
     <EmbeddedResource Include="Migrations\201809230633374_InitialCommit.resx">
       <DependentUpon>201809230633374_InitialCommit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810030604569_UpdateDatabase.resx">
-      <DependentUpon>201810030604569_UpdateDatabase.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Account\AccountCardView.resx">
       <DependentUpon>AccountCardView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Account\AccountView.resx">
       <DependentUpon>AccountView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Commons\DefaultView.resx">
-      <DependentUpon>DefaultView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Commons\PumpCardContainerView.resx">
       <DependentUpon>PumpCardContainerView.cs</DependentUpon>
@@ -351,11 +330,11 @@
     <EmbeddedResource Include="View\Commons\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Custom\SearchCommandView.resx">
+      <DependentUpon>SearchCommandView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Custom\CompanyLogoView.resx">
       <DependentUpon>CompanyLogoView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Custom\LoadingView.resx">
-      <DependentUpon>LoadingView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Custom\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
@@ -374,7 +353,7 @@
     <EmbeddedResource Include="View\Custom\PreLoading.resx">
       <DependentUpon>PreLoading.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Products\ProductView.resx">
+    <EmbeddedResource Include="View\Product\ProductView.resx">
       <DependentUpon>ProductView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Main\MainView.resx">
@@ -405,9 +384,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Classes\Controls\" />
@@ -417,23 +394,11 @@
     <Folder Include="Properties\Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\1.png" />
-    <Content Include="Assets\2.png" />
-    <Content Include="Assets\3.png" />
-    <Content Include="Assets\4.png" />
-    <Content Include="Assets\5.png" />
-    <Content Include="Assets\6.png" />
-    <Content Include="Assets\7.png" />
-    <Content Include="Assets\8.png" />
-    <Content Include="icons8_Gas_Station.ico" />
-    <None Include="Resources\8.png" />
-    <None Include="Resources\7.png" />
-    <None Include="Resources\6.png" />
-    <None Include="Resources\5.png" />
-    <None Include="Resources\4.png" />
-    <None Include="Resources\3.png" />
-    <None Include="Resources\2.png" />
-    <None Include="Resources\1.png" />
+    <Content Include="Assets\Info_48.png" />
+    <Content Include="Assets\Message_48.png" />
+    <Content Include="Assets\Question_48.png" />
+    <Content Include="Assets\Update_48.png" />
+    <Content Include="Assets\Warning_48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

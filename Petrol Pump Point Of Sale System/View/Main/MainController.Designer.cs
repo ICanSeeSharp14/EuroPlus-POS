@@ -1,80 +1,49 @@
-﻿using System;
-using Petrol_Pump_Point_Of_Sale_System.Models;
+﻿using Petrol_Pump_Point_Of_Sale_System.Models;
 
 using Petrol_Pump_Point_Of_Sale_System.View.Account;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Petrol_Pump_Point_Of_Sale_System.Classes.Helpers;
 using Petrol_Pump_Point_Of_Sale_System.Commons.Enums;
-using Petrol_Pump_Point_Of_Sale_System.Components;
 using Petrol_Pump_Point_Of_Sale_System.Core;
 using Petrol_Pump_Point_Of_Sale_System.Dialogs;
 using Petrol_Pump_Point_Of_Sale_System.Extensions;
 using Petrol_Pump_Point_Of_Sale_System.View.POS;
-using Petrol_Pump_Point_Of_Sale_System.View.Products;
+using Petrol_Pump_Point_Of_Sale_System.View.Product;
 
 namespace Petrol_Pump_Point_Of_Sale_System.View.Main
 {
     public partial class MainView
     {
         private bool _isLogout = false;
-        private Modules _selectedModule = new Modules();
 
-       
-        private ProductView ShowProductView() 
-           
+        private void Initialize()
         {
-            return new ProductView();
-        }
-     
-        private  void Initialize()
-        {
-            var product = new ProductView();
-            tpManageProduct.Controls.Add(product);
-            product.Dock = DockStyle.Fill;
-
-        }
-        public string SelectedTitle
-        {
-            get { return _selectedModule.Title; }
+            HomePage();
         }
 
-        public TabPage SelectedTabPage
-        {
-            get { return _selectedModule.SelectTab; }
-        }
-        private void SetSelectedButtonProperties(FlatButton button)
-        {
-            button.BackColorOnDefault = ColorHelper.FlatYellowNormal;
-            button.BackColorOnHover = ColorHelper.FlatYellowNormal;
-            button.BackColorOnClick = ColorHelper.FlatYellowNormal; 
-
-            button.ForeColorOnDefault = ColorHelper.White;
-            button.ForeColorOnHover = ColorHelper.White;
-            button.ForeColorOnClick = ColorHelper.White;
-        }
+      
         private List<Modules> GetManageModules()
         {
             return new List<Modules>
             {
-                new Modules { Title = "Consumables", SelectTab = tabPage10},
-                new Modules { Title = "Accounts", SelectTab =  tpManageAccount },
-                new Modules { Title = "Products", SelectTab = tpManageProduct },
+                new Modules { Title = "Consumables", Instance =  new AccountView() , Tab = tpHome},
+                new Modules { Title = "Stocks", Instance = new AccountView(), Tab = tpHome},
+                new Modules { Title = "Accounts", Instance =  new AccountView() , Tab = tpManageAccount},
+                new Modules { Title = "Products", Tab = tpManageProduct},
+                new Modules { Title = "Customers", Instance =  new AccountView() , Tab = tpManageCustomers},
+                
             };
         }
 
-        //private static List<Modules> GetReportModules()
-        //{
-        //    return new List<Modules>
-        //    {
-        //        new Modules { Title = "Sales", Instance =  new AccountView() },
-        //        new Modules { Title = "Inventory", Instance = new AccountView() },
-        //        new Modules { Title = "Logs", Instance =  new AccountView() },
-        //    };
-        //}
+        private List<Modules> GetReportModules()
+        {
+            return new List<Modules>
+            {
+                new Modules { Title = "Sales", Instance =  new AccountView() },
+                new Modules { Title = "Inventory", Instance = new AccountView() },
+                new Modules { Title = "Logs", Instance =  new AccountView() },
+            };
+        }
       
         private void GetCurrentDateTime()
         {
@@ -99,31 +68,21 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
 
         private void Manage()
         {
+            SetTitle("Manage");
             CreateNavigationContents(GetManageModules());
         }
 
-        //private void SetSubNavigationButtonProperties()
-        //{
-        //    foreach (var button in tcSubNavigation.Controls)
-        //    {
-        //        if (button is FlatButton)
-        //        {
-        //            var btn = (FlatButton) button;
-        //            btn.Margin = new Padding(0, 0, 4, 2);
-        //            btn.Height = 50;
-        //            btn.Width = 196;
-        //            btn.TabStop = false;
-        //        }
-        //    }
-        
-        //}
         private void Reports()
         {
+            SetTitle("POS");
+
             CreateNavigationContents(null);
         }
 
         private void Settings()
         {
+            SetTitle("Settings");
+
             CreateNavigationContents(null);
         }
 
@@ -133,17 +92,26 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
 
         }
 
+        private void HomePage()
+        {
+            SetTitle("Dash Board");
+
+            tcMenu.SelectTab(tpHome);
+            CreateNavigationContents(null);
+
+        }
         private void POS()
         {
             SetTitle("Point Of Sales");
+            tcMenu.SelectTab(tpPointOfSale);
 
             ClearContents();
 
-            var pos = new PointOfSaleView();
+            //var pos = new PointOfSaleView();
 
-            pnlBody.Controls.Add(pos);
+            //pnlBody.Controls.Add(pos);
 
-            pos.Dock = DockStyle.Fill;
+            //pos.Dock = DockStyle.Fill;
 
             CreateNavigationContents(null);
         }
@@ -157,23 +125,20 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
 
         #region Modules
 
-        private void CreateManageNavigationContent(List<Modules> modules)
-        {
-            pnlSubNavigation.Show();
-           
-        }
         private void CreateNavigationContents(List<Modules> modules)
         {
-
             var list = modules;
             if (list == null)
             {
                 pnlSubNavigation.Hide();
                 return;
             }
+
             pnlSubNavigation.Show();
-            navigationView.Initialize(modules);
-            navigationView.NavigationButtonClicked += (s, e) =>
+
+            pnlSubNavigation.Initialize(modules);
+
+            pnlSubNavigation.NavigationButtonClicked += (s, e) =>
             {
                 ShowModule();
             };
@@ -182,27 +147,34 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
        
         private void ShowModule()
         {
+            ClearContents();
+            SetSelectedTab();
             SetModuleTitle();
+
             CreateModuleInstance();
         }
 
         private void CreateModuleInstance()
         {
-            var module = navigationView.SelectedTabPage;
+           // var module = pnlSubNavigation.SelectedModule.Instance();
 
-            tcMenu.SelectTab(module);
+           //// pnlBody.Controls.Add(module);
 
-            //module.Dock = System.Windows.Forms.DockStyle.Fill;
+           // module.Dock = System.Windows.Forms.DockStyle.Fill;
         }
 
+        private void SetSelectedTab()
+        {
+            tcMenu.SelectedTab = pnlSubNavigation.SelectedTabPage;
+        }
         private void SetModuleTitle()
         {
-            lblModuleTitle.Text = navigationView.SelectedTitle;
+            lblModuleTitle.Text = pnlSubNavigation.SelectedTitle;
         }
 
         private void ClearContents()
         {
-            //pnlBody.Controls.Clear();
+           //pnlBody.Controls.Clear();
         }
 
         #endregion

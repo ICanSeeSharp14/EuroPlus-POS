@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Petrol_Pump_Point_Of_Sale_System.Core;
+
+namespace Petrol_Pump_Point_Of_Sale_System.View.Main
+{
+    public class Modules
+    {
+        public string Title { get; set; }
+        public UserControl Instance { get; set; }
+
+    }
+}

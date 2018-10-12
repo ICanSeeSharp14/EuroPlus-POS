@@ -1,0 +1,187 @@
+﻿namespace Petrol_Pump_Point_Of_Sale_System.View.Account
+{
+    partial class AccountView
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.pnlAccountDetails = new System.Windows.Forms.Panel();
+            this.pnlAccountList = new System.Windows.Forms.Panel();
+            this.paginatorView1 = new Petrol_Pump_Point_Of_Sale_System.View.Custom.PaginatorView();
+            
+            this.flatTable1 = new ITSpecialProject.Components.FlatTable();
+            this.pnl = new System.Windows.Forms.Panel();
+            this.pnlAccountDetails.SuspendLayout();
+            this.pnlAccountList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.flatTable1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pnlAccountDetails
+            // 
+            this.pnlAccountDetails.Controls.Add(this.pnl);
+            this.pnlAccountDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAccountDetails.Location = new System.Drawing.Point(518, 0);
+            this.pnlAccountDetails.Name = "pnlAccountDetails";
+            this.pnlAccountDetails.Padding = new System.Windows.Forms.Padding(0, 4, 5, 4);
+            this.pnlAccountDetails.Size = new System.Drawing.Size(555, 712);
+            this.pnlAccountDetails.TabIndex = 1;
+            // 
+            // pnlAccountList
+            // 
+            this.pnlAccountList.Controls.Add(this.paginatorView1);
+            this.pnlAccountList.Controls.Add(this.flatTextBox1);
+            this.pnlAccountList.Controls.Add(this.flatTable1);
+            this.pnlAccountList.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlAccountList.Location = new System.Drawing.Point(0, 0);
+            this.pnlAccountList.Name = "pnlAccountList";
+            this.pnlAccountList.Padding = new System.Windows.Forms.Padding(5);
+            this.pnlAccountList.Size = new System.Drawing.Size(518, 712);
+            this.pnlAccountList.TabIndex = 0;
+            // 
+            // paginatorView1
+            // 
+            this.paginatorView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.paginatorView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.paginatorView1.HasRecordCount = false;
+            this.paginatorView1.HasRefresh = true;
+            this.paginatorView1.Location = new System.Drawing.Point(5, 657);
+            this.paginatorView1.Name = "paginatorView1";
+            this.paginatorView1.Size = new System.Drawing.Size(508, 50);
+            this.paginatorView1.TabIndex = 2;
+            // 
+            // flatTextBox1
+            // 
+        
+            // flatTable1
+            // 
+            this.flatTable1.AllowUserToAddRows = false;
+            this.flatTable1.AllowUserToDeleteRows = false;
+            this.flatTable1.AllowUserToResizeColumns = false;
+            this.flatTable1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.flatTable1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.flatTable1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.flatTable1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.flatTable1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.flatTable1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.flatTable1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.flatTable1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.flatTable1.ColumnHeadersHeight = 30;
+            this.flatTable1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.flatTable1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.flatTable1.EllipseOnDefault = 0;
+            this.flatTable1.EnableHeadersVisualStyles = false;
+            this.flatTable1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.flatTable1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.flatTable1.Location = new System.Drawing.Point(9, 59);
+            this.flatTable1.Margin = new System.Windows.Forms.Padding(0);
+            this.flatTable1.MultiSelect = false;
+            this.flatTable1.Name = "flatTable1";
+            this.flatTable1.ReadOnly = true;
+            this.flatTable1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.flatTable1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.flatTable1.RowHeadersWidth = 10;
+            this.flatTable1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.flatTable1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.flatTable1.RowTemplate.Height = 40;
+            this.flatTable1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.flatTable1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.flatTable1.ShowCellErrors = false;
+            this.flatTable1.ShowCellToolTips = false;
+            this.flatTable1.ShowEditingIcon = false;
+            this.flatTable1.ShowRowErrors = false;
+            this.flatTable1.Size = new System.Drawing.Size(489, 592);
+            this.flatTable1.TabIndex = 1;
+            // 
+            // pnl
+            // 
+            this.pnl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl.Location = new System.Drawing.Point(0, 4);
+            this.pnl.Name = "pnl";
+            this.pnl.Size = new System.Drawing.Size(550, 57);
+            this.pnl.TabIndex = 0;
+            // 
+            // AccountView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.pnlAccountDetails);
+            this.Controls.Add(this.pnlAccountList);
+            this.Name = "AccountView";
+            this.Size = new System.Drawing.Size(1073, 712);
+            this.pnlAccountDetails.ResumeLayout(false);
+            this.pnlAccountList.ResumeLayout(false);
+            this.pnlAccountList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.flatTable1)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel pnlAccountDetails;
+        private System.Windows.Forms.Panel pnlAccountList;
+        private Custom.PaginatorView paginatorView1;
+        private ITA_UI.FlatTextBox flatTextBox1;
+        private ITSpecialProject.Components.FlatTable flatTable1;
+        private System.Windows.Forms.Panel pnl;
+    }
+}

@@ -1,5 +1,4 @@
 ﻿using Petrol_Pump_Point_Of_Sale_System.Core.Repositories;
-using Petrol_Pump_Point_Of_Sale_System.Entities;
 using System.Threading.Tasks;
 using Petrol_Pump_Point_Of_Sale_System.Models;
 
@@ -9,9 +8,9 @@ namespace Petrol_Pump_Point_Of_Sale_System.Persistence.Repositories
     {
         private readonly DatabaseContext _context;
 
-        public IRoleRepository Roles { get; set; }
-        public IProductRepository Products { get; set; }
-        public IUserRepository Users { get; set; }
+        public IRoleRepository Roles { get;  }
+        public IProductRepository Products { get; }
+        public IUserRepository Users { get;  }
         public DbRepository(DatabaseContext context)
         {
             _context = context;
@@ -20,7 +19,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.Persistence.Repositories
             Products = new ProductRepository(_context);
 
         }
-   
+
         public void Dispose()
         {
             _context.Dispose();
