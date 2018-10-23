@@ -56,15 +56,13 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSaveChanges = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnCancel = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
-            this.txtAttendantAddress = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
+            this.txtEmail = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtContactNo = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtLastName = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
+            this.txtAddress = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtFirstName = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
-            this.txtAttendantCode = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtSupplierName = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bwSuppliers = new System.ComponentModel.BackgroundWorker();
             this.epSuppliers = new System.Windows.Forms.ErrorProvider(this.components);
@@ -117,8 +115,8 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.command.GetSearchedValue = "";
             this.command.Location = new System.Drawing.Point(4, 4);
             this.command.Name = "command";
-            this.command.ShowActionButtons = true;
-            this.command.ShowSearchBar = true;
+            this.command.ShowActionButtons = false;
+            this.command.ShowSearchBar = false;
             this.command.Size = new System.Drawing.Size(1049, 53);
             this.command.TabIndex = 5;
             // 
@@ -282,8 +280,8 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             // 
             this.paginator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.paginator.GetCurrentPage = 1;
-            this.paginator.HasRecordCount = true;
-            this.paginator.HasRefresh = true;
+            this.paginator.HasRecordCount = false;
+            this.paginator.HasRefresh = false;
             this.paginator.Location = new System.Drawing.Point(4, 544);
             this.paginator.Name = "paginator";
             this.paginator.Size = new System.Drawing.Size(1049, 50);
@@ -293,15 +291,13 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             // 
             this.tpSupplierDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tpSupplierDetails.Controls.Add(this.tableLayoutPanel1);
-            this.tpSupplierDetails.Controls.Add(this.txtAttendantAddress);
+            this.tpSupplierDetails.Controls.Add(this.txtEmail);
             this.tpSupplierDetails.Controls.Add(this.label7);
             this.tpSupplierDetails.Controls.Add(this.txtContactNo);
             this.tpSupplierDetails.Controls.Add(this.label6);
-            this.tpSupplierDetails.Controls.Add(this.txtLastName);
+            this.tpSupplierDetails.Controls.Add(this.txtAddress);
             this.tpSupplierDetails.Controls.Add(this.label4);
-            this.tpSupplierDetails.Controls.Add(this.txtFirstName);
-            this.tpSupplierDetails.Controls.Add(this.txtAttendantCode);
-            this.tpSupplierDetails.Controls.Add(this.label2);
+            this.tpSupplierDetails.Controls.Add(this.txtSupplierName);
             this.tpSupplierDetails.Controls.Add(this.label1);
             this.tpSupplierDetails.Location = new System.Drawing.Point(4, 22);
             this.tpSupplierDetails.Name = "tpSupplierDetails";
@@ -318,7 +314,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Controls.Add(this.btnSaveChanges, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnCancel, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(337, 350);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(336, 305);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -388,44 +384,44 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // txtAttendantAddress
+            // txtEmail
             // 
-            this.txtAttendantAddress.BackColor = System.Drawing.Color.White;
-            this.txtAttendantAddress.BackColorOnEnter = System.Drawing.SystemColors.Control;
-            this.txtAttendantAddress.BackColorOnError = System.Drawing.Color.Empty;
-            this.txtAttendantAddress.BackColorOnLeave = System.Drawing.Color.White;
-            this.txtAttendantAddress.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtAttendantAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
-            this.txtAttendantAddress.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtAttendantAddress.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtAttendantAddress.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
-            this.txtAttendantAddress.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtAttendantAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtAttendantAddress.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtAttendantAddress.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtAttendantAddress.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.AlphaNumeric;
-            this.txtAttendantAddress.Location = new System.Drawing.Point(405, 294);
-            this.txtAttendantAddress.Margin = new System.Windows.Forms.Padding(0);
-            this.txtAttendantAddress.Name = "txtAttendantAddress";
-            this.txtAttendantAddress.PlaceHolder = null;
-            this.txtAttendantAddress.Required = true;
-            this.txtAttendantAddress.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
-            this.txtAttendantAddress.RequiredForeColorOnLeave = System.Drawing.Color.White;
-            this.txtAttendantAddress.RequiredForeColorOnValidate = System.Drawing.Color.White;
-            this.txtAttendantAddress.Size = new System.Drawing.Size(363, 27);
-            this.txtAttendantAddress.TabIndex = 64;
-            this.txtAttendantAddress.ValidateOnLeave = false;
+            this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.BackColorOnEnter = System.Drawing.SystemColors.Control;
+            this.txtEmail.BackColorOnError = System.Drawing.Color.Empty;
+            this.txtEmail.BackColorOnLeave = System.Drawing.Color.White;
+            this.txtEmail.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.txtEmail.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtEmail.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.txtEmail.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtEmail.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtEmail.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtEmail.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.AlphaNumeric;
+            this.txtEmail.Location = new System.Drawing.Point(404, 249);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(0);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PlaceHolder = null;
+            this.txtEmail.Required = true;
+            this.txtEmail.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
+            this.txtEmail.RequiredForeColorOnLeave = System.Drawing.Color.White;
+            this.txtEmail.RequiredForeColorOnValidate = System.Drawing.Color.White;
+            this.txtEmail.Size = new System.Drawing.Size(363, 27);
+            this.txtEmail.TabIndex = 64;
+            this.txtEmail.ValidateOnLeave = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(289, 301);
+            this.label7.Location = new System.Drawing.Point(288, 256);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 20);
+            this.label7.Size = new System.Drawing.Size(103, 20);
             this.label7.TabIndex = 63;
-            this.label7.Text = "Address";
+            this.label7.Text = "Email Address";
             // 
             // txtContactNo
             // 
@@ -443,7 +439,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.txtContactNo.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.txtContactNo.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.txtContactNo.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.NumericNoSpace;
-            this.txtContactNo.Location = new System.Drawing.Point(405, 250);
+            this.txtContactNo.Location = new System.Drawing.Point(404, 205);
             this.txtContactNo.Margin = new System.Windows.Forms.Padding(0);
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.PlaceHolder = null;
@@ -460,117 +456,78 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(289, 257);
+            this.label6.Location = new System.Drawing.Point(288, 212);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 20);
             this.label6.TabIndex = 61;
             this.label6.Text = "Contact No.";
             // 
-            // txtLastName
+            // txtAddress
             // 
-            this.txtLastName.BackColor = System.Drawing.Color.White;
-            this.txtLastName.BackColorOnEnter = System.Drawing.SystemColors.Control;
-            this.txtLastName.BackColorOnError = System.Drawing.Color.Empty;
-            this.txtLastName.BackColorOnLeave = System.Drawing.Color.White;
-            this.txtLastName.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtLastName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
-            this.txtLastName.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtLastName.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
-            this.txtLastName.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtLastName.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtLastName.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtLastName.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.Alphabet;
-            this.txtLastName.Location = new System.Drawing.Point(406, 209);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(0);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.PlaceHolder = null;
-            this.txtLastName.Required = true;
-            this.txtLastName.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
-            this.txtLastName.RequiredForeColorOnLeave = System.Drawing.Color.White;
-            this.txtLastName.RequiredForeColorOnValidate = System.Drawing.Color.White;
-            this.txtLastName.Size = new System.Drawing.Size(363, 27);
-            this.txtLastName.TabIndex = 58;
-            this.txtLastName.ValidateOnLeave = false;
+            this.txtAddress.BackColor = System.Drawing.Color.White;
+            this.txtAddress.BackColorOnEnter = System.Drawing.SystemColors.Control;
+            this.txtAddress.BackColorOnError = System.Drawing.Color.Empty;
+            this.txtAddress.BackColorOnLeave = System.Drawing.Color.White;
+            this.txtAddress.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.txtAddress.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtAddress.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.txtAddress.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtAddress.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtAddress.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtAddress.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.Alphabet;
+            this.txtAddress.Location = new System.Drawing.Point(405, 164);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(0);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PlaceHolder = null;
+            this.txtAddress.Required = true;
+            this.txtAddress.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
+            this.txtAddress.RequiredForeColorOnLeave = System.Drawing.Color.White;
+            this.txtAddress.RequiredForeColorOnValidate = System.Drawing.Color.White;
+            this.txtAddress.Size = new System.Drawing.Size(363, 27);
+            this.txtAddress.TabIndex = 58;
+            this.txtAddress.ValidateOnLeave = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(290, 216);
+            this.label4.Location = new System.Drawing.Point(289, 171);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 20);
+            this.label4.Size = new System.Drawing.Size(62, 20);
             this.label4.TabIndex = 57;
-            this.label4.Text = "Last Name";
+            this.label4.Text = "Address";
             // 
-            // txtFirstName
+            // txtSupplierName
             // 
-            this.txtFirstName.BackColor = System.Drawing.Color.White;
-            this.txtFirstName.BackColorOnEnter = System.Drawing.SystemColors.Control;
-            this.txtFirstName.BackColorOnError = System.Drawing.Color.Empty;
-            this.txtFirstName.BackColorOnLeave = System.Drawing.Color.White;
-            this.txtFirstName.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtFirstName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
-            this.txtFirstName.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtFirstName.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
-            this.txtFirstName.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtFirstName.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtFirstName.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtFirstName.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.Alphabet;
-            this.txtFirstName.Location = new System.Drawing.Point(405, 164);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(0);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.PlaceHolder = null;
-            this.txtFirstName.Required = true;
-            this.txtFirstName.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
-            this.txtFirstName.RequiredForeColorOnLeave = System.Drawing.Color.White;
-            this.txtFirstName.RequiredForeColorOnValidate = System.Drawing.Color.White;
-            this.txtFirstName.Size = new System.Drawing.Size(363, 27);
-            this.txtFirstName.TabIndex = 54;
-            this.txtFirstName.ValidateOnLeave = false;
-            // 
-            // txtAttendantCode
-            // 
-            this.txtAttendantCode.BackColor = System.Drawing.Color.White;
-            this.txtAttendantCode.BackColorOnEnter = System.Drawing.SystemColors.Control;
-            this.txtAttendantCode.BackColorOnError = System.Drawing.Color.Empty;
-            this.txtAttendantCode.BackColorOnLeave = System.Drawing.Color.White;
-            this.txtAttendantCode.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtAttendantCode.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
-            this.txtAttendantCode.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtAttendantCode.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtAttendantCode.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
-            this.txtAttendantCode.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtAttendantCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtAttendantCode.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtAttendantCode.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtAttendantCode.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.AlphaNumericNoSpace;
-            this.txtAttendantCode.Location = new System.Drawing.Point(405, 124);
-            this.txtAttendantCode.Margin = new System.Windows.Forms.Padding(0);
-            this.txtAttendantCode.Name = "txtAttendantCode";
-            this.txtAttendantCode.PlaceHolder = null;
-            this.txtAttendantCode.Required = true;
-            this.txtAttendantCode.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
-            this.txtAttendantCode.RequiredForeColorOnLeave = System.Drawing.Color.White;
-            this.txtAttendantCode.RequiredForeColorOnValidate = System.Drawing.Color.White;
-            this.txtAttendantCode.Size = new System.Drawing.Size(363, 27);
-            this.txtAttendantCode.TabIndex = 53;
-            this.txtAttendantCode.ValidateOnLeave = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(289, 171);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 20);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "First Name";
+            this.txtSupplierName.BackColor = System.Drawing.SystemColors.Control;
+            this.txtSupplierName.BackColorOnEnter = System.Drawing.SystemColors.Control;
+            this.txtSupplierName.BackColorOnError = System.Drawing.Color.Empty;
+            this.txtSupplierName.BackColorOnLeave = System.Drawing.Color.White;
+            this.txtSupplierName.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtSupplierName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.txtSupplierName.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtSupplierName.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.txtSupplierName.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.txtSupplierName.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtSupplierName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtSupplierName.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtSupplierName.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtSupplierName.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.AlphaNumericNoSpace;
+            this.txtSupplierName.Location = new System.Drawing.Point(405, 124);
+            this.txtSupplierName.Margin = new System.Windows.Forms.Padding(0);
+            this.txtSupplierName.Name = "txtSupplierName";
+            this.txtSupplierName.PlaceHolder = null;
+            this.txtSupplierName.Required = true;
+            this.txtSupplierName.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
+            this.txtSupplierName.RequiredForeColorOnLeave = System.Drawing.Color.White;
+            this.txtSupplierName.RequiredForeColorOnValidate = System.Drawing.Color.White;
+            this.txtSupplierName.Size = new System.Drawing.Size(363, 27);
+            this.txtSupplierName.TabIndex = 53;
+            this.txtSupplierName.ValidateOnLeave = false;
             // 
             // label1
             // 
@@ -579,9 +536,9 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(289, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 20);
+            this.label1.Size = new System.Drawing.Size(108, 20);
             this.label1.TabIndex = 51;
-            this.label1.Text = "Attendant Code";
+            this.label1.Text = "Supplier Name";
             // 
             // epSuppliers
             // 
@@ -773,15 +730,13 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private FlatButton btnSaveChanges;
         private FlatButton btnCancel;
-        private FlatTextBox txtAttendantAddress;
+        private FlatTextBox txtEmail;
         private System.Windows.Forms.Label label7;
         private FlatTextBox txtContactNo;
         private System.Windows.Forms.Label label6;
-        private FlatTextBox txtLastName;
+        private FlatTextBox txtAddress;
         private System.Windows.Forms.Label label4;
-        private FlatTextBox txtFirstName;
-        private FlatTextBox txtAttendantCode;
-        private System.Windows.Forms.Label label2;
+        private FlatTextBox txtSupplierName;
         private System.Windows.Forms.Label label1;
         private Custom.CommandView command;
         private Custom.PaginatorView paginator;

@@ -166,22 +166,21 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
         {
             using (var repository = new DbRepository(new DatabaseContext()))
             {
-                var selectedAttendant = repository.PumpAttendants.GetById(GetSupplierId());
+                var selectedSupplier = repository.Suppliers.GetById(GetSupplierId());
 
-                if (selectedAttendant != null)
-                    ShowSupplierDetails(selectedAttendant);
+                if (selectedSupplier != null)
+                    ShowSupplierDetails(selectedSupplier);
             }
         }
 
         
-        private void ShowSupplierDetails(Employee selectedAttendant)
+        private void ShowSupplierDetails(Models.Supplier selectedSupplier)
         {
-            txtAttendantCode.Text = selectedAttendant.EmployeeCode;
-            txtFirstName.Text = selectedAttendant.FirstName;
-            txtLastName.Text = selectedAttendant.LastName;
-            txtAttendantAddress.Text = selectedAttendant.Address;
+            txtSupplierName.Text = selectedSupplier.SupplierName;
+            txtAddress.Text = selectedSupplier.Address;
+            txtEmail.Text = selectedSupplier.Email;
             
-            txtContactNo.Text = selectedAttendant.ContactNo;
+            txtContactNo.Text = selectedSupplier.ContactNo;
             GoToSupplierDetails();
         }
 
@@ -194,21 +193,20 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             if (!ValidateDuplicateRecord()) return;
 
             var repository = dbRepository;
-            var newAttendant = new Employee()
+            var supplier = new Models.Supplier()
             {
-               FirstName = txtFirstName.Text,
-               EmployeeCode = txtAttendantCode.Text.Trim(),
+              
+               SupplierName = txtSupplierName.Text,
                ContactNo = txtContactNo.Text,
-               Address = txtAttendantAddress.Text,
-               LastName = txtLastName.Text.Trim(),
-               FullName = $"{txtFirstName.Text} {txtLastName.Text}",
+               Email = txtEmail.Text,
+               Address = txtAddress.Text.Trim(),
                IsActive = true,
-               PositionId = 1
+              
                
             //CreatedBy = AccountSession.GetAccount.Id
 
         };
-            repository.PumpAttendants.Add(newAttendant);
+            repository.Suppliers.Add(supplier);
             repository.Commit();
 
             ResetToDefault();
@@ -221,15 +219,15 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             if (!ValidateDuplicateRecord()) return;
 
             var repository = dbRepository;
-            var selectedAttendant = repository.PumpAttendants.GetById(GetSupplierId());
+            var selectedSupplier = repository.Suppliers.GetById(GetSupplierId());
             {
-                selectedAttendant.FirstName = txtFirstName.Text;
-                selectedAttendant.Address = txtAttendantAddress.Text;
-                selectedAttendant.ContactNo = txtContactNo.Text;
-                selectedAttendant.EmployeeCode = txtAttendantCode.Text;
-                selectedAttendant.LastName = txtLastName.Text;
-                selectedAttendant.FullName = $"{txtFirstName.Text} {txtLastName.Text}";
-
+                
+                selectedSupplier.Email = txtEmail.Text;
+                selectedSupplier.ContactNo = txtContactNo.Text;
+                selectedSupplier.SupplierName = txtSupplierName.Text;
+                selectedSupplier.Address = txtAddress.Text;
+                selectedSupplier.DateTimeModified = DateTime.Now;
+               
 
 
             };
@@ -252,12 +250,12 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
 
         private void EnableControls(bool flag)
         {
-            txtAttendantCode.Enabled = flag;
-            txtFirstName.Enabled = flag;
-            txtAttendantAddress.Enabled = flag;
+            txtSupplierName.Enabled = flag;
+
+            txtEmail.Enabled = flag;
            
             txtContactNo.Enabled = flag;
-            txtLastName.Enabled = flag;
+            txtAddress.Enabled = flag;
 
             dgvSupplier.Enabled = !flag;
 
@@ -272,7 +270,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
 
         private void SetTotalPage()
         {
-           paginator.SetMaxPage(new DatabaseContext().Employees.Count());
+           paginator.SetMaxPage(new DatabaseContext().Suppliers.Count());
         }
         #endregion
 
@@ -291,11 +289,11 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
                 .GetDataGridViewKey(dgvSupplier, 0));
         }
 
-        private IEnumerable<Employee> GetSuppliers()
+        private IEnumerable<Models.Supplier> GetSuppliers()
         {
             using (var repository = new DbRepository(new DatabaseContext()))
             {
-                return repository.PumpAttendants.GetAll();
+                return repository.Suppliers.GetAll();
 
             }
         }
@@ -355,27 +353,28 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
 
             using (var repository = new DbRepository(new DatabaseContext()))
             {
-                var fullName = $"{txtFirstName.Text} {txtLastName.Text}";
+                var fullName = $"{txtSupplierName.Text}";
 
                 if (IsNew)
                 {
-                    if (repository.PumpAttendants.AttendantNameAlreadyExist(fullName))
+                    if (repository.Suppliers.IsExist(fullName))
                     {
                         MessageAlert.Show(MessageHelper.DuplicateRecord(fullName), "Error", AlertType.Warning);
 
-                        isValidated = SetErrorMessage(txtFirstName, MessageHelper.DuplicateRecord(txtFirstName.Text));
-                        isValidated = SetErrorMessage(txtLastName, MessageHelper.DuplicateRecord(txtLastName.Text));
+                        isValidated = SetErrorMessage(txtSupplierName, MessageHelper.DuplicateRecord(txtSupplierName.Text));
+                        
                         return isValidated;
                     }
 
                 }
                 else
                 {
-                    var pumpAttendantId = GetSupplierId();
-                    if (repository.PumpAttendants.AttendantNameAlreadyExist(fullName, pumpAttendantId))
+                    var supplierId = GetSupplierId();
+                    if (repository.Suppliers.IsExist(fullName, supplierId))
                     {
-                        isValidated = SetErrorMessage(txtFirstName, MessageHelper.DuplicateRecord(txtFirstName.Text.Trim()));
-                        isValidated = SetErrorMessage(txtLastName, MessageHelper.DuplicateRecord(txtLastName.Text));
+                        MessageAlert.Show(MessageHelper.DuplicateRecord(fullName), "Error", AlertType.Warning);
+
+                        isValidated = SetErrorMessage(txtSupplierName, MessageHelper.DuplicateRecord(txtSupplierName.Text));
 
                         return isValidated;
                     }
