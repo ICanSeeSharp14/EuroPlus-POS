@@ -9,6 +9,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.Persistence.Repositories
         private readonly DatabaseContext _context;
 
         public IRoleRepository Roles { get; set; }
+        public ISupplierRepository Suppliers { get; set; }
         public IPumpAttendantRepository PumpAttendants { get; set; }
         public IProductRepository Products { get; set; }
         public IUserRepository Users { get; set; }
@@ -19,6 +20,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.Persistence.Repositories
             Roles = new RoleRepository(_context);
             Products = new ProductRepository(_context);
             PumpAttendants = new PumpAttendantRepository(_context);
+            Suppliers = new PumpAttendantRepository(_context);
 
         }
 

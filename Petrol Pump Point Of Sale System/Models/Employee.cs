@@ -33,7 +33,9 @@ namespace Petrol_Pump_Point_Of_Sale_System.Models
         [ForeignKey("PositionId")]
         public virtual Position Position { get; set; }
         public bool IsActive { get; set; }
-
-
+        public DateTime? DateTimeCreated { get; set; }
+        public int CreatedBy { get; set; }
+        public DateTime? DateTimeModified { get; set; }
+        public int ModifiedBy { get; set; }
     }
 }

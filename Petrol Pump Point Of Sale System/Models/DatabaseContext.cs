@@ -31,6 +31,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.Models
         //public virtual DbSet<PurchaseOrderDetails> OrderDetails { get; set; }
         public virtual DbSet<ProductRateHistory> RateHistory { get; set; }
         public virtual DbSet<Sale> Sales { get; set; }
+        public virtual DbSet<Supplier> Suppliers { get; set; }
         //public virtual DbSet<SalesInvoice> SalesInvoices { get; set; }
         //public virtual DbSet<Pump> Pumps { get; set; }
         //public virtual DbSet<Position> Positions { get; set; }

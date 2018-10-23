@@ -135,7 +135,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
         }
         private void DeleteSupplier()
         {
-            var attendantId = GetSuppliertId();
+            var attendantId = GetSupplierId();
             if (!ValidateSelectedRecord()) return;
 
             using (var repository = new DbRepository(new DatabaseContext()))
@@ -166,7 +166,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
         {
             using (var repository = new DbRepository(new DatabaseContext()))
             {
-                var selectedAttendant = repository.PumpAttendants.GetById(GetSuppliertId());
+                var selectedAttendant = repository.PumpAttendants.GetById(GetSupplierId());
 
                 if (selectedAttendant != null)
                     ShowSupplierDetails(selectedAttendant);
@@ -212,7 +212,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             repository.Commit();
 
             ResetToDefault();
-            MessageAlert.Show("New Attendant has successfully added.", "New Attendant", AlertType.Info);
+            MessageAlert.Show("New supplier has successfully added.", "Supplier", AlertType.Info);
         }
 
         private void UpdateSupplierDetails(DbRepository dbRepository)
@@ -221,7 +221,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             if (!ValidateDuplicateRecord()) return;
 
             var repository = dbRepository;
-            var selectedAttendant = repository.PumpAttendants.GetById(GetSuppliertId());
+            var selectedAttendant = repository.PumpAttendants.GetById(GetSupplierId());
             {
                 selectedAttendant.FirstName = txtFirstName.Text;
                 selectedAttendant.Address = txtAttendantAddress.Text;
@@ -242,7 +242,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
 
         private void ResetToDefault()
         {
-            GoToAttendantList();
+            GoToSupplierList();
             ClearText();
             ClearErrors();
             EnableControls(false);
@@ -259,14 +259,14 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             txtContactNo.Enabled = flag;
             txtLastName.Enabled = flag;
 
-            dgvPumpAttendant.Enabled = !flag;
+            dgvSupplier.Enabled = !flag;
 
             btnCancel.Enabled = flag;
             btnSaveChanges.Enabled = flag;
 
         }
 
-        private void GoToAttendantList() => btnList.PerformClick();
+        private void GoToSupplierList() => btnList.PerformClick();
 
         #region Set Methods
 
@@ -280,18 +280,18 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
 
         private void ShowSuppliers()
         {
-            bsPumpAttendants.DataSource = GetPumpAttendants();
+            bsSuppliers.DataSource = GetSuppliers();
         }
         #endregion
 
         #region Get Methods
-        private int GetSuppliertId()
+        private int GetSupplierId()
         {
             return int.Parse(ControlHelper
-                .GetDataGridViewKey(dgvPumpAttendant, 0));
+                .GetDataGridViewKey(dgvSupplier, 0));
         }
 
-        private IEnumerable<Employee> GetPumpAttendants()
+        private IEnumerable<Employee> GetSuppliers()
         {
             using (var repository = new DbRepository(new DatabaseContext()))
             {
@@ -306,7 +306,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
 
         private void ClearText()
         {
-            ControlHelper.ClearTextBox(tpAttendantDetails);
+            ControlHelper.ClearTextBox(tpSupplierDetails);
         }
 
 
@@ -316,7 +316,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
         private bool ValidateSelectedRecord()
         {
 
-            if (dgvPumpAttendant.RowCount == 0)
+            if (dgvSupplier.RowCount == 0)
             {
                 MessageAlert.Show(MessageHelper.NoSelectedRecord(), "Error", AlertType.BadInfo);
                 return false;
@@ -329,7 +329,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             ClearErrors();
 
             var isValidated = true;
-            foreach (var control in tpAttendantDetails.Controls.Cast<Control>())
+            foreach (var control in tpSupplierDetails.Controls.Cast<Control>())
             {
                 if (control is FlatTextBox)
                 {
@@ -371,7 +371,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
                 }
                 else
                 {
-                    var pumpAttendantId = GetSuppliertId();
+                    var pumpAttendantId = GetSupplierId();
                     if (repository.PumpAttendants.AttendantNameAlreadyExist(fullName, pumpAttendantId))
                     {
                         isValidated = SetErrorMessage(txtFirstName, MessageHelper.DuplicateRecord(txtFirstName.Text.Trim()));
@@ -390,12 +390,12 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
 
         private bool SetErrorMessage(Control control, string errorMessage)
         {
-            epPumpAttendants.SetError(control, errorMessage);
+            epSuppliers.SetError(control, errorMessage);
 
             return false;
         }
 
-        private void ClearErrors() => epPumpAttendants.Clear();
+        private void ClearErrors() => epSuppliers.Clear();
 
         #endregion
     

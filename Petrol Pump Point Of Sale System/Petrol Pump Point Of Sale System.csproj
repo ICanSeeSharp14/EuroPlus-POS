@@ -169,6 +169,7 @@
     <Compile Include="Core\Filter.cs" />
     <Compile Include="Core\Models\IEntity.cs" />
     <Compile Include="Core\Repositories\IPumpAttendantRepository.cs" />
+    <Compile Include="Core\Repositories\ISupplierRepository.cs" />
     <Compile Include="Migrations\201810230635032_AlterTableEmployee.cs" />
     <Compile Include="Migrations\201810230635032_AlterTableEmployee.Designer.cs">
       <DependentUpon>201810230635032_AlterTableEmployee.cs</DependentUpon>
@@ -189,6 +190,7 @@
     <Compile Include="Migrations\201810231239172_ChangedSomething.Designer.cs">
       <DependentUpon>201810231239172_ChangedSomething.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Supplier.cs" />
     <Compile Include="Monostates\AccountSession.cs" />
     <Compile Include="Persistence\Repositories\PumpAttendantRepository.cs" />
     <Compile Include="Dialogs\FlatMessageBox.cs">

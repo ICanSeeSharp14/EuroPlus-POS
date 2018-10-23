@@ -8,7 +8,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.Core.Repositories
         IUserRepository Users { get; }
         IProductRepository Products { get; }
         IRoleRepository Roles { get; }
-
+        ISupplierRepository Suppliers { get; }
         IPumpAttendantRepository PumpAttendants { get; set; }
 
         int Commit();

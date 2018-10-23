@@ -40,7 +40,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.tcPumpAttendantMenu = new MaterialSkin.Controls.MaterialTabControl();
             this.tpAttendantList = new System.Windows.Forms.TabPage();
             this.command = new Petrol_Pump_Point_Of_Sale_System.View.Custom.CommandView();
-            this.dgvPumpAttendant = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTable();
+            this.dgvSupplier = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTable();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,9 +50,9 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.dateAppliedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateHiredDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateResignedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bsPumpAttendants = new System.Windows.Forms.BindingSource(this.components);
+            this.bsSuppliers = new System.Windows.Forms.BindingSource(this.components);
             this.paginator = new Petrol_Pump_Point_Of_Sale_System.View.Custom.PaginatorView();
-            this.tpAttendantDetails = new System.Windows.Forms.TabPage();
+            this.tpSupplierDetails = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSaveChanges = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnCancel = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
@@ -66,8 +66,8 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.txtAttendantCode = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.bwAccounts = new System.ComponentModel.BackgroundWorker();
-            this.epPumpAttendants = new System.Windows.Forms.ErrorProvider(this.components);
+            this.bwSuppliers = new System.ComponentModel.BackgroundWorker();
+            this.epSuppliers = new System.Windows.Forms.ErrorProvider(this.components);
             this.tlpAttendantButtonTab = new System.Windows.Forms.TableLayoutPanel();
             this.btnDeactivate = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnList = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
@@ -75,18 +75,18 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.btnRateHistory = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.tcPumpAttendantMenu.SuspendLayout();
             this.tpAttendantList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPumpAttendant)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsPumpAttendants)).BeginInit();
-            this.tpAttendantDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsSuppliers)).BeginInit();
+            this.tpSupplierDetails.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.epPumpAttendants)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epSuppliers)).BeginInit();
             this.tlpAttendantButtonTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcPumpAttendantMenu
             // 
             this.tcPumpAttendantMenu.Controls.Add(this.tpAttendantList);
-            this.tcPumpAttendantMenu.Controls.Add(this.tpAttendantDetails);
+            this.tcPumpAttendantMenu.Controls.Add(this.tpSupplierDetails);
             this.tcPumpAttendantMenu.Depth = 0;
             this.tcPumpAttendantMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcPumpAttendantMenu.Location = new System.Drawing.Point(0, 40);
@@ -100,7 +100,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             // 
             this.tpAttendantList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tpAttendantList.Controls.Add(this.command);
-            this.tpAttendantList.Controls.Add(this.dgvPumpAttendant);
+            this.tpAttendantList.Controls.Add(this.dgvSupplier);
             this.tpAttendantList.Controls.Add(this.paginator);
             this.tpAttendantList.Location = new System.Drawing.Point(4, 22);
             this.tpAttendantList.Margin = new System.Windows.Forms.Padding(0);
@@ -122,23 +122,23 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.command.Size = new System.Drawing.Size(1049, 53);
             this.command.TabIndex = 5;
             // 
-            // dgvPumpAttendant
+            // dgvSupplier
             // 
-            this.dgvPumpAttendant.AllowUserToAddRows = false;
-            this.dgvPumpAttendant.AllowUserToDeleteRows = false;
-            this.dgvPumpAttendant.AllowUserToResizeColumns = false;
-            this.dgvPumpAttendant.AllowUserToResizeRows = false;
+            this.dgvSupplier.AllowUserToAddRows = false;
+            this.dgvSupplier.AllowUserToDeleteRows = false;
+            this.dgvSupplier.AllowUserToResizeColumns = false;
+            this.dgvSupplier.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.dgvPumpAttendant.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPumpAttendant.AutoGenerateColumns = false;
-            this.dgvPumpAttendant.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPumpAttendant.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgvPumpAttendant.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgvPumpAttendant.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvPumpAttendant.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvPumpAttendant.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvSupplier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSupplier.AutoGenerateColumns = false;
+            this.dgvSupplier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSupplier.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvSupplier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgvSupplier.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvSupplier.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvSupplier.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -146,10 +146,10 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPumpAttendant.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPumpAttendant.ColumnHeadersHeight = 30;
-            this.dgvPumpAttendant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvPumpAttendant.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvSupplier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSupplier.ColumnHeadersHeight = 30;
+            this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvSupplier.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.employeeCodeDataGridViewTextBoxColumn,
             this.firstNameDataGridViewTextBoxColumn,
@@ -159,7 +159,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.dateAppliedDataGridViewTextBoxColumn,
             this.dateHiredDataGridViewTextBoxColumn,
             this.dateResignedDataGridViewTextBoxColumn});
-            this.dgvPumpAttendant.DataSource = this.bsPumpAttendants;
+            this.dgvSupplier.DataSource = this.bsSuppliers;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11.25F);
@@ -167,18 +167,18 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPumpAttendant.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvPumpAttendant.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvPumpAttendant.EllipseOnDefault = 0;
-            this.dgvPumpAttendant.EnableHeadersVisualStyles = false;
-            this.dgvPumpAttendant.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
-            this.dgvPumpAttendant.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
-            this.dgvPumpAttendant.Location = new System.Drawing.Point(4, 75);
-            this.dgvPumpAttendant.Margin = new System.Windows.Forms.Padding(0);
-            this.dgvPumpAttendant.MultiSelect = false;
-            this.dgvPumpAttendant.Name = "dgvPumpAttendant";
-            this.dgvPumpAttendant.ReadOnly = true;
-            this.dgvPumpAttendant.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvSupplier.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvSupplier.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvSupplier.EllipseOnDefault = 0;
+            this.dgvSupplier.EnableHeadersVisualStyles = false;
+            this.dgvSupplier.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.dgvSupplier.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.dgvSupplier.Location = new System.Drawing.Point(4, 75);
+            this.dgvSupplier.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvSupplier.MultiSelect = false;
+            this.dgvSupplier.Name = "dgvSupplier";
+            this.dgvSupplier.ReadOnly = true;
+            this.dgvSupplier.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F);
@@ -186,26 +186,26 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPumpAttendant.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvPumpAttendant.RowHeadersVisible = false;
-            this.dgvPumpAttendant.RowHeadersWidth = 10;
-            this.dgvPumpAttendant.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvSupplier.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvSupplier.RowHeadersVisible = false;
+            this.dgvSupplier.RowHeadersWidth = 10;
+            this.dgvSupplier.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPumpAttendant.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvPumpAttendant.RowTemplate.Height = 40;
-            this.dgvPumpAttendant.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPumpAttendant.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPumpAttendant.ShowCellErrors = false;
-            this.dgvPumpAttendant.ShowCellToolTips = false;
-            this.dgvPumpAttendant.ShowEditingIcon = false;
-            this.dgvPumpAttendant.ShowRowErrors = false;
-            this.dgvPumpAttendant.Size = new System.Drawing.Size(1049, 469);
-            this.dgvPumpAttendant.TabIndex = 2;
+            this.dgvSupplier.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvSupplier.RowTemplate.Height = 40;
+            this.dgvSupplier.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSupplier.ShowCellErrors = false;
+            this.dgvSupplier.ShowCellToolTips = false;
+            this.dgvSupplier.ShowEditingIcon = false;
+            this.dgvSupplier.ShowRowErrors = false;
+            this.dgvSupplier.Size = new System.Drawing.Size(1049, 469);
+            this.dgvSupplier.TabIndex = 2;
             // 
             // Id
             // 
@@ -274,9 +274,9 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.dateResignedDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateResignedDataGridViewTextBoxColumn.Visible = false;
             // 
-            // bsPumpAttendants
+            // bsSuppliers
             // 
-            this.bsPumpAttendants.DataSource = typeof(Petrol_Pump_Point_Of_Sale_System.Models.Employee);
+            this.bsSuppliers.DataSource = typeof(Petrol_Pump_Point_Of_Sale_System.Models.Employee);
             // 
             // paginator
             // 
@@ -289,26 +289,26 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.paginator.Size = new System.Drawing.Size(1049, 50);
             this.paginator.TabIndex = 6;
             // 
-            // tpAttendantDetails
+            // tpSupplierDetails
             // 
-            this.tpAttendantDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tpAttendantDetails.Controls.Add(this.tableLayoutPanel1);
-            this.tpAttendantDetails.Controls.Add(this.txtAttendantAddress);
-            this.tpAttendantDetails.Controls.Add(this.label7);
-            this.tpAttendantDetails.Controls.Add(this.txtContactNo);
-            this.tpAttendantDetails.Controls.Add(this.label6);
-            this.tpAttendantDetails.Controls.Add(this.txtLastName);
-            this.tpAttendantDetails.Controls.Add(this.label4);
-            this.tpAttendantDetails.Controls.Add(this.txtFirstName);
-            this.tpAttendantDetails.Controls.Add(this.txtAttendantCode);
-            this.tpAttendantDetails.Controls.Add(this.label2);
-            this.tpAttendantDetails.Controls.Add(this.label1);
-            this.tpAttendantDetails.Location = new System.Drawing.Point(4, 22);
-            this.tpAttendantDetails.Name = "tpAttendantDetails";
-            this.tpAttendantDetails.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAttendantDetails.Size = new System.Drawing.Size(1057, 598);
-            this.tpAttendantDetails.TabIndex = 1;
-            this.tpAttendantDetails.Text = "tabPage1";
+            this.tpSupplierDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tpSupplierDetails.Controls.Add(this.tableLayoutPanel1);
+            this.tpSupplierDetails.Controls.Add(this.txtAttendantAddress);
+            this.tpSupplierDetails.Controls.Add(this.label7);
+            this.tpSupplierDetails.Controls.Add(this.txtContactNo);
+            this.tpSupplierDetails.Controls.Add(this.label6);
+            this.tpSupplierDetails.Controls.Add(this.txtLastName);
+            this.tpSupplierDetails.Controls.Add(this.label4);
+            this.tpSupplierDetails.Controls.Add(this.txtFirstName);
+            this.tpSupplierDetails.Controls.Add(this.txtAttendantCode);
+            this.tpSupplierDetails.Controls.Add(this.label2);
+            this.tpSupplierDetails.Controls.Add(this.label1);
+            this.tpSupplierDetails.Location = new System.Drawing.Point(4, 22);
+            this.tpSupplierDetails.Name = "tpSupplierDetails";
+            this.tpSupplierDetails.Padding = new System.Windows.Forms.Padding(3);
+            this.tpSupplierDetails.Size = new System.Drawing.Size(1057, 598);
+            this.tpSupplierDetails.TabIndex = 1;
+            this.tpSupplierDetails.Text = "tabPage1";
             // 
             // tableLayoutPanel1
             // 
@@ -583,10 +583,10 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.label1.TabIndex = 51;
             this.label1.Text = "Attendant Code";
             // 
-            // epPumpAttendants
+            // epSuppliers
             // 
-            this.epPumpAttendants.ContainerControl = this;
-            this.epPumpAttendants.Icon = ((System.Drawing.Icon)(resources.GetObject("epPumpAttendants.Icon")));
+            this.epSuppliers.ContainerControl = this;
+            this.epSuppliers.Icon = ((System.Drawing.Icon)(resources.GetObject("epSuppliers.Icon")));
             // 
             // tlpAttendantButtonTab
             // 
@@ -737,12 +737,12 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.Size = new System.Drawing.Size(1065, 664);
             this.tcPumpAttendantMenu.ResumeLayout(false);
             this.tpAttendantList.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPumpAttendant)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsPumpAttendants)).EndInit();
-            this.tpAttendantDetails.ResumeLayout(false);
-            this.tpAttendantDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsSuppliers)).EndInit();
+            this.tpSupplierDetails.ResumeLayout(false);
+            this.tpSupplierDetails.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.epPumpAttendants)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epSuppliers)).EndInit();
             this.tlpAttendantButtonTab.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -751,9 +751,9 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
         #endregion
         private MaterialSkin.Controls.MaterialTabControl tcPumpAttendantMenu;
         private System.Windows.Forms.TabPage tpAttendantList;
-        private FlatTable dgvPumpAttendant;
-        private System.ComponentModel.BackgroundWorker bwAccounts;
-        private System.Windows.Forms.BindingSource bsPumpAttendants;
+        private FlatTable dgvSupplier;
+        private System.ComponentModel.BackgroundWorker bwSuppliers;
+        private System.Windows.Forms.BindingSource bsSuppliers;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
@@ -763,13 +763,13 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
         private System.Windows.Forms.DataGridViewTextBoxColumn dateAppliedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateHiredDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateResignedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ErrorProvider epPumpAttendants;
+        private System.Windows.Forms.ErrorProvider epSuppliers;
         private System.Windows.Forms.TableLayoutPanel tlpAttendantButtonTab;
         private FlatButton btnDeactivate;
         private FlatButton btnList;
         private FlatButton btnDetails;
         private FlatButton btnRateHistory;
-        private System.Windows.Forms.TabPage tpAttendantDetails;
+        private System.Windows.Forms.TabPage tpSupplierDetails;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private FlatButton btnSaveChanges;
         private FlatButton btnCancel;
