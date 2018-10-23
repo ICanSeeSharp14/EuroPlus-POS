@@ -743,7 +743,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Account
             this.btnDeleteAccount.Name = "btnDeleteAccount";
             this.btnDeleteAccount.Size = new System.Drawing.Size(166, 43);
             this.btnDeleteAccount.TabIndex = 2;
-            this.btnDeleteAccount.Text = "Delete Account";
+            this.btnDeleteAccount.Text = "Deactivate";
             this.btnDeleteAccount.ToolTip = "";
             this.btnDeleteAccount.UseVisualStyleBackColor = false;
             this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
@@ -936,7 +936,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Account
             this.btnPermanentDelete.Name = "btnPermanentDelete";
             this.btnPermanentDelete.Size = new System.Drawing.Size(201, 43);
             this.btnPermanentDelete.TabIndex = 2;
-            this.btnPermanentDelete.Text = "Permanently Delete";
+            this.btnPermanentDelete.Text = "Delete Account";
             this.btnPermanentDelete.ToolTip = "";
             this.btnPermanentDelete.UseVisualStyleBackColor = false;
             this.btnPermanentDelete.Click += new System.EventHandler(this.btnPermanentDelete_Click);
@@ -966,7 +966,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Account
             this.btnActivateAccount.Name = "btnActivateAccount";
             this.btnActivateAccount.Size = new System.Drawing.Size(199, 43);
             this.btnActivateAccount.TabIndex = 1;
-            this.btnActivateAccount.Text = "Activate Account";
+            this.btnActivateAccount.Text = "Restore Account";
             this.btnActivateAccount.ToolTip = "";
             this.btnActivateAccount.UseVisualStyleBackColor = false;
             this.btnActivateAccount.Click += new System.EventHandler(this.btnActivateAccount_Click);

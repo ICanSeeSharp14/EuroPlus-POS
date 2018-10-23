@@ -46,6 +46,7 @@
             this.btnSumit = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).BeginInit();
             this.pnlControlBox.SuspendLayout();
+            this.pnlTopMenuContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -73,6 +74,14 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            // 
+            // pnlTitleBorder
+            // 
+            this.pnlTitleBorder.Size = new System.Drawing.Size(454, 4);
+            // 
+            // pnlTopMenuContainer
+            // 
+            this.pnlTopMenuContainer.Size = new System.Drawing.Size(454, 40);
             // 
             // txtPurchaseRate
             // 
@@ -388,6 +397,7 @@
             this.btnSumit.Text = "Save Changes";
             this.btnSumit.ToolTip = "";
             this.btnSumit.UseVisualStyleBackColor = false;
+            this.btnSumit.Click += new System.EventHandler(this.btnSumit_Click);
             // 
             // CreateProductView
             // 
@@ -429,6 +439,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateProductView";
             this.Load += new System.EventHandler(this.CreateProductView_Load);
+            this.Controls.SetChildIndex(this.pnlTitleBorder, 0);
+            this.Controls.SetChildIndex(this.pnlTopMenuContainer, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txtProductCode, 0);
@@ -446,6 +458,7 @@
             this.Controls.SetChildIndex(this.btnSumit, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).EndInit();
             this.pnlControlBox.ResumeLayout(false);
+            this.pnlTopMenuContainer.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -23,5 +23,10 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
         private void CreateProductView_Load(object sender, EventArgs e)
         {
         }
+
+        private void btnSumit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
