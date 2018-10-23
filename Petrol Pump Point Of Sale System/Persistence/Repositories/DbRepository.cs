@@ -20,7 +20,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.Persistence.Repositories
             Roles = new RoleRepository(_context);
             Products = new ProductRepository(_context);
             PumpAttendants = new PumpAttendantRepository(_context);
-            Suppliers = new PumpAttendantRepository(_context);
+            Suppliers = new SupplierRepository(_context);
 
         }
 
