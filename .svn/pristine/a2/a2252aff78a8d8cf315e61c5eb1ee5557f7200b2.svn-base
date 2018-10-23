@@ -1,0 +1,457 @@
+﻿using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
+using Petrol_Pump_Point_Of_Sale_System.Classes.Helpers;
+using Petrol_Pump_Point_Of_Sale_System.Components;
+using Petrol_Pump_Point_Of_Sale_System.Persistence.Repositories;
+using Petrol_Pump_Point_Of_Sale_System.Models;
+using System;
+using System.Collections.Generic;
+using Petrol_Pump_Point_Of_Sale_System.Commons.Enums;
+using Petrol_Pump_Point_Of_Sale_System.Commons.Helper;
+using Petrol_Pump_Point_Of_Sale_System.Dialogs;
+using Petrol_Pump_Point_Of_Sale_System.View.Custom;
+
+namespace Petrol_Pump_Point_Of_Sale_System.View.Product
+{
+    public partial class ProductView : ICommand
+    {
+        private void Initialize()
+        {
+            InitializeEvent();
+            InitializeButtonTabEvent();
+            InitializeProductList();
+        }
+        private void InitializeButtonTabEvent()
+        {
+            SetProductButtonTabEvent();
+        }
+
+        private void InitializeProductList()
+        {
+            if (!bwProducts.IsBusy)
+            {
+                bwProducts.RunWorkerAsync();
+
+            }
+        }
+
+        private void EditProduct()
+        {
+            if (!ValidateErrors()) return;
+
+            using (var db = new DbRepository(new DatabaseContext()))
+            {
+                var productId = int.Parse(ControlHelper
+                                        .GetDataGridViewKey(dgvProduct, 0));
+
+                var selectedProduct = db.Products.GetById(productId);
+                //.GetById(productId);
+                if (selectedProduct != null)
+                    ShowProductDetails(selectedProduct);
+            }
+        }
+
+        private void ShowProductDetails(Products selectedProduct)
+        {
+            txtProductCode.Text = selectedProduct.ProductCode;
+            txtProductName.Text = selectedProduct.ProductName;
+            txtUnit.Text = selectedProduct.ProductName;
+            txtPurchaseRate.Text = Convert.ToString(selectedProduct.PurchaseRate);
+            txtSalesRate.Text = Convert.ToString(selectedProduct.SalesRate);
+            txtQuantity.Text = Convert.ToString(selectedProduct.Quantity);
+            GotoProductDetailsTab();
+        }
+
+        private void GotoProductDetailsTab()
+        {
+            tcProductMenu.SelectTab(tpProductDetails);
+        }
+
+        private void ShowErrorMessage()
+        {
+           MessageAlert.Show(MessageHelper.NoSelectedRecord(),"Error",AlertType.Error);
+           
+        }
+        public void ShowProducts()
+        {
+            dgvProduct.DataSource = GetProducts();
+
+
+        }
+
+        private IEnumerable<Products> GetProducts()
+        {
+            using (var db = new DbRepository(new DatabaseContext()))
+            {
+                return db.Products.GetAll(command.GetSearchedValue, paginator.GetCurrentPage, paginator.GetRecordsPerPage);
+            }
+        }
+
+        private void InitializeEvent()
+        {
+            bwProducts.DoWork += (s, e) =>
+            {
+                GetProducts();
+                
+            };
+
+            bwProducts.RunWorkerCompleted += (s, e) =>
+            {
+
+                ShowProducts();
+                
+            };
+            paginator.PageNavigationButtonClicked += (s, e) =>
+            {
+                ShowProducts();
+            };
+            paginator.RefreshButtonClicked += (s, e) =>
+            {
+                ShowProducts();
+            };
+
+            paginator.RecordCountChanged += (s, e) =>
+            {
+                SetTotalPage();
+                ShowProducts();
+            };
+
+            command.SearchButtonClicked += (s, e) =>
+            {
+                SetTotalPage();
+                ShowProducts();
+            };
+
+            command.FilterOnEnter += (s, e) =>
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    paginator.ResetPage();
+                    SetTotalPage();
+                    ShowProducts();
+                }
+
+            };
+
+
+
+            command.UnFilterOnClearText += (s, e) =>
+            {
+                if (command.GetSearchedValue == "")
+                {
+                    paginator.ResetPage();
+                    SetTotalPage();
+                    ShowProducts();
+                }
+
+            };
+            command.AddButtonClicked += (s, e) =>
+            {
+
+                CreateProduct();
+                //new CreateProductView().Show();
+            };
+
+            command.EditButtonClicked += (s, e) =>
+            {
+                EditProduct();
+            };
+
+            command.DeleteButtonClicked += (s, e) =>
+            {
+                DeleteProduct();
+            };
+
+        }
+
+        private void SaveChanges()
+        {
+            using (var repository = new DbRepository(new DatabaseContext()))
+            {
+                if (!IsNew)
+                {
+                    UpdateProductDetails(repository);
+                }
+         
+                SaveNewProduct(repository);
+            }   
+        }
+
+        private void SaveNewProduct(DbRepository repository)
+        {
+            if (!ValidateErrors()) return;
+
+            var productRepository = repository;
+            var newProduct = new Products()
+            {
+                ProductCode = txtProductCode.Text.Trim(),
+                ProductName = txtProductCode.Text.Trim(),
+                SalesRate = decimal.Parse(txtSalesRate.Text),
+                PurchaseRate = decimal.Parse(txtPurchaseRate.Text),
+                Unit = txtUnit.Text.Trim(),
+                Description = txtDescription.Text.Trim(),
+                Quantity = int.Parse(txtQuantity.Text)
+
+            };
+            productRepository.Products.Add(newProduct);
+            productRepository.Commit();
+            
+            InitializeProductList();
+            MessageAlert.Show("New product has successfully added.","New Product",AlertType.Info);
+        }
+
+        private void UpdateProductDetails(DbRepository repository)
+        {
+            if (!ValidateErrors()) return;
+
+            var productRepository = repository;
+           
+            var newProduct = new Products()
+            {
+                ProductCode = txtProductCode.Text.Trim(),
+                ProductName = txtProductCode.Text.Trim(),
+                SalesRate = decimal.Parse(txtSalesRate.Text),
+                PurchaseRate = decimal.Parse(txtPurchaseRate.Text),
+                Unit = txtUnit.Text.Trim(),
+                Description = txtDescription.Text.Trim(),
+                Quantity = int.Parse(txtQuantity.Text)
+
+            };
+        }
+        
+        private void CreateProduct()
+        {
+            ClearText();
+            GoToProductDetails();
+            EnableControls(true);
+        }
+        private void GoToProductDetails()
+        {
+            btnDetails.PerformClick();
+            tcProductMenu.SelectTab(tpProductDetails);
+        }
+
+        private void EnableControls(bool flag)
+        {
+            txtProductCode.Enabled = flag;
+            txtProductName.Enabled = flag;
+            txtPurchaseRate.Enabled = flag;
+            txtDescription.Enabled = flag;
+            txtQuantity.Enabled = flag;
+            txtSalesRate.Enabled = flag;
+            txtUnit.Enabled = flag;
+
+            dgvProduct.Enabled = !flag;
+
+            btnCancel.Enabled = flag;
+            btnSaveChanges.Enabled = flag;
+
+        }
+
+        private void ClearText()
+        {
+            ControlHelper.ClearTextBox(tpProductDetails);
+        }
+        private void DeleteProduct()
+        {
+            if (!ValidateErrors()) return;
+
+            
+            using (var repository = new DbRepository(new DatabaseContext()))
+            {
+                var selectedProduct = repository.Products.GetById(GetProductId());
+                if (selectedProduct != null)
+                {
+                    repository.Products.Remove(selectedProduct);
+                    repository.Commit();
+                    Notification.Show("Remove successful!","Successful",Notification.AlertColor.Green);
+                    ShowProducts();
+                }
+                   
+            }
+        }
+
+        private int GetProductId()
+        {
+           var productId = int.Parse(ControlHelper
+               .GetDataGridViewKey(dgvProduct, 0));
+           return productId;
+        }
+
+        #region Validations
+        private bool ValidateErrors()
+        {
+            if (dgvProduct.RowCount == 0)
+            {
+                MessageAlert.Show(MessageHelper.NoSelectedRecord(), "Error", AlertType.BadInfo);
+                return false;
+            }
+            if (!ValidateRequiredFields())
+                return false;
+            if (!ValidateDuplicateRecord())
+                return false;
+
+            return true;
+        }
+
+        private bool ValidateRequiredFields()
+        {
+            var isValidated = true;
+            foreach (var control in tpProductDetails.Controls.Cast<Control>())
+            {
+                if (control is FlatTextBox)
+                {
+                    var textBox = control as FlatTextBox;
+                    if (string.IsNullOrEmpty(textBox.Text.Trim()) && textBox.Required)
+                    {
+                        isValidated = SetErrorMessage(textBox, MessageHelper.NoInput());
+                        textBox.Focus();
+                        return isValidated;
+                    }
+                    ClearErrors();
+                }
+
+            }
+
+            return isValidated;
+        }
+
+        private bool ValidateDuplicateRecord()
+        {
+            var isValidated = true;
+
+            using (var repository = new DbRepository(new DatabaseContext()))
+            {
+                if (IsNew)
+                {
+                    if (repository.Products.ProductNameAlreadyExist(txtProductName.Text))
+                    {
+                        isValidated = SetErrorMessage(txtProductName, MessageHelper.DuplicateRecord(txtProductName.Text.Trim()));
+                        return isValidated;
+                    }
+                    ClearErrors();
+
+                }
+                else
+                {
+                    var productId = GetProductId();
+                    if (repository.Products.ProductNameAlreadyExist(txtProductName.Text.Trim(), productId))
+                    {
+                        isValidated = SetErrorMessage(txtProductName, MessageHelper.DuplicateRecord(txtProductName.Text.Trim()));
+                        return isValidated;
+                    }
+
+                    ClearErrors();
+                }
+
+
+            }
+
+            return isValidated;
+        }
+
+
+        private bool SetErrorMessage(Control control, string errorMessage)
+        {
+            epProducts.SetError(control, errorMessage);
+
+            return false;
+        }
+
+        private void ClearErrors()
+        {
+            epProducts.Clear();
+        }
+
+        #endregion
+
+        private void RemoveFromList(Products product)
+        {
+            using (var db = new DbRepository(new DatabaseContext()))
+            {
+                db.Products.Remove(product);
+                db.Commit();
+                ShowProducts();
+            }
+
+        }
+
+       
+        private void SetTotalPage()
+        {
+            paginator.SetMaxPage(new DatabaseContext().Products.Count(p => p.IsActive));
+        }
+        private void SetProductButtonTabEvent()
+        {
+            var controls = tlpProductButtonTab.Controls.Cast<Control>().ToList();
+
+            foreach (var control in controls)
+            {
+                if (control is FlatButton)
+                {
+                    var button = control as FlatButton;
+                    button.Click += (s, e) =>
+                    {
+                        SelectButtonTab(button);
+                        GetSelectedTab(button);
+
+                    };
+                }
+            }
+        }
+
+        private void SelectButtonTab(FlatButton button)
+        {
+            SelectedButtonTheme(button);
+            DeselectProductTabButton(button);
+        }
+
+        private void DeselectProductTabButton(FlatButton button)
+        {
+            foreach (var control in tlpProductButtonTab.Controls.Cast<Control>())
+            {
+                var currentButton = control as FlatButton;
+
+                if (control is FlatButton && !currentButton.Equals(button))
+                {
+                    DeselectButtonTheme(currentButton);
+                }
+            }
+        }
+
+        private void SelectedButtonTheme(FlatButton button)
+        {
+            button.Margin = new Padding(1, 1, 1, 1);
+            button.Dock = DockStyle.Fill;
+            button.BackColorOnDefault = ColorHelper.FlatYellowNormal;
+            button.BackColorOnHover = ColorHelper.FlatYellowNormal;
+            button.BackColorOnClick = ColorHelper.FlatYellowNormal;
+            button.ForeColorOnDefault = ColorHelper.White;
+            button.ForeColorOnHover = ColorHelper.White;
+            button.ForeColorOnClick = ColorHelper.White;
+        }
+
+        private void GetSelectedTab(FlatButton button)
+        {
+            var selectedButton = button.Text;
+            tcProductMenu.SelectTab("tp" + selectedButton.ToString().Replace(" ",""));
+        }
+        private void DeselectButtonTheme(FlatButton button)
+        {
+            button.Margin = new Padding(1, 1, 1, 1);
+            button.Dock = DockStyle.Fill;
+            button.BackColorOnDefault = Color.FromArgb(72, 72, 72);
+            button.BackColorOnHover = Color.FromArgb(72, 72, 72);
+            button.BackColorOnClick = Color.FromArgb(72, 72, 72);
+            button.ForeColorOnDefault = ColorHelper.White;
+            button.ForeColorOnHover = ColorHelper.White;
+            button.ForeColorOnClick = ColorHelper.White;
+        }
+
+        public bool IsNew { get; set; }
+    }
+
+
+
+}

@@ -6,41 +6,108 @@ using Petrol_Pump_Point_Of_Sale_System.Components;
 using Petrol_Pump_Point_Of_Sale_System.Persistence.Repositories;
 using Petrol_Pump_Point_Of_Sale_System.Models;
 using System;
+using System.Collections.Generic;
 using Petrol_Pump_Point_Of_Sale_System.Commons.Enums;
 using Petrol_Pump_Point_Of_Sale_System.Commons.Helper;
 using Petrol_Pump_Point_Of_Sale_System.Dialogs;
+using Petrol_Pump_Point_Of_Sale_System.Monostates;
+using Petrol_Pump_Point_Of_Sale_System.View.Custom;
 
 namespace Petrol_Pump_Point_Of_Sale_System.View.Product
 {
-    public partial class ProductView
+    public partial class ProductView : ICommand
     {
-
+        #region Initialization
         private void Initialize()
         {
+            IsNew = true;
             InitializeEvent();
             InitializeButtonTabEvent();
-            
+            InitializeProductList();
         }
-        private void InitializeButtonTabEvent()
-        {
-            SetProductButtonTabEvent();
-        }
+        #endregion
 
-        private void GetSelectedProduct()
+        #region Events
+        private void InitializeEvent()
         {
-            using (var db = new DbRepository(new DatabaseContext()))
+            #region Background Worker
+            bwProducts.DoWork += (s, e) => GetProducts();
+            bwProducts.RunWorkerCompleted += (s, e) => ShowProducts();
+            #endregion
+
+            #region Pagination
+            paginator.PageNavigationButtonClicked += (s, e) => ShowProducts();
+            paginator.RefreshButtonClicked += (s, e) => ShowProducts();
+            paginator.RecordCountChanged += OnPaginatorOnRecordCountChanged;
+
+            #endregion
+
+            #region Commands
+            command.SearchButtonClicked += OnCommandOnSearchButtonClicked;
+
+            command.FilterOnEnter += OnCommandOnFilterOnEnter;
+            command.UnFilterOnClearText += OnCommandOnUnFilterOnClearText;
+            command.AddButtonClicked += (s, e) => CreateProduct();
+
+            command.EditButtonClicked += (s, e) => EditProduct();
+
+            command.DeleteButtonClicked += (s, e) => DeleteProduct();
+            #endregion
+
+        }
+        #region Event Methods
+        private void OnCommandOnUnFilterOnClearText(object s, EventArgs e)
+        {
+            if (command.GetSearchedValue == "")
             {
-                var productId = int.Parse(ControlHelper
-                                        .GetDataGridViewKey(dgvProduct, "Id"));
-
-                var selectedProduct = db.Products.GetById(productId);
-                //.GetById(productId);
-                if (selectedProduct != null)
-                    FillProductInformation(selectedProduct);
+                paginator.ResetPage();
+                SetTotalPage();
+                ShowProducts();
             }
         }
 
-        private void FillProductInformation(Models.Product selectedProduct)
+        private void OnCommandOnFilterOnEnter(object s, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                paginator.ResetPage();
+                SetTotalPage();
+                ShowProducts();
+            }
+        }
+
+        private void OnCommandOnSearchButtonClicked(object s, EventArgs e)
+        {
+            SetTotalPage();
+            ShowProducts();
+        }
+
+        private void OnPaginatorOnRecordCountChanged(object s, EventArgs e)
+        {
+            SetTotalPage();
+            ShowProducts();
+        }
+        #endregion
+        private void InitializeButtonTabEvent() => SetProductButtonTabEvent();
+
+        #endregion
+
+        #region Methods
+        private void InitializeProductList()
+        {
+            if (!bwProducts.IsBusy)
+            {
+                bwProducts.RunWorkerAsync();
+
+            }
+        }
+
+        #region  Controller
+        #endregion
+
+        #region Show Methods
+        public void ShowProducts() => dgvProduct.DataSource = GetProducts();
+        private void ShowProductDetails(Products selectedProduct)
         {
             txtProductCode.Text = selectedProduct.ProductCode;
             txtProductName.Text = selectedProduct.ProductName;
@@ -50,6 +117,48 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             txtQuantity.Text = Convert.ToString(selectedProduct.Quantity);
             GotoProductDetailsTab();
         }
+        #endregion
+
+        #region Get Methods
+        private IEnumerable<Products> GetProducts()
+        {
+            using (var db = new DbRepository(new DatabaseContext()))
+            {
+                return db.Products
+                         .GetAll(pageIndex: paginator.GetCurrentPage,
+                                 pageSize: paginator.GetRecordsPerPage)
+                         .Where(p => p.ProductName.Contains(command.GetSearchedValue) ||
+                                p.ProductCode.Contains((command.GetSearchedValue)))
+                        .ToList();
+            }
+        }
+        private void GetProductDetails()
+        {
+            using (var repository = new DbRepository(new DatabaseContext()))
+            {
+                var productId = GetProductId();
+
+                var selectedProduct = repository.Products.GetById(productId);
+
+                if (selectedProduct != null)
+                    ShowProductDetails(selectedProduct);
+            }
+        }
+        #endregion
+
+        #endregion
+
+
+        private void EditProduct()
+        {
+            if (!ValidateSelectedRecord()) return;
+            IsNew = false;
+            ClearText();
+            GetProductDetails();
+            GoToProductDetails();
+            EnableControls(true);
+        }
+        
 
         private void GotoProductDetailsTab()
         {
@@ -59,106 +168,250 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
         private void ShowErrorMessage()
         {
            MessageAlert.Show(MessageHelper.NoSelectedRecord(),"Error",AlertType.Error);
+           
         }
-        public void GetProducts()
+
+        private void CancelChanges()
         {
-            using (var db = new DbRepository(new DatabaseContext()))
-            {
-                var products = db.Products.GetAll(searchCommand.GetSearchedValue, paginator.GetCurrentPage,paginator.GetRecordsPerPage);
-                dgvProduct.DataSource = products;
-            }
+            ResetToDefault();
         }
 
-        private void InitializeEvent()
+        private void SaveChanges()
         {
-            paginator.PageNavigationButtonClicked += (s, e) =>
+            using (var repository = new DbRepository(new DatabaseContext()))
             {
-                GetProducts();
-            };
-            paginator.RefreshButtonClicked += (s, e) =>
-            {
-                GetProducts();
-            };
-
-            paginator.RecordCountChanged += (s, e) =>
-            {
-                
-                SetTotalPage();
-                GetProducts();
-            };
-
-            searchCommand.SearchButtonClicked += (s, e) =>
-            {
-                SetTotalPage();
-                GetProducts();
-            };
-
-            searchCommand.FilterOnEnter += (s, e) =>
-            {
-                if (e.KeyCode == Keys.Enter)
+                if (!IsNew)
                 {
-                    paginator.ResetPage();
-                    SetTotalPage();
-                    GetProducts();
+                    UpdateProductDetails(repository);
                 }
-                    
-            };
+         
+                SaveNewProduct(repository);
+            }   
+        }
 
-            searchCommand.UnFilterOnClearText += (s, e) =>
+        private void SaveNewProduct(DbRepository repository)
+        {
+            if (!ValidateRequiredFields()) return;
+            if (!ValidateDuplicateRecord()) return;
+
+            var productRepository = repository;
+            var newProduct = new Products()
             {
-                if (searchCommand.GetSearchedValue == "")
-                {
-                    paginator.ResetPage();
-                    SetTotalPage();
-                    GetProducts();
-                }
-                   
-            };
-            searchCommand.AddButtonClicked += (s, e) =>
+                ProductCode = txtProductCode.Text.Trim(),
+                ProductName = txtProductCode.Text.Trim(),
+                SalesRate = decimal.Parse(txtSalesRate.Text),
+                PurchaseRate = decimal.Parse(txtPurchaseRate.Text),
+                Unit = txtUnit.Text.Trim(),
+                Description = txtDescription.Text.Trim(),
+                Quantity = int.Parse(txtQuantity.Text),
+                DateTimeCreated = DateTime.Now,
+                IsActive = true
+                //CreatedBy = AccountSession.GetAccount.Id
+
+        };
+            productRepository.Products.Add(newProduct);
+            productRepository.Commit();
+            
+            ResetToDefault();
+            MessageAlert.Show("New product has successfully added.","New Product",AlertType.Info);
+        }
+
+        private void UpdateProductDetails(DbRepository dbRepository)
+        {
+            if (!ValidateRequiredFields()) return;
+            if (!ValidateDuplicateRecord()) return;
+
+            var repository = dbRepository;
+            var selectedProduct = repository.Products.GetById(GetProductId());
             {
-
+                selectedProduct.ProductCode = txtProductCode.Text.Trim();
+                selectedProduct.ProductName = txtProductCode.Text.Trim();
+                selectedProduct.SalesRate = decimal.Parse(txtSalesRate.Text);
+                selectedProduct.PurchaseRate = decimal.Parse(txtPurchaseRate.Text);
+                selectedProduct.Unit = txtUnit.Text.Trim();
+                selectedProduct.Description = txtDescription.Text.Trim();
+                selectedProduct.Quantity = int.Parse(txtQuantity.Text);
+                selectedProduct.DateTimeModified = DateTime.Now;
+                //selectedProduct.ModifiedBy = AccountSession.GetAccount.Id;
             };
+            repository.Commit();
 
-            searchCommand.EditButtonClicked += (s, e) =>
-            {
-                GetSelectedProduct();
-            };
+            MessageAlert.Show("Successfully Changed");
+            ResetToDefault();
+        }
 
-            searchCommand.DeleteButtonClicked += (s, e) =>
-            {
-                DeleteProduct();
-            };
+        private void ResetToDefault()
+        {
+            GoToProductList();
+            ClearText();
+            ClearErrors();
+            EnableControls(false);
+            ShowProducts();
+            
+        }
 
+        private void GoToProductList()
+        {
+            tcProductMenu.SelectTab(tpProductList);
+        }
+        private void CreateProduct()
+        {
+            ClearText();
+            GoToProductDetails();
+            EnableControls(true);
+        }
+        private void GoToProductDetails()
+        {
+            btnDetails.PerformClick();
+            tcProductMenu.SelectTab(tpProductDetails);
+        }
+        
+        
+        private void EnableControls(bool flag)
+        {
+            txtProductCode.Enabled = flag;
+            txtProductName.Enabled = flag;
+            txtPurchaseRate.Enabled = flag;
+            txtDescription.Enabled = flag;
+            txtQuantity.Enabled = flag;
+            txtSalesRate.Enabled = flag;
+            txtUnit.Enabled = flag;
 
+            dgvProduct.Enabled = !flag;
+
+            btnCancel.Enabled = flag;
+            btnSaveChanges.Enabled = flag;
 
         }
 
+        private void ClearText()
+        {
+            ControlHelper.ClearTextBox(tpProductDetails);
+        }
         private void DeleteProduct()
         {
-            using (var db = new DbRepository(new DatabaseContext()))
+            if (!ValidateSelectedRecord()) return;
+
+            using (var repository = new DbRepository(new DatabaseContext()))
             {
-                var productId = int.Parse(ControlHelper
-                    .GetDataGridViewKey(dgvProduct, "Id"));
-                var selectedProduct = db.Products.GetById(productId);
+                var selectedProduct = repository.Products.GetById(GetProductId());
                 if (selectedProduct != null)
-                    RemoveFromList(selectedProduct);
+                {
+                    repository.Products.Remove(selectedProduct);
+                    repository.Commit();
+                    Notification.Show("Remove successful!","Successful",Notification.AlertColor.Green);
+                    ShowProducts();
+                }
+                   
             }
         }
 
-        private void RemoveFromList(Models.Product product)
+      
+
+        #region Validations
+        private bool ValidateSelectedRecord()
+        {
+            
+            if (!IsNew && dgvProduct.RowCount == 0)
+            {
+                MessageAlert.Show(MessageHelper.NoSelectedRecord(), "Error", AlertType.BadInfo);
+                return false;
+            }
+            return true;
+        }
+
+        private bool ValidateRequiredFields()
+        {
+            var isValidated = true;
+            foreach (var control in tpProductDetails.Controls.Cast<Control>())
+            {
+                if (control is FlatTextBox)
+                {
+                    var textBox = control as FlatTextBox;
+                    if (string.IsNullOrEmpty(textBox.Text.Trim()) && textBox.Required)
+                    {
+                        isValidated = SetErrorMessage(textBox, MessageHelper.NoInput());
+                        textBox.Focus();
+                        return isValidated;
+                    }
+                    ClearErrors();
+                }
+
+            }
+
+            return isValidated;
+        }
+
+        private bool ValidateDuplicateRecord()
+        {
+            ClearErrors();
+
+            var isValidated = true;
+
+            using (var repository = new DbRepository(new DatabaseContext()))
+            {
+                if (IsNew)
+                {
+                    if (repository.Products.ProductNameAlreadyExist(txtProductName.Text))
+                    {
+                        isValidated = SetErrorMessage(txtProductName, MessageHelper.DuplicateRecord(txtProductName.Text.Trim()));
+                        return isValidated;
+                    }
+                   
+                }
+                else
+                {
+                    var productId = GetProductId();
+                    if (repository.Products.ProductNameAlreadyExist(txtProductName.Text, productId))
+                    {
+                        isValidated = SetErrorMessage(txtProductName, MessageHelper.DuplicateRecord(txtProductName.Text.Trim()));
+                        return isValidated;
+                    }
+                }
+
+
+            }
+
+            return isValidated;
+        }
+
+
+        private bool SetErrorMessage(Control control, string errorMessage)
+        {
+            epProducts.SetError(control, errorMessage);
+
+            return false;
+        }
+
+        private void ClearErrors()
+        {
+            epProducts.Clear();
+        }
+
+        #endregion
+        private int GetProductId()
+        {
+            return int.Parse(ControlHelper
+                .GetDataGridViewKey(dgvProduct, 0));
+        }
+        private void RemoveFromList(Products product)
         {
             using (var db = new DbRepository(new DatabaseContext()))
             {
-                db.Products.Delete(product);
+                db.Products.Remove(product);
                 db.Commit();
-                GetProducts();
+                ShowProducts();
             }
+
         }
 
+       
         private void SetTotalPage()
         {
             paginator.SetMaxPage(new DatabaseContext().Products.Count(p => p.IsActive));
         }
+
+        #region Button Themes
         private void SetProductButtonTabEvent()
         {
             var controls = tlpProductButtonTab.Controls.Cast<Control>().ToList();
@@ -212,7 +465,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
         private void GetSelectedTab(FlatButton button)
         {
             var selectedButton = button.Text;
-            tcProductMenu.SelectTab("tp" + button.Text.Replace(" ",""));
+            tcProductMenu.SelectTab("tp" + selectedButton.ToString().Replace(" ",""));
         }
         private void DeselectButtonTheme(FlatButton button)
         {
@@ -225,7 +478,9 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             button.ForeColorOnHover = ColorHelper.White;
             button.ForeColorOnClick = ColorHelper.White;
         }
+        #endregion
 
+        public bool IsNew { get; set; }
     }
 
 

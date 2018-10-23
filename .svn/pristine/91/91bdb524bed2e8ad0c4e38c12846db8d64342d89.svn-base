@@ -1,0 +1,72 @@
+﻿using Petrol_Pump_Point_Of_Sale_System.Components;
+
+namespace Petrol_Pump_Point_Of_Sale_System.View.Custom
+{
+    partial class LoginView
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.pnlLoginContainer = new FlatPanel();
+            this.SuspendLayout();
+            // 
+            // pnlLoginContainer
+            // 
+            this.pnlLoginContainer.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlLoginContainer.ColorAOnDefault = System.Drawing.Color.WhiteSmoke;
+            this.pnlLoginContainer.ColorBOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(80)))), ((int)(((byte)(45)))));
+            this.pnlLoginContainer.ColorCOnDefault = System.Drawing.Color.Transparent;
+            this.pnlLoginContainer.ColorToneOnDefault = ITSpecialProject.Commons.Enums.ColorCombination.SoloColor;
+            this.pnlLoginContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlLoginContainer.EllipseOnDefault = 0;
+            this.pnlLoginContainer.GradientAngleOnDefault = 0;
+            this.pnlLoginContainer.Location = new System.Drawing.Point(0, 0);
+            this.pnlLoginContainer.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlLoginContainer.Name = "pnlLoginContainer";
+            this.pnlLoginContainer.Size = new System.Drawing.Size(498, 511);
+            this.pnlLoginContainer.TabIndex = 0;
+            // 
+            // LoginView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(498, 511);
+            this.ControlBox = false;
+            this.Controls.Add(this.pnlLoginContainer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "LoginView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private FlatPanel pnlLoginContainer;
+
+
+    }
+}

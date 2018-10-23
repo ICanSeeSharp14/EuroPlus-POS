@@ -1,0 +1,21 @@
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Petrol_Pump_Point_Of_Sale_System.Models;
+
+namespace Petrol_Pump_Point_Of_Sale_System.Core.Repositories
+{
+    public interface IUserRepository : IRepository<User>
+    {
+      
+        IEnumerable<User> SearchUsers(string searchValue);
+
+        IEnumerable<dynamic> GetAllUsers();
+
+      
+       Task<User> CheckLoginUser(string username, string password);
+
+       
+    }
+
+    
+}

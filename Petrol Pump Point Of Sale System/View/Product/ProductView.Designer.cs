@@ -1,4 +1,6 @@
-﻿namespace Petrol_Pump_Point_Of_Sale_System.View.Product
+﻿using Petrol_Pump_Point_Of_Sale_System.Components;
+
+namespace Petrol_Pump_Point_Of_Sale_System.View.Product
 {
     partial class ProductView
     {
@@ -28,48 +30,69 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductView));
             this.pnlButtonTab = new System.Windows.Forms.Panel();
             this.tlpProductButtonTab = new System.Windows.Forms.TableLayoutPanel();
+            this.btnDeactivate = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnList = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnDetails = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnRateHistory = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.tcProductMenu = new MaterialSkin.Controls.MaterialTabControl();
             this.tpProductList = new System.Windows.Forms.TabPage();
-            this.searchCommand = new Petrol_Pump_Point_Of_Sale_System.View.Custom.SearchCommandView();
-            this.dgvProduct = new ITSpecialProject.Components.FlatTable();
-            this.paginator = new Petrol_Pump_Point_Of_Sale_System.View.Custom.PaginatorView();
+            this.dgvProduct = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTable();
+            this.bsProducts = new System.Windows.Forms.BindingSource(this.components);
             this.tpProductDetails = new System.Windows.Forms.TabPage();
-            this.tlpDetailButtons = new System.Windows.Forms.TableLayoutPanel();
-            this.btnDelete = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
-            this.btnEdit = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
-            this.txtPurchaseRate = new ITA_UI.FlatTextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSaveChanges = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
+            this.btnCancel = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
+            this.txtPurchaseRate = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtSalesRate = new ITA_UI.FlatTextBox();
+            this.txtSalesRate = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtQuantity = new ITA_UI.FlatTextBox();
+            this.txtQuantity = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtUnit = new ITA_UI.FlatTextBox();
+            this.txtUnit = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.flatTextBox3 = new ITA_UI.FlatTextBox();
+            this.txtDescription = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtProductName = new ITA_UI.FlatTextBox();
-            this.txtProductCode = new ITA_UI.FlatTextBox();
+            this.txtProductName = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
+            this.txtProductCode = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tpRateHistory = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.flatButton1 = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
+            this.flatButton2 = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
+            this.bwProducts = new System.ComponentModel.BackgroundWorker();
+            this.epProducts = new System.Windows.Forms.ErrorProvider(this.components);
+            this.paginator = new Petrol_Pump_Point_Of_Sale_System.View.Custom.PaginatorView();
+            this.command = new Petrol_Pump_Point_Of_Sale_System.View.Custom.CommandView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchaseRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlButtonTab.SuspendLayout();
             this.tlpProductButtonTab.SuspendLayout();
             this.tcProductMenu.SuspendLayout();
             this.tpProductList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsProducts)).BeginInit();
             this.tpProductDetails.SuspendLayout();
-            this.tlpDetailButtons.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epProducts)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlButtonTab
@@ -83,11 +106,13 @@
             // 
             // tlpProductButtonTab
             // 
-            this.tlpProductButtonTab.ColumnCount = 4;
+            this.tlpProductButtonTab.ColumnCount = 5;
             this.tlpProductButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tlpProductButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tlpProductButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tlpProductButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 623F));
+            this.tlpProductButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tlpProductButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 465F));
+            this.tlpProductButtonTab.Controls.Add(this.btnDeactivate, 3, 0);
             this.tlpProductButtonTab.Controls.Add(this.btnList, 0, 0);
             this.tlpProductButtonTab.Controls.Add(this.btnDetails, 1, 0);
             this.tlpProductButtonTab.Controls.Add(this.btnRateHistory, 2, 0);
@@ -98,6 +123,35 @@
             this.tlpProductButtonTab.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpProductButtonTab.Size = new System.Drawing.Size(1065, 40);
             this.tlpProductButtonTab.TabIndex = 1;
+            // 
+            // btnDeactivate
+            // 
+            this.btnDeactivate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.btnDeactivate.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.btnDeactivate.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.btnDeactivate.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.btnDeactivate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeactivate.EllipseOnClick = 0;
+            this.btnDeactivate.EllipseOnDefault = 0;
+            this.btnDeactivate.EllipseOnHover = 0;
+            this.btnDeactivate.FlatAppearance.BorderSize = 0;
+            this.btnDeactivate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.btnDeactivate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.btnDeactivate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeactivate.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.btnDeactivate.ForeColor = System.Drawing.Color.White;
+            this.btnDeactivate.ForeColorOnClick = System.Drawing.Color.White;
+            this.btnDeactivate.ForeColorOnDefault = System.Drawing.Color.White;
+            this.btnDeactivate.ForeColorOnHover = System.Drawing.Color.White;
+            this.btnDeactivate.Location = new System.Drawing.Point(452, 2);
+            this.btnDeactivate.Margin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.btnDeactivate.Name = "btnDeactivate";
+            this.btnDeactivate.Size = new System.Drawing.Size(148, 36);
+            this.btnDeactivate.TabIndex = 51;
+            this.btnDeactivate.Text = "Inactive Products";
+            this.btnDeactivate.ToolTip = "";
+            this.btnDeactivate.UseVisualStyleBackColor = false;
+            this.btnDeactivate.Visible = false;
             // 
             // btnList
             // 
@@ -185,6 +239,7 @@
             this.btnRateHistory.Text = "Rate History";
             this.btnRateHistory.ToolTip = "";
             this.btnRateHistory.UseVisualStyleBackColor = false;
+            this.btnRateHistory.Visible = false;
             // 
             // tcProductMenu
             // 
@@ -204,7 +259,7 @@
             // tpProductList
             // 
             this.tpProductList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tpProductList.Controls.Add(this.searchCommand);
+            this.tpProductList.Controls.Add(this.command);
             this.tpProductList.Controls.Add(this.dgvProduct);
             this.tpProductList.Controls.Add(this.paginator);
             this.tpProductList.Location = new System.Drawing.Point(4, 22);
@@ -213,18 +268,7 @@
             this.tpProductList.Padding = new System.Windows.Forms.Padding(4);
             this.tpProductList.Size = new System.Drawing.Size(1057, 598);
             this.tpProductList.TabIndex = 0;
-            this.tpProductList.Text = "Product List";
-            // 
-            // searchCommand
-            // 
-            this.searchCommand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.searchCommand.Dock = System.Windows.Forms.DockStyle.Top;
-            this.searchCommand.Location = new System.Drawing.Point(4, 4);
-            this.searchCommand.Name = "searchCommand";
-            this.searchCommand.ShowActionButtons = true;
-            this.searchCommand.ShowSearchBar = true;
-            this.searchCommand.Size = new System.Drawing.Size(1049, 53);
-            this.searchCommand.TabIndex = 5;
+            this.tpProductList.Text = "Products List";
             // 
             // dgvProduct
             // 
@@ -236,6 +280,7 @@
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             this.dgvProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProduct.AutoGenerateColumns = false;
             this.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProduct.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvProduct.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
@@ -252,6 +297,16 @@
             this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProduct.ColumnHeadersHeight = 30;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.productCodeDataGridViewTextBoxColumn,
+            this.productNameDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.unitDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn,
+            this.salesRateDataGridViewTextBoxColumn,
+            this.purchaseRateDataGridViewTextBoxColumn});
+            this.dgvProduct.DataSource = this.bsProducts;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11.25F);
@@ -299,22 +354,14 @@
             this.dgvProduct.Size = new System.Drawing.Size(1049, 477);
             this.dgvProduct.TabIndex = 2;
             // 
-            // paginator
+            // bsProducts
             // 
-            this.paginator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
-            this.paginator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.paginator.GetCurrentPage = 1;
-            this.paginator.HasRecordCount = true;
-            this.paginator.HasRefresh = true;
-            this.paginator.Location = new System.Drawing.Point(4, 547);
-            this.paginator.Name = "paginator";
-            this.paginator.Size = new System.Drawing.Size(1049, 47);
-            this.paginator.TabIndex = 4;
+            this.bsProducts.DataSource = typeof(Petrol_Pump_Point_Of_Sale_System.Models.Products);
             // 
             // tpProductDetails
             // 
-            this.tpProductDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.tpProductDetails.Controls.Add(this.tlpDetailButtons);
+            this.tpProductDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tpProductDetails.Controls.Add(this.tableLayoutPanel1);
             this.tpProductDetails.Controls.Add(this.txtPurchaseRate);
             this.tpProductDetails.Controls.Add(this.label7);
             this.tpProductDetails.Controls.Add(this.txtSalesRate);
@@ -323,366 +370,377 @@
             this.tpProductDetails.Controls.Add(this.label5);
             this.tpProductDetails.Controls.Add(this.txtUnit);
             this.tpProductDetails.Controls.Add(this.label4);
-            this.tpProductDetails.Controls.Add(this.flatTextBox3);
+            this.tpProductDetails.Controls.Add(this.txtDescription);
             this.tpProductDetails.Controls.Add(this.label3);
             this.tpProductDetails.Controls.Add(this.txtProductName);
             this.tpProductDetails.Controls.Add(this.txtProductCode);
             this.tpProductDetails.Controls.Add(this.label2);
             this.tpProductDetails.Controls.Add(this.label1);
+            this.epProducts.SetIconPadding(this.tpProductDetails, 10);
             this.tpProductDetails.Location = new System.Drawing.Point(4, 22);
             this.tpProductDetails.Margin = new System.Windows.Forms.Padding(0);
             this.tpProductDetails.Name = "tpProductDetails";
             this.tpProductDetails.Size = new System.Drawing.Size(1057, 598);
             this.tpProductDetails.TabIndex = 1;
-            this.tpProductDetails.Text = "Product Details";
+            this.tpProductDetails.Text = "Products Details";
             // 
-            // tlpDetailButtons
+            // tableLayoutPanel1
             // 
-            this.tlpDetailButtons.ColumnCount = 5;
-            this.tlpDetailButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.84039F));
-            this.tlpDetailButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.15961F));
-            this.tlpDetailButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 270F));
-            this.tlpDetailButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tlpDetailButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 374F));
-            this.tlpDetailButtons.Controls.Add(this.btnDelete, 2, 0);
-            this.tlpDetailButtons.Controls.Add(this.btnEdit, 1, 0);
-            this.tlpDetailButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tlpDetailButtons.Location = new System.Drawing.Point(0, 540);
-            this.tlpDetailButtons.Name = "tlpDetailButtons";
-            this.tlpDetailButtons.RowCount = 1;
-            this.tlpDetailButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpDetailButtons.Size = new System.Drawing.Size(1057, 58);
-            this.tlpDetailButtons.TabIndex = 28;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.btnSaveChanges, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnCancel, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(301, 377);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(432, 47);
+            this.tableLayoutPanel1.TabIndex = 50;
             // 
-            // btnDelete
+            // btnSaveChanges
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.btnDelete.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btnDelete.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.btnDelete.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.EllipseOnClick = 0;
-            this.btnDelete.EllipseOnDefault = 0;
-            this.btnDelete.EllipseOnHover = 0;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.ForeColorOnClick = System.Drawing.Color.White;
-            this.btnDelete.ForeColorOnDefault = System.Drawing.Color.White;
-            this.btnDelete.ForeColorOnHover = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(404, 0);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(116, 44);
-            this.btnDelete.TabIndex = 24;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.ToolTip = "Click to Edit";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnSaveChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnSaveChanges.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnSaveChanges.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnSaveChanges.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnSaveChanges.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveChanges.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSaveChanges.EllipseOnClick = 0;
+            this.btnSaveChanges.EllipseOnDefault = 0;
+            this.btnSaveChanges.EllipseOnHover = 0;
+            this.btnSaveChanges.Enabled = false;
+            this.btnSaveChanges.FlatAppearance.BorderSize = 0;
+            this.btnSaveChanges.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnSaveChanges.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnSaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveChanges.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.btnSaveChanges.ForeColor = System.Drawing.Color.White;
+            this.btnSaveChanges.ForeColorOnClick = System.Drawing.Color.White;
+            this.btnSaveChanges.ForeColorOnDefault = System.Drawing.Color.White;
+            this.btnSaveChanges.ForeColorOnHover = System.Drawing.Color.White;
+            this.btnSaveChanges.Location = new System.Drawing.Point(289, 2);
+            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.btnSaveChanges.Name = "btnSaveChanges";
+            this.btnSaveChanges.Size = new System.Drawing.Size(142, 43);
+            this.btnSaveChanges.TabIndex = 2;
+            this.btnSaveChanges.Text = "Save Changes";
+            this.btnSaveChanges.ToolTip = "";
+            this.btnSaveChanges.UseVisualStyleBackColor = false;
+            this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
             // 
-            // btnEdit
+            // btnCancel
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.btnEdit.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(100)))), ((int)(((byte)(150)))));
-            this.btnEdit.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.btnEdit.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(70)))), ((int)(((byte)(120)))));
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.EllipseOnClick = 0;
-            this.btnEdit.EllipseOnDefault = 0;
-            this.btnEdit.EllipseOnHover = 0;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(100)))), ((int)(((byte)(150)))));
-            this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(70)))), ((int)(((byte)(120)))));
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.ForeColorOnClick = System.Drawing.Color.White;
-            this.btnEdit.ForeColorOnDefault = System.Drawing.Color.White;
-            this.btnEdit.ForeColorOnHover = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(230, 0);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(153, 44);
-            this.btnEdit.TabIndex = 25;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.ToolTip = "Click to Edit";
-            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnCancel.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnCancel.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnCancel.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancel.EllipseOnClick = 0;
+            this.btnCancel.EllipseOnDefault = 0;
+            this.btnCancel.EllipseOnHover = 0;
+            this.btnCancel.Enabled = false;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.ForeColorOnClick = System.Drawing.Color.White;
+            this.btnCancel.ForeColorOnDefault = System.Drawing.Color.White;
+            this.btnCancel.ForeColorOnHover = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(145, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(142, 43);
+            this.btnCancel.TabIndex = 6;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.ToolTip = "";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtPurchaseRate
             // 
             this.txtPurchaseRate.BackColor = System.Drawing.Color.White;
-            this.txtPurchaseRate.BackColorOnEnter = System.Drawing.Color.WhiteSmoke;
+            this.txtPurchaseRate.BackColorOnEnter = System.Drawing.SystemColors.Control;
+            this.txtPurchaseRate.BackColorOnError = System.Drawing.Color.Empty;
             this.txtPurchaseRate.BackColorOnLeave = System.Drawing.Color.White;
             this.txtPurchaseRate.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtPurchaseRate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtPurchaseRate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             this.txtPurchaseRate.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtPurchaseRate.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPurchaseRate.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txtPurchaseRate.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
             this.txtPurchaseRate.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txtPurchaseRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.txtPurchaseRate.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.txtPurchaseRate.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtPurchaseRate.InputValidation = ITA_UI.FlatTextBox.Validation.AlphaNumeric;
-            this.txtPurchaseRate.Location = new System.Drawing.Point(366, 289);
+            this.epProducts.SetIconPadding(this.txtPurchaseRate, 10);
+            this.txtPurchaseRate.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.Decimal;
+            this.txtPurchaseRate.Location = new System.Drawing.Point(370, 330);
             this.txtPurchaseRate.Margin = new System.Windows.Forms.Padding(0);
             this.txtPurchaseRate.Name = "txtPurchaseRate";
             this.txtPurchaseRate.PlaceHolder = null;
             this.txtPurchaseRate.Required = true;
-            this.txtPurchaseRate.RequiredErrorMessage = "Field is Required";
             this.txtPurchaseRate.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
             this.txtPurchaseRate.RequiredForeColorOnLeave = System.Drawing.Color.White;
             this.txtPurchaseRate.RequiredForeColorOnValidate = System.Drawing.Color.White;
             this.txtPurchaseRate.Size = new System.Drawing.Size(363, 27);
-            this.txtPurchaseRate.TabIndex = 23;
+            this.txtPurchaseRate.TabIndex = 49;
+            this.txtPurchaseRate.ValidateOnLeave = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(250, 296);
+            this.label7.Location = new System.Drawing.Point(254, 337);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 20);
-            this.label7.TabIndex = 22;
+            this.label7.TabIndex = 48;
             this.label7.Text = "Purchase Rate";
             // 
             // txtSalesRate
             // 
             this.txtSalesRate.BackColor = System.Drawing.Color.White;
-            this.txtSalesRate.BackColorOnEnter = System.Drawing.Color.WhiteSmoke;
+            this.txtSalesRate.BackColorOnEnter = System.Drawing.SystemColors.Control;
+            this.txtSalesRate.BackColorOnError = System.Drawing.Color.Empty;
             this.txtSalesRate.BackColorOnLeave = System.Drawing.Color.White;
             this.txtSalesRate.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtSalesRate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtSalesRate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             this.txtSalesRate.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtSalesRate.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSalesRate.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txtSalesRate.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
             this.txtSalesRate.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txtSalesRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.txtSalesRate.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.txtSalesRate.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtSalesRate.InputValidation = ITA_UI.FlatTextBox.Validation.AlphaNumeric;
-            this.txtSalesRate.Location = new System.Drawing.Point(366, 252);
+            this.epProducts.SetIconPadding(this.txtSalesRate, 10);
+            this.txtSalesRate.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.Decimal;
+            this.txtSalesRate.Location = new System.Drawing.Point(370, 286);
             this.txtSalesRate.Margin = new System.Windows.Forms.Padding(0);
             this.txtSalesRate.Name = "txtSalesRate";
             this.txtSalesRate.PlaceHolder = null;
             this.txtSalesRate.Required = true;
-            this.txtSalesRate.RequiredErrorMessage = "Field is Required";
             this.txtSalesRate.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
             this.txtSalesRate.RequiredForeColorOnLeave = System.Drawing.Color.White;
             this.txtSalesRate.RequiredForeColorOnValidate = System.Drawing.Color.White;
             this.txtSalesRate.Size = new System.Drawing.Size(363, 27);
-            this.txtSalesRate.TabIndex = 21;
+            this.txtSalesRate.TabIndex = 47;
+            this.txtSalesRate.ValidateOnLeave = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(250, 259);
+            this.label6.Location = new System.Drawing.Point(254, 293);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 20);
-            this.label6.TabIndex = 20;
+            this.label6.TabIndex = 46;
             this.label6.Text = "Sales Rate";
             // 
             // txtQuantity
             // 
             this.txtQuantity.BackColor = System.Drawing.Color.White;
-            this.txtQuantity.BackColorOnEnter = System.Drawing.Color.WhiteSmoke;
+            this.txtQuantity.BackColorOnEnter = System.Drawing.SystemColors.Control;
+            this.txtQuantity.BackColorOnError = System.Drawing.Color.Empty;
             this.txtQuantity.BackColorOnLeave = System.Drawing.Color.White;
             this.txtQuantity.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtQuantity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtQuantity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             this.txtQuantity.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtQuantity.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txtQuantity.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
             this.txtQuantity.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txtQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.txtQuantity.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.txtQuantity.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtQuantity.InputValidation = ITA_UI.FlatTextBox.Validation.AlphaNumeric;
-            this.txtQuantity.Location = new System.Drawing.Point(366, 205);
+            this.epProducts.SetIconPadding(this.txtQuantity, 10);
+            this.txtQuantity.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.Numeric;
+            this.txtQuantity.Location = new System.Drawing.Point(370, 239);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(0);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PlaceHolder = null;
             this.txtQuantity.Required = true;
-            this.txtQuantity.RequiredErrorMessage = "Field is Required";
             this.txtQuantity.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
             this.txtQuantity.RequiredForeColorOnLeave = System.Drawing.Color.White;
             this.txtQuantity.RequiredForeColorOnValidate = System.Drawing.Color.White;
             this.txtQuantity.Size = new System.Drawing.Size(363, 27);
-            this.txtQuantity.TabIndex = 19;
+            this.txtQuantity.TabIndex = 45;
+            this.txtQuantity.ValidateOnLeave = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(250, 212);
+            this.label5.Location = new System.Drawing.Point(254, 246);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 20);
-            this.label5.TabIndex = 18;
+            this.label5.TabIndex = 44;
             this.label5.Text = "Quantity";
             // 
             // txtUnit
             // 
             this.txtUnit.BackColor = System.Drawing.Color.White;
-            this.txtUnit.BackColorOnEnter = System.Drawing.Color.WhiteSmoke;
+            this.txtUnit.BackColorOnEnter = System.Drawing.SystemColors.Control;
+            this.txtUnit.BackColorOnError = System.Drawing.Color.Empty;
             this.txtUnit.BackColorOnLeave = System.Drawing.Color.White;
             this.txtUnit.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtUnit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtUnit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             this.txtUnit.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtUnit.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUnit.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txtUnit.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
             this.txtUnit.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txtUnit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.txtUnit.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.txtUnit.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtUnit.InputValidation = ITA_UI.FlatTextBox.Validation.AlphaNumeric;
-            this.txtUnit.Location = new System.Drawing.Point(366, 162);
+            this.epProducts.SetIconPadding(this.txtUnit, 10);
+            this.txtUnit.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.AlphaNumeric;
+            this.txtUnit.Location = new System.Drawing.Point(370, 196);
             this.txtUnit.Margin = new System.Windows.Forms.Padding(0);
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.PlaceHolder = null;
             this.txtUnit.Required = true;
-            this.txtUnit.RequiredErrorMessage = "Field is Required";
             this.txtUnit.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
             this.txtUnit.RequiredForeColorOnLeave = System.Drawing.Color.White;
             this.txtUnit.RequiredForeColorOnValidate = System.Drawing.Color.White;
             this.txtUnit.Size = new System.Drawing.Size(363, 27);
-            this.txtUnit.TabIndex = 17;
+            this.txtUnit.TabIndex = 43;
+            this.txtUnit.ValidateOnLeave = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(250, 169);
+            this.label4.Location = new System.Drawing.Point(254, 203);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 20);
-            this.label4.TabIndex = 16;
+            this.label4.TabIndex = 42;
             this.label4.Text = "Unit";
             // 
-            // flatTextBox3
+            // txtDescription
             // 
-            this.flatTextBox3.BackColor = System.Drawing.Color.White;
-            this.flatTextBox3.BackColorOnEnter = System.Drawing.Color.WhiteSmoke;
-            this.flatTextBox3.BackColorOnLeave = System.Drawing.Color.White;
-            this.flatTextBox3.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.flatTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.flatTextBox3.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.flatTextBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.flatTextBox3.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.flatTextBox3.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
-            this.flatTextBox3.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.flatTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.flatTextBox3.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.flatTextBox3.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.flatTextBox3.InputValidation = ITA_UI.FlatTextBox.Validation.AlphaNumeric;
-            this.flatTextBox3.Location = new System.Drawing.Point(366, 120);
-            this.flatTextBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.flatTextBox3.Name = "flatTextBox3";
-            this.flatTextBox3.PlaceHolder = null;
-            this.flatTextBox3.Required = true;
-            this.flatTextBox3.RequiredErrorMessage = "Field is Required";
-            this.flatTextBox3.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
-            this.flatTextBox3.RequiredForeColorOnLeave = System.Drawing.Color.White;
-            this.flatTextBox3.RequiredForeColorOnValidate = System.Drawing.Color.White;
-            this.flatTextBox3.Size = new System.Drawing.Size(363, 27);
-            this.flatTextBox3.TabIndex = 15;
+            this.txtDescription.BackColor = System.Drawing.Color.White;
+            this.txtDescription.BackColorOnEnter = System.Drawing.SystemColors.Control;
+            this.txtDescription.BackColorOnError = System.Drawing.Color.Empty;
+            this.txtDescription.BackColorOnLeave = System.Drawing.Color.White;
+            this.txtDescription.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtDescription.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.txtDescription.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtDescription.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.txtDescription.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtDescription.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtDescription.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.epProducts.SetIconPadding(this.txtDescription, 10);
+            this.txtDescription.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.Alphabet;
+            this.txtDescription.Location = new System.Drawing.Point(370, 154);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(0);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.PlaceHolder = null;
+            this.txtDescription.Required = false;
+            this.txtDescription.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
+            this.txtDescription.RequiredForeColorOnLeave = System.Drawing.Color.White;
+            this.txtDescription.RequiredForeColorOnValidate = System.Drawing.Color.White;
+            this.txtDescription.Size = new System.Drawing.Size(363, 27);
+            this.txtDescription.TabIndex = 41;
+            this.txtDescription.ValidateOnLeave = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(250, 127);
+            this.label3.Location = new System.Drawing.Point(254, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 20);
-            this.label3.TabIndex = 14;
+            this.label3.TabIndex = 40;
             this.label3.Text = "Description";
             // 
             // txtProductName
             // 
             this.txtProductName.BackColor = System.Drawing.Color.White;
-            this.txtProductName.BackColorOnEnter = System.Drawing.Color.WhiteSmoke;
+            this.txtProductName.BackColorOnEnter = System.Drawing.SystemColors.Control;
+            this.txtProductName.BackColorOnError = System.Drawing.Color.Empty;
             this.txtProductName.BackColorOnLeave = System.Drawing.Color.White;
             this.txtProductName.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtProductName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtProductName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             this.txtProductName.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtProductName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProductName.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txtProductName.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
             this.txtProductName.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txtProductName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.txtProductName.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.txtProductName.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtProductName.InputValidation = ITA_UI.FlatTextBox.Validation.AlphaNumeric;
-            this.txtProductName.Location = new System.Drawing.Point(366, 79);
+            this.epProducts.SetIconPadding(this.txtProductName, 10);
+            this.txtProductName.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.AlphaNumeric;
+            this.txtProductName.Location = new System.Drawing.Point(370, 113);
             this.txtProductName.Margin = new System.Windows.Forms.Padding(0);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.PlaceHolder = null;
             this.txtProductName.Required = true;
-            this.txtProductName.RequiredErrorMessage = "Field is Required";
             this.txtProductName.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
             this.txtProductName.RequiredForeColorOnLeave = System.Drawing.Color.White;
             this.txtProductName.RequiredForeColorOnValidate = System.Drawing.Color.White;
             this.txtProductName.Size = new System.Drawing.Size(363, 27);
-            this.txtProductName.TabIndex = 13;
+            this.txtProductName.TabIndex = 39;
+            this.txtProductName.ValidateOnLeave = false;
             // 
             // txtProductCode
             // 
             this.txtProductCode.BackColor = System.Drawing.Color.White;
-            this.txtProductCode.BackColorOnEnter = System.Drawing.Color.WhiteSmoke;
+            this.txtProductCode.BackColorOnEnter = System.Drawing.SystemColors.Control;
+            this.txtProductCode.BackColorOnError = System.Drawing.Color.Empty;
             this.txtProductCode.BackColorOnLeave = System.Drawing.Color.White;
             this.txtProductCode.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtProductCode.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtProductCode.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             this.txtProductCode.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtProductCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProductCode.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txtProductCode.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
             this.txtProductCode.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
             this.txtProductCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.txtProductCode.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.txtProductCode.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtProductCode.InputValidation = ITA_UI.FlatTextBox.Validation.AlphaNumeric;
-            this.txtProductCode.Location = new System.Drawing.Point(366, 39);
+            this.epProducts.SetIconPadding(this.txtProductCode, 10);
+            this.txtProductCode.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.AlphaNumericNoSpace;
+            this.txtProductCode.Location = new System.Drawing.Point(370, 73);
             this.txtProductCode.Margin = new System.Windows.Forms.Padding(0);
             this.txtProductCode.Name = "txtProductCode";
             this.txtProductCode.PlaceHolder = null;
             this.txtProductCode.Required = true;
-            this.txtProductCode.RequiredErrorMessage = "Field is Required";
             this.txtProductCode.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
             this.txtProductCode.RequiredForeColorOnLeave = System.Drawing.Color.White;
             this.txtProductCode.RequiredForeColorOnValidate = System.Drawing.Color.White;
             this.txtProductCode.Size = new System.Drawing.Size(363, 27);
-            this.txtProductCode.TabIndex = 12;
+            this.txtProductCode.TabIndex = 38;
+            this.txtProductCode.ValidateOnLeave = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(250, 86);
+            this.label2.Location = new System.Drawing.Point(254, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 20);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Product Name";
+            this.label2.Size = new System.Drawing.Size(110, 20);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Products Name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(250, 46);
+            this.label1.Location = new System.Drawing.Point(254, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 20);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Product Code";
+            this.label1.Size = new System.Drawing.Size(105, 20);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Products Code";
             // 
             // tpRateHistory
             // 
@@ -696,13 +754,178 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPage1.Controls.Add(this.tableLayoutPanel2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1057, 598);
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Controls.Add(this.flatButton1, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.flatButton2, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 548);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1051, 47);
+            this.tableLayoutPanel2.TabIndex = 36;
+            // 
+            // flatButton1
+            // 
+            this.flatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.flatButton1.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.flatButton1.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.flatButton1.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.flatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flatButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flatButton1.EllipseOnClick = 0;
+            this.flatButton1.EllipseOnDefault = 0;
+            this.flatButton1.EllipseOnHover = 0;
+            this.flatButton1.Enabled = false;
+            this.flatButton1.FlatAppearance.BorderSize = 0;
+            this.flatButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.flatButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.flatButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flatButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.flatButton1.ForeColor = System.Drawing.Color.White;
+            this.flatButton1.ForeColorOnClick = System.Drawing.Color.White;
+            this.flatButton1.ForeColorOnDefault = System.Drawing.Color.White;
+            this.flatButton1.ForeColorOnHover = System.Drawing.Color.White;
+            this.flatButton1.Location = new System.Drawing.Point(701, 2);
+            this.flatButton1.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.flatButton1.Name = "flatButton1";
+            this.flatButton1.Size = new System.Drawing.Size(349, 43);
+            this.flatButton1.TabIndex = 2;
+            this.flatButton1.Text = "Save Changes";
+            this.flatButton1.ToolTip = "";
+            this.flatButton1.UseVisualStyleBackColor = false;
+            // 
+            // flatButton2
+            // 
+            this.flatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.flatButton2.BackColorOnClick = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.flatButton2.BackColorOnDefault = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.flatButton2.BackColorOnHover = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.flatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flatButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flatButton2.EllipseOnClick = 0;
+            this.flatButton2.EllipseOnDefault = 0;
+            this.flatButton2.EllipseOnHover = 0;
+            this.flatButton2.Enabled = false;
+            this.flatButton2.FlatAppearance.BorderSize = 0;
+            this.flatButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.flatButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(140)))), ((int)(((byte)(90)))));
+            this.flatButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flatButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.flatButton2.ForeColor = System.Drawing.Color.White;
+            this.flatButton2.ForeColorOnClick = System.Drawing.Color.White;
+            this.flatButton2.ForeColorOnDefault = System.Drawing.Color.White;
+            this.flatButton2.ForeColorOnHover = System.Drawing.Color.White;
+            this.flatButton2.Location = new System.Drawing.Point(351, 2);
+            this.flatButton2.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.flatButton2.Name = "flatButton2";
+            this.flatButton2.Size = new System.Drawing.Size(348, 43);
+            this.flatButton2.TabIndex = 6;
+            this.flatButton2.Text = "Cancel";
+            this.flatButton2.ToolTip = "";
+            this.flatButton2.UseVisualStyleBackColor = false;
+            // 
+            // epProducts
+            // 
+            this.epProducts.ContainerControl = this;
+            this.epProducts.Icon = ((System.Drawing.Icon)(resources.GetObject("epProducts.Icon")));
+            // 
+            // paginator
+            // 
+            this.paginator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.paginator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.paginator.GetCurrentPage = 1;
+            this.paginator.HasRecordCount = true;
+            this.paginator.HasRefresh = true;
+            this.paginator.Location = new System.Drawing.Point(4, 547);
+            this.paginator.Name = "paginator";
+            this.paginator.Size = new System.Drawing.Size(1049, 47);
+            this.paginator.TabIndex = 6;
+            // 
+            // command
+            // 
+            this.command.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.command.Dock = System.Windows.Forms.DockStyle.Top;
+            this.command.GetSearchedValue = "";
+            this.command.Location = new System.Drawing.Point(4, 4);
+            this.command.Name = "command";
+            this.command.ShowActionButtons = true;
+            this.command.ShowSearchBar = true;
+            this.command.Size = new System.Drawing.Size(1049, 53);
+            this.command.TabIndex = 7;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // productCodeDataGridViewTextBoxColumn
+            // 
+            this.productCodeDataGridViewTextBoxColumn.DataPropertyName = "ProductCode";
+            this.productCodeDataGridViewTextBoxColumn.HeaderText = "Product Code";
+            this.productCodeDataGridViewTextBoxColumn.Name = "productCodeDataGridViewTextBoxColumn";
+            this.productCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productNameDataGridViewTextBoxColumn
+            // 
+            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.HeaderText = "Product Name";
+            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descriptionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // unitDataGridViewTextBoxColumn
+            // 
+            this.unitDataGridViewTextBoxColumn.DataPropertyName = "Unit";
+            this.unitDataGridViewTextBoxColumn.HeaderText = "Unit";
+            this.unitDataGridViewTextBoxColumn.Name = "unitDataGridViewTextBoxColumn";
+            this.unitDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // salesRateDataGridViewTextBoxColumn
+            // 
+            this.salesRateDataGridViewTextBoxColumn.DataPropertyName = "SalesRate";
+            this.salesRateDataGridViewTextBoxColumn.HeaderText = "Sales Rate";
+            this.salesRateDataGridViewTextBoxColumn.Name = "salesRateDataGridViewTextBoxColumn";
+            this.salesRateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // purchaseRateDataGridViewTextBoxColumn
+            // 
+            this.purchaseRateDataGridViewTextBoxColumn.DataPropertyName = "PurchaseRate";
+            this.purchaseRateDataGridViewTextBoxColumn.HeaderText = "Purchase Rate";
+            this.purchaseRateDataGridViewTextBoxColumn.Name = "purchaseRateDataGridViewTextBoxColumn";
+            this.purchaseRateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ProductView
             // 
@@ -719,9 +942,13 @@
             this.tcProductMenu.ResumeLayout(false);
             this.tpProductList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsProducts)).EndInit();
             this.tpProductDetails.ResumeLayout(false);
             this.tpProductDetails.PerformLayout();
-            this.tlpDetailButtons.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.epProducts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -737,28 +964,42 @@
         private System.Windows.Forms.TabPage tpProductList;
         private System.Windows.Forms.TabPage tpProductDetails;
         private System.Windows.Forms.TabPage tpRateHistory;
-        private ITSpecialProject.Components.FlatTable dgvProduct;
-        private Custom.PaginatorView paginator;
-        private ITA_UI.FlatTextBox flatTextBox2;
-        private System.Windows.Forms.Label label2;
-        private ITA_UI.FlatTextBox flatTextBox1;
-        private System.Windows.Forms.Label label1;
-        private ITA_UI.FlatTextBox txtProductName;
-        private ITA_UI.FlatTextBox txtProductCode;
-        private Components.FlatButton btnDelete;
-        private ITA_UI.FlatTextBox txtPurchaseRate;
-        private System.Windows.Forms.Label label7;
-        private ITA_UI.FlatTextBox txtSalesRate;
-        private System.Windows.Forms.Label label6;
-        private ITA_UI.FlatTextBox txtQuantity;
-        private System.Windows.Forms.Label label5;
-        private ITA_UI.FlatTextBox txtUnit;
-        private System.Windows.Forms.Label label4;
-        private ITA_UI.FlatTextBox flatTextBox3;
-        private System.Windows.Forms.Label label3;
-        private Components.FlatButton btnEdit;
-        private System.Windows.Forms.TableLayoutPanel tlpDetailButtons;
+        private FlatTable dgvProduct;
         private System.Windows.Forms.TabPage tabPage1;
-        private Custom.SearchCommandView searchCommand;
+        private System.Windows.Forms.BindingSource bsProducts;
+        
+        private System.ComponentModel.BackgroundWorker bwProducts;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private FlatButton flatButton1;
+        private FlatButton flatButton2;
+        private FlatTextBox txtPurchaseRate;
+        private System.Windows.Forms.Label label7;
+        private FlatTextBox txtSalesRate;
+        private System.Windows.Forms.Label label6;
+        private FlatTextBox txtQuantity;
+        private System.Windows.Forms.Label label5;
+        private FlatTextBox txtUnit;
+        private System.Windows.Forms.Label label4;
+        private FlatTextBox txtDescription;
+        private System.Windows.Forms.Label label3;
+        private FlatTextBox txtProductName;
+        private FlatTextBox txtProductCode;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private FlatButton btnSaveChanges;
+        private FlatButton btnCancel;
+        private System.Windows.Forms.ErrorProvider epProducts;
+        private FlatButton btnDeactivate;
+        private Custom.CommandView command;
+        private Custom.PaginatorView paginator;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unitDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salesRateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn purchaseRateDataGridViewTextBoxColumn;
     }
 }

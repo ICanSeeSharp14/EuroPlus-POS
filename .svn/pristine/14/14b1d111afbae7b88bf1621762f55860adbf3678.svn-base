@@ -1,0 +1,229 @@
+﻿using Petrol_Pump_Point_Of_Sale_System.Models;
+
+using Petrol_Pump_Point_Of_Sale_System.View.Account;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using Petrol_Pump_Point_Of_Sale_System.Commons.Enums;
+using Petrol_Pump_Point_Of_Sale_System.Core;
+using Petrol_Pump_Point_Of_Sale_System.Dialogs;
+using Petrol_Pump_Point_Of_Sale_System.Extensions;
+using Petrol_Pump_Point_Of_Sale_System.View.POS;
+using Petrol_Pump_Point_Of_Sale_System.View.Product;
+
+namespace Petrol_Pump_Point_Of_Sale_System.View.Main
+{
+    public partial class MainView
+    {
+        private bool _isLogout = false;
+
+        private void Initialize()
+        {
+            HomePage();
+        }
+
+      
+        private List<Modules> GetManageModules()
+        {
+            return new List<Modules>
+            {
+                new Modules { Title = "Consumables", Instance =  new AccountView() , Tab = tpHome},
+                new Modules { Title = "Stocks", Instance = new AccountView(), Tab = tpHome},
+                new Modules { Title = "Accounts", Instance =  new AccountView() , Tab = tpManageAccount},
+                new Modules { Title = "Products", Tab = tpManageProduct},
+                new Modules { Title = "Customers", Instance =  new AccountView() , Tab = tpManageCustomers},
+                
+            };
+        }
+
+        private List<Modules> GetReportModules()
+        {
+            return new List<Modules>
+            {
+                new Modules { Title = "Sales", Instance =  new AccountView() },
+                new Modules { Title = "Inventory", Instance = new AccountView() },
+                new Modules { Title = "Logs", Instance =  new AccountView() },
+            };
+        }
+      
+        private void GetCurrentDateTime()
+        {
+            //lblDateTime.Text = @"{DateTime.Now.ToString("MMM dd")}} • {{DateTime.Now.ToString("hh:mm tt")}";
+        }
+
+        public void FillUserDetails()
+        {
+           // btnProfile.Text = @"Good Day, {AccountSession.GetAccount.FirstName}!";
+
+            GetCurrentDateTime();
+        }
+
+        #region Navigation
+
+        private void Home()
+        {
+            SetTitle("Home");
+
+            CreateNavigationContents(null);
+        }
+
+        private void Manage()
+        {
+            SetTitle("Manage");
+            CreateNavigationContents(GetManageModules());
+        }
+
+        private void Reports()
+        {
+            SetTitle("POS");
+
+            CreateNavigationContents(null);
+        }
+
+        private void Settings()
+        {
+            SetTitle("Settings");
+
+            CreateNavigationContents(null);
+        }
+
+        private void Support()
+        {
+            CreateNavigationContents(null);
+
+        }
+
+        private void HomePage()
+        {
+            SetTitle("Dash Board");
+
+            tcMenu.SelectTab(tpHome);
+            CreateNavigationContents(null);
+
+        }
+        private void POS()
+        {
+            SetTitle("Point Of Sales");
+            tcMenu.SelectTab(tpPointOfSale);
+
+            ClearContents();
+
+            //var pos = new PointOfSaleView();
+
+            //pnlBody.Controls.Add(pos);
+
+            //pos.Dock = DockStyle.Fill;
+
+            CreateNavigationContents(null);
+        }
+
+        private void SetTitle(string title)
+        {
+            lblModuleTitle.Text = title;
+        }
+
+        #endregion
+
+        #region Modules
+
+        private void CreateNavigationContents(List<Modules> modules)
+        {
+            var list = modules;
+            if (list == null)
+            {
+                pnlSubNavigation.Hide();
+                return;
+            }
+
+            pnlSubNavigation.Show();
+
+            pnlSubNavigation.Initialize(modules);
+
+            pnlSubNavigation.NavigationButtonClicked += (s, e) =>
+            {
+                ShowModule();
+            };
+        }
+
+       
+        private void ShowModule()
+        {
+            ClearContents();
+            SetSelectedTab();
+            SetModuleTitle();
+
+            CreateModuleInstance();
+        }
+
+        private void CreateModuleInstance()
+        {
+           // var module = pnlSubNavigation.SelectedModule.Instance();
+
+           //// pnlBody.Controls.Add(module);
+
+           // module.Dock = System.Windows.Forms.DockStyle.Fill;
+        }
+
+        private void SetSelectedTab()
+        {
+            tcMenu.SelectedTab = pnlSubNavigation.SelectedTabPage;
+        }
+        private void SetModuleTitle()
+        {
+            lblModuleTitle.Text = pnlSubNavigation.SelectedTitle;
+        }
+
+        private void ClearContents()
+        {
+           //pnlBody.Controls.Clear();
+        }
+
+        #endregion
+
+        #region Sign Off
+
+        private void LockScreen()
+        {
+            this.Hide();
+
+            //var form = new LockScreenView();
+            //form.Show();
+
+            //form.FormClosed += (s, e) => { this.Show(); };
+        }
+
+        private bool Logout()
+        {
+            if (!LogoutMessage()) return false;
+
+            _isLogout = true;
+
+            return true;
+        }
+
+        private bool LogoutMessage()
+        {
+            return FlatMessageBox.Show("Do you want to logout?", "Logout", DialogButtons.YesNo, DialogType.Info) == DialogButton.Yes
+                ? true
+                : false;
+        }
+
+        private bool Exit()
+        {
+            if (ExitMessage())
+            {
+                System.Environment.Exit(0);
+            }
+
+            return false;
+        }
+
+        private bool ExitMessage()
+        {
+            return FlatMessageBox.Show("Do you want to exit?", "Exit", DialogButtons.YesNo, DialogType.Info) == DialogButton.Yes
+                ? true
+                : false;
+        }
+
+        #endregion
+    }
+}

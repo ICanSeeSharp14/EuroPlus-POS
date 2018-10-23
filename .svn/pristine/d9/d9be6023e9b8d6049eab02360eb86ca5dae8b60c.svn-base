@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A42DD69-8E06-4E1D-86C5-61AFB90DF26B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Petrol_Pump_Point_Of_Sale_System</RootNamespace>
+    <AssemblyName>Petrol Pump Point Of Sale System</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Petrol_Pump_Point_Of_Sale_System.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A25534C6D1ADAF80AF41BBFF3F024E02C4DD62D8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Petrol Pump Point Of Sale System_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Petrol Pump Point Of Sale System_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BunifuDataViz 1.0.1">
+      <HintPath>..\Assets\BunifuDataViz 1.0.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\Assets\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.25\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Gradient.cs" />
+    <Compile Include="Classes\Helpers\ColorHelper.cs" />
+    <Compile Include="Classes\Helpers\EnumHelper.cs" />
+    <Compile Include="Classes\Helpers\FontHelper.cs" />
+    <Compile Include="Classes\Helpers\TransitionHelper.cs" />
+    <Compile Include="Commons\Helper\Status.cs" />
+    <Compile Include="Commons\Helper\ControlHelper.cs" />
+    <Compile Include="Commons\Helper\StatusHelper.cs" />
+    <Compile Include="Components\FlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\FlatCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\FlatComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\FlatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\FlatForm.Designer.cs">
+      <DependentUpon>FlatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\FlatGlowButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\FlatGradientButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\FlatNavigationPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\FlatPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\FlatPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\FlatRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\FlatTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\FlatTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Filter.cs" />
+    <Compile Include="Core\Models\IEntity.cs" />
+    <Compile Include="Core\Repositories\IPumpAttendantRepository.cs" />
+    <Compile Include="Monostates\AccountSession.cs" />
+    <Compile Include="Persistence\Repositories\PumpAttendantRepository.cs" />
+    <Compile Include="Dialogs\FlatMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FlatMessageBox.Designer.cs">
+      <DependentUpon>FlatMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\AlertType.cs" />
+    <Compile Include="Enums\ColorCombination.cs" />
+    <Compile Include="Enums\DialogButton.cs" />
+    <Compile Include="Enums\DialogButtons.cs" />
+    <Compile Include="Enums\DialogType.cs" />
+    <Compile Include="Enums\DragState.cs" />
+    <Compile Include="Enums\StreamType.cs" />
+    <Compile Include="Extensions\ExtensionMethods.cs" />
+    <Compile Include="Interfaces\IColor.cs" />
+    <Compile Include="Interfaces\IEllipse.cs" />
+    <Compile Include="Interfaces\IFont.cs" />
+    <Compile Include="Interfaces\IGradient.cs" />
+    <Compile Include="Commons\Enums\AlertType.cs" />
+    <Compile Include="Commons\Enums\ColorCombination.cs" />
+    <Compile Include="Commons\Enums\Command.cs" />
+    <Compile Include="Commons\Enums\DialogButton.cs" />
+    <Compile Include="Commons\Enums\DialogButtons.cs" />
+    <Compile Include="Commons\Enums\DialogType.cs" />
+    <Compile Include="Commons\Enums\DragState.cs" />
+    <Compile Include="Commons\Enums\ModuleType.cs" />
+    <Compile Include="Commons\Enums\PaymentType.cs" />
+    <Compile Include="Commons\Enums\SalesType.cs" />
+    <Compile Include="Commons\Enums\StreamType.cs" />
+    <Compile Include="Commons\Enums\UserType.cs" />
+    <Compile Include="Commons\Helper\DbHelper.cs" />
+    <Compile Include="Commons\Helper\EnumHelper.cs" />
+    <Compile Include="Commons\Helper\FontHelper.cs" />
+    <Compile Include="Commons\Helper\MessageHelper.cs" />
+    <Compile Include="Core\Repositories\IDbRepository.cs" />
+    <Compile Include="Core\Repositories\IGenericMethod.cs" />
+    <Compile Include="Core\Repositories\IRepository.cs" />
+    <Compile Include="Core\Repositories\IProductRepository.cs" />
+    <Compile Include="Core\Repositories\IRoleRepository.cs" />
+    <Compile Include="Core\Repositories\ISaleRepository.cs" />
+    <Compile Include="Core\Repositories\IUserRepository.cs" />
+    <Compile Include="Dialogs\MessageAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MessageAlert.Designer.cs">
+      <DependentUpon>MessageAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810141522139_InitialCommit.cs" />
+    <Compile Include="Migrations\201810141522139_InitialCommit.Designer.cs">
+      <DependentUpon>201810141522139_InitialCommit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810150516044_AlterTableUser.cs" />
+    <Compile Include="Migrations\201810150516044_AlterTableUser.Designer.cs">
+      <DependentUpon>201810150516044_AlterTableUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810150803265_AlterTableUser1.cs" />
+    <Compile Include="Migrations\201810150803265_AlterTableUser1.Designer.cs">
+      <DependentUpon>201810150803265_AlterTableUser1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DatabaseContext.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Expense.cs" />
+    <Compile Include="Models\IDatabaseContext.cs" />
+    <Compile Include="Models\Liquidation.cs" />
+    <Compile Include="Models\ModelManager.cs" />
+    <Compile Include="Models\Module.cs" />
+    <Compile Include="Models\Position.cs" />
+    <Compile Include="Models\Products.cs" />
+    <Compile Include="Models\ProductRateHistory.cs" />
+    <Compile Include="Models\Pump.cs" />
+    <Compile Include="Models\PurchaseInvoice.cs" />
+    <Compile Include="Models\PurchaseOrder.cs" />
+    <Compile Include="Models\PurchaseOrderDetails.cs" />
+    <Compile Include="Models\PurchaseReturn.cs" />
+    <Compile Include="Models\Sale.cs" />
+    <Compile Include="Models\SalesInvoice.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserAccess.cs" />
+    <Compile Include="Models\UserRole.cs" />
+    <Compile Include="Models\Vendor.cs" />
+    <Compile Include="Persistence\Repositories\DbRepository.cs" />
+    <Compile Include="Persistence\Repositories\Repository.cs" />
+    <Compile Include="Persistence\Repositories\ProductRepository.cs" />
+    <Compile Include="Persistence\Repositories\RoleRepository.cs" />
+    <Compile Include="Persistence\Repositories\UserRepository.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Account\AccountCardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Account\AccountCardView.Designer.cs">
+      <DependentUpon>AccountCardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Account\AccountController.Designer.cs" />
+    <Compile Include="View\Account\AccountView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Account\AccountView.Designer.cs">
+      <DependentUpon>AccountView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Commons\LoginController.Designer.cs">
+      <DependentUpon>LoginController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Custom\PumpCardContainerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Custom\PumpCardContainerView.Designer.cs">
+      <DependentUpon>PumpCardContainerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Custom\Notification.cs" />
+    <Compile Include="View\Custom\CommandController.Designer.cs" />
+    <Compile Include="View\Custom\CommandView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Custom\CommandView.Designer.cs">
+      <DependentUpon>CommandView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ICommand.cs" />
+    <Compile Include="View\Manage\FileMaintenance\Pump Attendant\PumpAttendantController.Designer.cs" />
+    <Compile Include="View\Manage\FileMaintenance\Pump Attendant\PumpAttendantView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Manage\FileMaintenance\Pump Attendant\PumpAttendantView.Designer.cs">
+      <DependentUpon>PumpAttendantView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Manage\FileMaintenance\Pump\PumpView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Manage\FileMaintenance\Pump\PumpView.Designer.cs">
+      <DependentUpon>PumpView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Product\CreateProductView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Product\CreateProductView.Designer.cs">
+      <DependentUpon>CreateProductView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Product\ProductController.Designer.cs" />
+    <Compile Include="View\Product\ProductView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Product\ProductView.Designer.cs">
+      <DependentUpon>ProductView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Manage\FileMaintenance\Pump\PumpCardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Manage\FileMaintenance\Pump\PumpCardView.Designer.cs">
+      <DependentUpon>PumpCardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Commons\PumpItemView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Commons\PumpItemView.Designer.cs">
+      <DependentUpon>PumpItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Commons\SplashScreenView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Commons\SplashScreenView.Designer.cs">
+      <DependentUpon>SplashScreenView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Custom\CompanyLogoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Custom\CompanyLogoView.Designer.cs">
+      <DependentUpon>CompanyLogoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Commons\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Commons\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Custom\PaginatorController.Designer.cs" />
+    <Compile Include="View\Custom\PaginatorView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Custom\PaginatorView.Designer.cs">
+      <DependentUpon>PaginatorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Custom\PreloaderView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Custom\PreloaderView.Designer.cs">
+      <DependentUpon>PreloaderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Custom\PreLoading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Custom\PreLoading.Designer.cs">
+      <DependentUpon>PreLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\IView.cs" />
+    <Compile Include="Core\Models\IModule.cs" />
+    <Compile Include="View\Main\MainController.Designer.cs" />
+    <Compile Include="View\Main\MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Main\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Main\Modules.cs" />
+    <Compile Include="View\Main\NavigationController.Designer.cs" />
+    <Compile Include="View\Main\NavigationView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Main\NavigationView.Designer.cs">
+      <DependentUpon>NavigationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POS\PointOfSaleView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\POS\PointOfSaleView.Designer.cs">
+      <DependentUpon>PointOfSaleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SaleItemView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\SaleItemView.Designer.cs">
+      <DependentUpon>SaleItemView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Components\FlatForm.resx">
+      <DependentUpon>FlatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FlatMessageBox.resx">
+      <DependentUpon>FlatMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MessageAlert.resx">
+      <DependentUpon>MessageAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810141522139_InitialCommit.resx">
+      <DependentUpon>201810141522139_InitialCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810150516044_AlterTableUser.resx">
+      <DependentUpon>201810150516044_AlterTableUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810150803265_AlterTableUser1.resx">
+      <DependentUpon>201810150803265_AlterTableUser1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Account\AccountCardView.resx">
+      <DependentUpon>AccountCardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Account\AccountView.resx">
+      <DependentUpon>AccountView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Custom\PumpCardContainerView.resx">
+      <DependentUpon>PumpCardContainerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Commons\PumpItemView.resx">
+      <DependentUpon>PumpItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Commons\SplashScreenView.resx">
+      <DependentUpon>SplashScreenView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Custom\CommandView.resx">
+      <DependentUpon>CommandView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Custom\CompanyLogoView.resx">
+      <DependentUpon>CompanyLogoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Commons\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Custom\PaginatorView.resx">
+      <DependentUpon>PaginatorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Custom\PreloaderView.resx">
+      <DependentUpon>PreloaderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Custom\PreLoading.resx">
+      <DependentUpon>PreLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Manage\FileMaintenance\Pump Attendant\PumpAttendantView.resx">
+      <DependentUpon>PumpAttendantView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Manage\FileMaintenance\Pump\PumpView.resx">
+      <DependentUpon>PumpView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Product\CreateProductView.resx">
+      <DependentUpon>CreateProductView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Product\ProductView.resx">
+      <DependentUpon>ProductView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Main\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Main\NavigationView.resx">
+      <DependentUpon>NavigationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POS\PointOfSaleView.resx">
+      <DependentUpon>PointOfSaleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Manage\FileMaintenance\Pump\PumpCardView.resx">
+      <DependentUpon>PumpCardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SaleItemView.resx">
+      <DependentUpon>SaleItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Assets\Frameworks\MaterialSkin.0.2.1.nupkg" />
+    <None Include="packages.config" />
+    <None Include="DataSources\Petrol_Pump_Point_Of_Sale_System.Models.Product.datasource" />
+    <None Include="DataSources\Petrol_Pump_Point_Of_Sale_System.Models.Products.datasource" />
+    <None Include="Petrol Pump Point Of Sale System_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.Customer.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.Employee.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.Expense.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.Liquidation.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.ModelManager.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.Module.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.Position.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.ProductRateHistory.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.Pump.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.PurchaseInvoice.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.PurchaseOrder.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.PurchaseOrderDetails.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.PurchaseReturn.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.Sale.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.SalesInvoice.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.User.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.UserAccess.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.UserRole.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.Vendor.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\Controls\" />
+    <Folder Include="Commons\Extensions\" />
+    <Folder Include="Managers\" />
+    <Folder Include="Persistence\Configurations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Info_48.png" />
+    <Content Include="Assets\Message_48.png" />
+    <Content Include="Assets\Question_48.png" />
+    <Content Include="Assets\Update_48.png" />
+    <Content Include="Assets\Warning_48.png" />
+    <None Include="Resources\Warning_48.png" />
+    <None Include="Resources\Users_96.png" />
+    <None Include="Resources\Update_48.png" />
+    <None Include="Resources\UnlockColor_32.png" />
+    <None Include="Resources\Support_32.png" />
+    <None Include="Resources\Supplier_64.png" />
+    <None Include="Resources\Settings_32.png" />
+    <None Include="Resources\SearchColor_24.png" />
+    <None Include="Resources\Sales_100.png" />
+    <None Include="Resources\Reports_32.png" />
+    <None Include="Resources\ReportColor_64.png" />
+    <None Include="Resources\RefreshLight_32.png" />
+    <None Include="Resources\Refresh_32.png" />
+    <None Include="Resources\Raw_64.png" />
+    <None Include="Resources\Question_48.png" />
+    <None Include="Resources\PrintReceipt_32.png" />
+    <None Include="Resources\PreloaderColor_64.png" />
+    <None Include="Resources\Preloader_64.png" />
+    <None Include="Resources\POS_32.png" />
+    <None Include="Resources\Picture_100.png" />
+    <None Include="Resources\Notification_48.png" />
+    <None Include="Resources\NavigateR_64.png" />
+    <None Include="Resources\NavigateR_32.png" />
+    <None Include="Resources\Message_48.png" />
+    <None Include="Resources\Menu_64.png" />
+    <None Include="Resources\Manage_32.png" />
+    <None Include="Resources\Maintenance_48.png" />
+    <None Include="Resources\Logout_32.png" />
+    <None Include="Resources\LockColor_32.png" />
+    <None Include="Resources\Lock_32.png" />
+    <None Include="Resources\Info_48.png" />
+    <None Include="Resources\IncreaseColor_24.png" />
+    <None Include="Resources\Home_32.png" />
+    <None Include="Resources\Help_32.png" />
+    <None Include="Resources\Hand_48.png" />
+    <None Include="Resources\Exit_32.png" />
+    <None Include="Resources\Error_48.png" />
+    <None Include="Resources\EditColor_24.png" />
+    <None Include="Resources\Disconnected_42.png" />
+    <None Include="Resources\DeleteColor_24.png" />
+    <None Include="Resources\Delete_48.png" />
+    <None Include="Resources\Default_100.png" />
+    <None Include="Resources\DecreaseColor_24.png" />
+    <None Include="Resources\Database_TransBG.png" />
+    <None Include="Resources\Contact_32.png" />
+    <None Include="Resources\Connected_32.png" />
+    <None Include="Resources\ClearColor_32.png" />
+    <None Include="Resources\CancelColor_24.png" />
+    <None Include="Resources\Cancel_100.png" />
+    <None Include="Resources\Bill_1000_Pesos.png" />
+    <None Include="Resources\Bill_500_Pesos.jpg" />
+    <None Include="Resources\Bill_200_Pesos.jpg" />
+    <None Include="Resources\Bill_100_Pesos.jpg" />
+    <None Include="Resources\Bill_50_Pesos.jpg" />
+    <None Include="Resources\Bill_25_Cents.jpg" />
+    <None Include="Resources\Bill_20_Pesos.jpg" />
+    <None Include="Resources\Bill_10_Pesos.jpg" />
+    <None Include="Resources\Bill_10_Cents.jpg" />
+    <None Include="Resources\Bill_5_Pesos.jpg" />
+    <None Include="Resources\Bill_5_Cents.jpg" />
+    <None Include="Resources\Bill_1_Peso.jpg" />
+    <None Include="Resources\Bill_1_Cent.jpg" />
+    <None Include="Resources\Account_100.png" />
+    <None Include="Resources\Account_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
