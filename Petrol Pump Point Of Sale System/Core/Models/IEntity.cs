@@ -3,6 +3,6 @@
     public interface IEntity
     {
         int Id { get; }
-        //bool IsActive { get; set; }
+        bool IsActive { get; set; }
     }
 }

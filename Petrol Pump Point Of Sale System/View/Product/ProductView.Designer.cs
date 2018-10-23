@@ -44,9 +44,18 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.btnDetails = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnRateHistory = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.tcProductMenu = new MaterialSkin.Controls.MaterialTabControl();
-            this.tpProductList = new System.Windows.Forms.TabPage();
+            this.tpAttendantList = new System.Windows.Forms.TabPage();
             this.dgvProduct = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTable();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchaseRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsProducts = new System.Windows.Forms.BindingSource(this.components);
+            this.paginator = new Petrol_Pump_Point_Of_Sale_System.View.Custom.PaginatorView();
             this.tpProductDetails = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSaveChanges = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
@@ -72,20 +81,11 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.flatButton2 = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.bwProducts = new System.ComponentModel.BackgroundWorker();
             this.epProducts = new System.Windows.Forms.ErrorProvider(this.components);
-            this.paginator = new Petrol_Pump_Point_Of_Sale_System.View.Custom.PaginatorView();
             this.command = new Petrol_Pump_Point_Of_Sale_System.View.Custom.CommandView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salesRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purchaseRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlButtonTab.SuspendLayout();
             this.tlpProductButtonTab.SuspendLayout();
             this.tcProductMenu.SuspendLayout();
-            this.tpProductList.SuspendLayout();
+            this.tpAttendantList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsProducts)).BeginInit();
             this.tpProductDetails.SuspendLayout();
@@ -243,7 +243,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             // 
             // tcProductMenu
             // 
-            this.tcProductMenu.Controls.Add(this.tpProductList);
+            this.tcProductMenu.Controls.Add(this.tpAttendantList);
             this.tcProductMenu.Controls.Add(this.tpProductDetails);
             this.tcProductMenu.Controls.Add(this.tpRateHistory);
             this.tcProductMenu.Controls.Add(this.tabPage1);
@@ -256,19 +256,19 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.tcProductMenu.Size = new System.Drawing.Size(1065, 624);
             this.tcProductMenu.TabIndex = 12;
             // 
-            // tpProductList
+            // tpAttendantList
             // 
-            this.tpProductList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tpProductList.Controls.Add(this.command);
-            this.tpProductList.Controls.Add(this.dgvProduct);
-            this.tpProductList.Controls.Add(this.paginator);
-            this.tpProductList.Location = new System.Drawing.Point(4, 22);
-            this.tpProductList.Margin = new System.Windows.Forms.Padding(0);
-            this.tpProductList.Name = "tpProductList";
-            this.tpProductList.Padding = new System.Windows.Forms.Padding(4);
-            this.tpProductList.Size = new System.Drawing.Size(1057, 598);
-            this.tpProductList.TabIndex = 0;
-            this.tpProductList.Text = "Products List";
+            this.tpAttendantList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tpAttendantList.Controls.Add(this.command);
+            this.tpAttendantList.Controls.Add(this.dgvProduct);
+            this.tpAttendantList.Controls.Add(this.paginator);
+            this.tpAttendantList.Location = new System.Drawing.Point(4, 22);
+            this.tpAttendantList.Margin = new System.Windows.Forms.Padding(0);
+            this.tpAttendantList.Name = "tpAttendantList";
+            this.tpAttendantList.Padding = new System.Windows.Forms.Padding(4);
+            this.tpAttendantList.Size = new System.Drawing.Size(1057, 598);
+            this.tpAttendantList.TabIndex = 0;
+            this.tpAttendantList.Text = "Products List";
             // 
             // dgvProduct
             // 
@@ -354,9 +354,79 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.dgvProduct.Size = new System.Drawing.Size(1049, 477);
             this.dgvProduct.TabIndex = 2;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // productCodeDataGridViewTextBoxColumn
+            // 
+            this.productCodeDataGridViewTextBoxColumn.DataPropertyName = "ProductCode";
+            this.productCodeDataGridViewTextBoxColumn.HeaderText = "Product Code";
+            this.productCodeDataGridViewTextBoxColumn.Name = "productCodeDataGridViewTextBoxColumn";
+            this.productCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productNameDataGridViewTextBoxColumn
+            // 
+            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.HeaderText = "Product Name";
+            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descriptionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // unitDataGridViewTextBoxColumn
+            // 
+            this.unitDataGridViewTextBoxColumn.DataPropertyName = "Unit";
+            this.unitDataGridViewTextBoxColumn.HeaderText = "Unit";
+            this.unitDataGridViewTextBoxColumn.Name = "unitDataGridViewTextBoxColumn";
+            this.unitDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // salesRateDataGridViewTextBoxColumn
+            // 
+            this.salesRateDataGridViewTextBoxColumn.DataPropertyName = "SalesRate";
+            this.salesRateDataGridViewTextBoxColumn.HeaderText = "Sales Rate";
+            this.salesRateDataGridViewTextBoxColumn.Name = "salesRateDataGridViewTextBoxColumn";
+            this.salesRateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // purchaseRateDataGridViewTextBoxColumn
+            // 
+            this.purchaseRateDataGridViewTextBoxColumn.DataPropertyName = "PurchaseRate";
+            this.purchaseRateDataGridViewTextBoxColumn.HeaderText = "Purchase Rate";
+            this.purchaseRateDataGridViewTextBoxColumn.Name = "purchaseRateDataGridViewTextBoxColumn";
+            this.purchaseRateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // bsProducts
             // 
             this.bsProducts.DataSource = typeof(Petrol_Pump_Point_Of_Sale_System.Models.Products);
+            // 
+            // paginator
+            // 
+            this.paginator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.paginator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.paginator.GetCurrentPage = 1;
+            this.paginator.HasRecordCount = false;
+            this.paginator.HasRefresh = false;
+            this.paginator.Location = new System.Drawing.Point(4, 547);
+            this.paginator.Name = "paginator";
+            this.paginator.Size = new System.Drawing.Size(1049, 47);
+            this.paginator.TabIndex = 6;
             // 
             // tpProductDetails
             // 
@@ -845,18 +915,6 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.epProducts.ContainerControl = this;
             this.epProducts.Icon = ((System.Drawing.Icon)(resources.GetObject("epProducts.Icon")));
             // 
-            // paginator
-            // 
-            this.paginator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
-            this.paginator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.paginator.GetCurrentPage = 1;
-            this.paginator.HasRecordCount = true;
-            this.paginator.HasRefresh = true;
-            this.paginator.Location = new System.Drawing.Point(4, 547);
-            this.paginator.Name = "paginator";
-            this.paginator.Size = new System.Drawing.Size(1049, 47);
-            this.paginator.TabIndex = 6;
-            // 
             // command
             // 
             this.command.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
@@ -868,64 +926,6 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.command.ShowSearchBar = true;
             this.command.Size = new System.Drawing.Size(1049, 53);
             this.command.TabIndex = 7;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // productCodeDataGridViewTextBoxColumn
-            // 
-            this.productCodeDataGridViewTextBoxColumn.DataPropertyName = "ProductCode";
-            this.productCodeDataGridViewTextBoxColumn.HeaderText = "Product Code";
-            this.productCodeDataGridViewTextBoxColumn.Name = "productCodeDataGridViewTextBoxColumn";
-            this.productCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productNameDataGridViewTextBoxColumn
-            // 
-            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
-            this.productNameDataGridViewTextBoxColumn.HeaderText = "Product Name";
-            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descriptionDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // unitDataGridViewTextBoxColumn
-            // 
-            this.unitDataGridViewTextBoxColumn.DataPropertyName = "Unit";
-            this.unitDataGridViewTextBoxColumn.HeaderText = "Unit";
-            this.unitDataGridViewTextBoxColumn.Name = "unitDataGridViewTextBoxColumn";
-            this.unitDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // salesRateDataGridViewTextBoxColumn
-            // 
-            this.salesRateDataGridViewTextBoxColumn.DataPropertyName = "SalesRate";
-            this.salesRateDataGridViewTextBoxColumn.HeaderText = "Sales Rate";
-            this.salesRateDataGridViewTextBoxColumn.Name = "salesRateDataGridViewTextBoxColumn";
-            this.salesRateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // purchaseRateDataGridViewTextBoxColumn
-            // 
-            this.purchaseRateDataGridViewTextBoxColumn.DataPropertyName = "PurchaseRate";
-            this.purchaseRateDataGridViewTextBoxColumn.HeaderText = "Purchase Rate";
-            this.purchaseRateDataGridViewTextBoxColumn.Name = "purchaseRateDataGridViewTextBoxColumn";
-            this.purchaseRateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ProductView
             // 
@@ -940,7 +940,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.pnlButtonTab.ResumeLayout(false);
             this.tlpProductButtonTab.ResumeLayout(false);
             this.tcProductMenu.ResumeLayout(false);
-            this.tpProductList.ResumeLayout(false);
+            this.tpAttendantList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsProducts)).EndInit();
             this.tpProductDetails.ResumeLayout(false);
@@ -961,7 +961,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
         private System.Windows.Forms.Panel pnlButtonTab;
         private System.Windows.Forms.TableLayoutPanel tlpProductButtonTab;
         private MaterialSkin.Controls.MaterialTabControl tcProductMenu;
-        private System.Windows.Forms.TabPage tpProductList;
+        private System.Windows.Forms.TabPage tpAttendantList;
         private System.Windows.Forms.TabPage tpProductDetails;
         private System.Windows.Forms.TabPage tpRateHistory;
         private FlatTable dgvProduct;
@@ -991,7 +991,6 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
         private FlatButton btnCancel;
         private System.Windows.Forms.ErrorProvider epProducts;
         private FlatButton btnDeactivate;
-        private Custom.CommandView command;
         private Custom.PaginatorView paginator;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productCodeDataGridViewTextBoxColumn;
@@ -1001,5 +1000,6 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn salesRateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn purchaseRateDataGridViewTextBoxColumn;
+        private Custom.CommandView command;
     }
 }

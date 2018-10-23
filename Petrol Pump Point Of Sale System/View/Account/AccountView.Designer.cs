@@ -199,7 +199,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Account
             this.dgvAccount.EnableHeadersVisualStyles = false;
             this.dgvAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
             this.dgvAccount.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
-            this.dgvAccount.Location = new System.Drawing.Point(2, 78);
+            this.dgvAccount.Location = new System.Drawing.Point(2, 40);
             this.dgvAccount.Margin = new System.Windows.Forms.Padding(0);
             this.dgvAccount.MultiSelect = false;
             this.dgvAccount.Name = "dgvAccount";
@@ -230,7 +230,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Account
             this.dgvAccount.ShowCellToolTips = false;
             this.dgvAccount.ShowEditingIcon = false;
             this.dgvAccount.ShowRowErrors = false;
-            this.dgvAccount.Size = new System.Drawing.Size(550, 512);
+            this.dgvAccount.Size = new System.Drawing.Size(550, 550);
             this.dgvAccount.TabIndex = 29;
             this.dgvAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellClick);
             this.dgvAccount.SelectionChanged += new System.EventHandler(this.dgvAccount_SelectionChanged);
@@ -1057,8 +1057,9 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Account
             // 
             // bsDeactivatedUsers
             // 
-            this.bsDeactivatedUsers.AllowNew = false;
+            this.bsDeactivatedUsers.AllowNew = true;
             this.bsDeactivatedUsers.DataSource = typeof(Petrol_Pump_Point_Of_Sale_System.Models.User);
+            this.bsDeactivatedUsers.Filter = "";
             // 
             // bsUsersAccess
             // 

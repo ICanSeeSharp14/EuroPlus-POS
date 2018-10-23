@@ -169,6 +169,14 @@
     <Compile Include="Core\Filter.cs" />
     <Compile Include="Core\Models\IEntity.cs" />
     <Compile Include="Core\Repositories\IPumpAttendantRepository.cs" />
+    <Compile Include="Migrations\201810230635032_AlterTableEmployee.cs" />
+    <Compile Include="Migrations\201810230635032_AlterTableEmployee.Designer.cs">
+      <DependentUpon>201810230635032_AlterTableEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810230715181_AlterTableEmployeesAddFullNameColumn.cs" />
+    <Compile Include="Migrations\201810230715181_AlterTableEmployeesAddFullNameColumn.Designer.cs">
+      <DependentUpon>201810230715181_AlterTableEmployeesAddFullNameColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Monostates\AccountSession.cs" />
     <Compile Include="Persistence\Repositories\PumpAttendantRepository.cs" />
     <Compile Include="Dialogs\FlatMessageBox.cs">
@@ -429,6 +437,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810150803265_AlterTableUser1.resx">
       <DependentUpon>201810150803265_AlterTableUser1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810230635032_AlterTableEmployee.resx">
+      <DependentUpon>201810230635032_AlterTableEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810230715181_AlterTableEmployeesAddFullNameColumn.resx">
+      <DependentUpon>201810230715181_AlterTableEmployeesAddFullNameColumn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Account\AccountCardView.resx">
       <DependentUpon>AccountCardView.cs</DependentUpon>

@@ -9,7 +9,6 @@ namespace Petrol_Pump_Point_Of_Sale_System.Models
     {
         [Key]
         public int Id { get; set; }
-        
         [StringLength(15)]
         public string EmployeeCode { get; set; }
       
@@ -18,6 +17,18 @@ namespace Petrol_Pump_Point_Of_Sale_System.Models
 
         [StringLength(50)]
         public string LastName { get; set; }
+
+        private string _fullName;
+        public string FullName
+        {
+            get { return _fullName; }
+            set
+            {
+                _fullName = value;
+                _fullName = $"{FirstName} {LastName}";
+            }
+
+        } 
         public string Address { get;set; }
 
         [StringLength(15)]
@@ -30,7 +41,8 @@ namespace Petrol_Pump_Point_Of_Sale_System.Models
 
         [ForeignKey("PositionId")]
         public virtual Position Position { get; set; }
-        
- 
+        public bool IsActive { get; set; }
+
+
     }
 }

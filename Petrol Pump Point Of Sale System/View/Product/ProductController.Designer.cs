@@ -102,9 +102,6 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             }
         }
 
-        #region  Controller
-        #endregion
-
         #region Show Methods
         public void ShowProducts() => dgvProduct.DataSource = GetProducts();
         private void ShowProductDetails(Products selectedProduct)
@@ -252,7 +249,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
 
         private void GoToProductList()
         {
-            tcProductMenu.SelectTab(tpProductList);
+            tcProductMenu.SelectTab(tpAttendantList);
         }
         private void CreateProduct()
         {
