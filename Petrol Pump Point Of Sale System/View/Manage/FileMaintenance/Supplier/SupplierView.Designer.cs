@@ -1,8 +1,8 @@
 ﻿using Petrol_Pump_Point_Of_Sale_System.Components;
 
-namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Attendant
+namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
 {
-    partial class PumpAttendantView
+    partial class SupplierView
     {
         /// <summary> 
         /// Required designer variable.
@@ -36,7 +36,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Supplier.SupplierView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SupplierView));
             this.tcPumpAttendantMenu = new MaterialSkin.Controls.MaterialTabControl();
             this.tpAttendantList = new System.Windows.Forms.TabPage();
             this.command = new Petrol_Pump_Point_Of_Sale_System.View.Custom.CommandView();
@@ -51,6 +51,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             this.dateHiredDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateResignedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsPumpAttendants = new System.Windows.Forms.BindingSource(this.components);
+            this.paginator = new Petrol_Pump_Point_Of_Sale_System.View.Custom.PaginatorView();
             this.tpAttendantDetails = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSaveChanges = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
@@ -72,7 +73,6 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             this.btnList = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnDetails = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnRateHistory = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
-            this.paginator = new Petrol_Pump_Point_Of_Sale_System.View.Custom.PaginatorView();
             this.tcPumpAttendantMenu.SuspendLayout();
             this.tpAttendantList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPumpAttendant)).BeginInit();
@@ -277,6 +277,17 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             // bsPumpAttendants
             // 
             this.bsPumpAttendants.DataSource = typeof(Petrol_Pump_Point_Of_Sale_System.Models.Employee);
+            // 
+            // paginator
+            // 
+            this.paginator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.paginator.GetCurrentPage = 1;
+            this.paginator.HasRecordCount = true;
+            this.paginator.HasRefresh = true;
+            this.paginator.Location = new System.Drawing.Point(4, 544);
+            this.paginator.Name = "paginator";
+            this.paginator.Size = new System.Drawing.Size(1049, 50);
+            this.paginator.TabIndex = 6;
             // 
             // tpAttendantDetails
             // 
@@ -651,7 +662,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             this.btnList.Name = "btnList";
             this.btnList.Size = new System.Drawing.Size(148, 36);
             this.btnList.TabIndex = 8;
-            this.btnList.Text = "Attendant List";
+            this.btnList.Text = "Supplier List";
             this.btnList.ToolTip = "";
             this.btnList.UseVisualStyleBackColor = false;
             // 
@@ -680,7 +691,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Size = new System.Drawing.Size(148, 36);
             this.btnDetails.TabIndex = 9;
-            this.btnDetails.Text = "Attendant Details";
+            this.btnDetails.Text = "Supplier Details";
             this.btnDetails.ToolTip = "";
             this.btnDetails.UseVisualStyleBackColor = false;
             this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
@@ -715,25 +726,14 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             this.btnRateHistory.UseVisualStyleBackColor = false;
             this.btnRateHistory.Visible = false;
             // 
-            // paginator
-            // 
-            this.paginator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.paginator.GetCurrentPage = 1;
-            this.paginator.HasRecordCount = true;
-            this.paginator.HasRefresh = true;
-            this.paginator.Location = new System.Drawing.Point(4, 544);
-            this.paginator.Name = "paginator";
-            this.paginator.Size = new System.Drawing.Size(1049, 50);
-            this.paginator.TabIndex = 6;
-            // 
-            // PumpAttendantView
+            // SupplierView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.tcPumpAttendantMenu);
             this.Controls.Add(this.tlpAttendantButtonTab);
-            this.Name = "PumpAttendantView";
+            this.Name = "SupplierView";
             this.Size = new System.Drawing.Size(1065, 664);
             this.tcPumpAttendantMenu.ResumeLayout(false);
             this.tpAttendantList.ResumeLayout(false);

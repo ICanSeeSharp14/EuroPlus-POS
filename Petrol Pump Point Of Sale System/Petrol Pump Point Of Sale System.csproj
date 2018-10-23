@@ -339,6 +339,13 @@
     <Compile Include="View\Manage\FileMaintenance\Pump\PumpView.Designer.cs">
       <DependentUpon>PumpView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Manage\FileMaintenance\Supplier\SupplierController.Designer.cs" />
+    <Compile Include="View\Manage\FileMaintenance\Supplier\SupplierView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Manage\FileMaintenance\Supplier\SupplierView.Designer.cs">
+      <DependentUpon>SupplierView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Product\CreateProductView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -514,6 +521,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Manage\FileMaintenance\Pump\PumpView.resx">
       <DependentUpon>PumpView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Manage\FileMaintenance\Supplier\SupplierView.resx">
+      <DependentUpon>SupplierView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Product\CreateProductView.resx">
       <DependentUpon>CreateProductView.cs</DependentUpon>

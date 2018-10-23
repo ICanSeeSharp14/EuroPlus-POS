@@ -9,6 +9,7 @@ using Petrol_Pump_Point_Of_Sale_System.Dialogs;
 using Petrol_Pump_Point_Of_Sale_System.Extensions;
 using Petrol_Pump_Point_Of_Sale_System.View.Custom;
 using Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Attendant;
+using Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier;
 using Petrol_Pump_Point_Of_Sale_System.View.POS;
 using Petrol_Pump_Point_Of_Sale_System.View.Product;
 
@@ -33,7 +34,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
                 new Modules { Title = "Accounts", Instance =  new AccountView() , Tab = tpManageAccount},
                 new Modules { Title = "Products", Instance =  new ProductView(),Tab = tpManageProduct},
                 new Modules { Title = "Customers", Instance =  new ProductView() , Tab = tpManageCustomers},
-                new Modules { Title = "Pump Attendants", Instance =  new PumpAttendantView() , Tab = tpManagePumpAttendants},
+                new Modules { Title = "Pump Attendants", Instance =  new SupplierView() , Tab = tpManagePumpAttendants},
                 
             };
         }
