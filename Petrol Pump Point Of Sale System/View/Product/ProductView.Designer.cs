@@ -44,7 +44,8 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.btnDetails = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnRateHistory = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.tcProductMenu = new MaterialSkin.Controls.MaterialTabControl();
-            this.tpAttendantList = new System.Windows.Forms.TabPage();
+            this.tpProductList = new System.Windows.Forms.TabPage();
+            this.command = new Petrol_Pump_Point_Of_Sale_System.View.Custom.CommandView();
             this.dgvProduct = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTable();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,11 +82,10 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.flatButton2 = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.bwProducts = new System.ComponentModel.BackgroundWorker();
             this.epProducts = new System.Windows.Forms.ErrorProvider(this.components);
-            this.command = new Petrol_Pump_Point_Of_Sale_System.View.Custom.CommandView();
             this.pnlButtonTab.SuspendLayout();
             this.tlpProductButtonTab.SuspendLayout();
             this.tcProductMenu.SuspendLayout();
-            this.tpAttendantList.SuspendLayout();
+            this.tpProductList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsProducts)).BeginInit();
             this.tpProductDetails.SuspendLayout();
@@ -243,7 +243,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             // 
             // tcProductMenu
             // 
-            this.tcProductMenu.Controls.Add(this.tpAttendantList);
+            this.tcProductMenu.Controls.Add(this.tpProductList);
             this.tcProductMenu.Controls.Add(this.tpProductDetails);
             this.tcProductMenu.Controls.Add(this.tpRateHistory);
             this.tcProductMenu.Controls.Add(this.tabPage1);
@@ -256,19 +256,31 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.tcProductMenu.Size = new System.Drawing.Size(1065, 624);
             this.tcProductMenu.TabIndex = 12;
             // 
-            // tpAttendantList
+            // tpProductList
             // 
-            this.tpAttendantList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tpAttendantList.Controls.Add(this.command);
-            this.tpAttendantList.Controls.Add(this.dgvProduct);
-            this.tpAttendantList.Controls.Add(this.paginator);
-            this.tpAttendantList.Location = new System.Drawing.Point(4, 22);
-            this.tpAttendantList.Margin = new System.Windows.Forms.Padding(0);
-            this.tpAttendantList.Name = "tpAttendantList";
-            this.tpAttendantList.Padding = new System.Windows.Forms.Padding(4);
-            this.tpAttendantList.Size = new System.Drawing.Size(1057, 598);
-            this.tpAttendantList.TabIndex = 0;
-            this.tpAttendantList.Text = "Products List";
+            this.tpProductList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tpProductList.Controls.Add(this.command);
+            this.tpProductList.Controls.Add(this.dgvProduct);
+            this.tpProductList.Controls.Add(this.paginator);
+            this.tpProductList.Location = new System.Drawing.Point(4, 22);
+            this.tpProductList.Margin = new System.Windows.Forms.Padding(0);
+            this.tpProductList.Name = "tpProductList";
+            this.tpProductList.Padding = new System.Windows.Forms.Padding(4);
+            this.tpProductList.Size = new System.Drawing.Size(1057, 598);
+            this.tpProductList.TabIndex = 0;
+            this.tpProductList.Text = "Products List";
+            // 
+            // command
+            // 
+            this.command.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.command.Dock = System.Windows.Forms.DockStyle.Top;
+            this.command.GetSearchedValue = "";
+            this.command.Location = new System.Drawing.Point(4, 4);
+            this.command.Name = "command";
+            this.command.ShowActionButtons = true;
+            this.command.ShowSearchBar = true;
+            this.command.Size = new System.Drawing.Size(1049, 53);
+            this.command.TabIndex = 7;
             // 
             // dgvProduct
             // 
@@ -915,18 +927,6 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.epProducts.ContainerControl = this;
             this.epProducts.Icon = ((System.Drawing.Icon)(resources.GetObject("epProducts.Icon")));
             // 
-            // command
-            // 
-            this.command.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.command.Dock = System.Windows.Forms.DockStyle.Top;
-            this.command.GetSearchedValue = "";
-            this.command.Location = new System.Drawing.Point(4, 4);
-            this.command.Name = "command";
-            this.command.ShowActionButtons = true;
-            this.command.ShowSearchBar = true;
-            this.command.Size = new System.Drawing.Size(1049, 53);
-            this.command.TabIndex = 7;
-            // 
             // ProductView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -940,7 +940,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.pnlButtonTab.ResumeLayout(false);
             this.tlpProductButtonTab.ResumeLayout(false);
             this.tcProductMenu.ResumeLayout(false);
-            this.tpAttendantList.ResumeLayout(false);
+            this.tpProductList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsProducts)).EndInit();
             this.tpProductDetails.ResumeLayout(false);
@@ -961,7 +961,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
         private System.Windows.Forms.Panel pnlButtonTab;
         private System.Windows.Forms.TableLayoutPanel tlpProductButtonTab;
         private MaterialSkin.Controls.MaterialTabControl tcProductMenu;
-        private System.Windows.Forms.TabPage tpAttendantList;
+        private System.Windows.Forms.TabPage tpProductList;
         private System.Windows.Forms.TabPage tpProductDetails;
         private System.Windows.Forms.TabPage tpRateHistory;
         private FlatTable dgvProduct;

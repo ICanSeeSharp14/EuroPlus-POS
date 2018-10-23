@@ -127,10 +127,10 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             {
                 if (!IsNew)
                 {
-                    UpdateProductDetails(repository);
+                    UpdateAttendantDetails(repository);
                 }
 
-                SaveNewProduct(repository);
+                SaveNewAttendant(repository);
             }
         }
         private void DeletePumpAttendant()
@@ -140,10 +140,10 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
 
             using (var repository = new DbRepository(new DatabaseContext()))
             {
-                var selectedProduct = repository.Products.GetById(GetPumpAttendantId());
-                if (selectedProduct != null)
+                var selectedAttendant = repository.PumpAttendants.GetById(attendantId);
+                if (selectedAttendant != null)
                 {
-                    repository.Products.Remove(selectedProduct);
+                    repository.PumpAttendants.Remove(selectedAttendant);
                     repository.Commit();
                     ShowPumpAttendants();
                 }
@@ -157,18 +157,16 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             if (!ValidateSelectedRecord()) return;
             IsNew = false;
             ClearText();
-            GetProductDetails();
+            GetAttendantDetails();
             GoToAttendantDetails();
             EnableControls(true);
         }
 
-        private void GetProductDetails()
+        private void GetAttendantDetails()
         {
             using (var repository = new DbRepository(new DatabaseContext()))
             {
-                var pumpAttendantId = GetPumpAttendantId();
-
-                var selectedAttendant = repository.PumpAttendants.GetById(pumpAttendantId);
+                var selectedAttendant = repository.PumpAttendants.GetById(GetPumpAttendantId());
 
                 if (selectedAttendant != null)
                     ShowAttendantDetails(selectedAttendant);
@@ -182,18 +180,15 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             txtFirstName.Text = selectedAttendant.FirstName;
             txtLastName.Text = selectedAttendant.LastName;
             txtAttendantAddress.Text = selectedAttendant.Address;
-            txtContactNo.Text = Convert.ToString(selectedAttendant.ContactNo);
+            
+            txtContactNo.Text = selectedAttendant.ContactNo;
             GoToAttendantDetails();
         }
 
      
-        private void GoToAttendantDetails()
-        {
-            btnDetails.PerformClick();
-            tcPumpAttendantMenu.SelectTab(tpAttendantDetails);
-        }
+        private void GoToAttendantDetails() => btnDetails.PerformClick();
 
-        private void SaveNewProduct(DbRepository dbRepository)
+        private void SaveNewAttendant(DbRepository dbRepository)
         {
             if (!ValidateRequiredFields()) return;
             if (!ValidateDuplicateRecord()) return;
@@ -201,11 +196,14 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             var repository = dbRepository;
             var newAttendant = new Employee()
             {
-               FirstName = txtAttendantCode.Text.Trim(),
+               FirstName = txtFirstName.Text,
                EmployeeCode = txtAttendantCode.Text.Trim(),
                ContactNo = txtContactNo.Text,
                Address = txtAttendantAddress.Text,
-                LastName = txtLastName.Text.Trim(),
+               LastName = txtLastName.Text.Trim(),
+               FullName = $"{txtFirstName.Text} {txtLastName.Text}",
+               IsActive = true,
+               PositionId = 1
                
             //CreatedBy = AccountSession.GetAccount.Id
 
@@ -217,7 +215,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             MessageAlert.Show("New Attendant has successfully added.", "New Attendant", AlertType.Info);
         }
 
-        private void UpdateProductDetails(DbRepository dbRepository)
+        private void UpdateAttendantDetails(DbRepository dbRepository)
         {
             if (!ValidateRequiredFields()) return;
             if (!ValidateDuplicateRecord()) return;
@@ -230,10 +228,10 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
                 selectedAttendant.ContactNo = txtContactNo.Text;
                 selectedAttendant.EmployeeCode = txtAttendantCode.Text;
                 selectedAttendant.LastName = txtLastName.Text;
-                //selectedAttendant.Position = txtDescription.Text.Trim();
-                //selectedAttendant = int.Parse(txtQuantity.Text);
-                //selectedAttendant.DateTimeModified = DateTime.Now;
-                //selectedAttendant.ModifiedBy = AccountSession.GetAccount.Id;
+                selectedAttendant.FullName = $"{txtFirstName.Text} {txtLastName.Text}";
+
+
+
             };
             repository.Commit();
 
@@ -244,7 +242,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
 
         private void ResetToDefault()
         {
-            GoToProductList();
+            GoToAttendantList();
             ClearText();
             ClearErrors();
             EnableControls(false);
@@ -268,10 +266,8 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
 
         }
 
-        private void GoToProductList()
-        {
+        private void GoToAttendantList() => btnList.PerformClick();
 
-        }
         #region Set Methods
 
         private void SetTotalPage()
@@ -320,7 +316,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
         private bool ValidateSelectedRecord()
         {
 
-            if (!IsNew && dgvPumpAttendant.RowCount == 0)
+            if (dgvPumpAttendant.RowCount == 0)
             {
                 MessageAlert.Show(MessageHelper.NoSelectedRecord(), "Error", AlertType.BadInfo);
                 return false;
@@ -363,9 +359,12 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
 
                 if (IsNew)
                 {
-                    if (repository.PumpAttendants.AttendantNameAlreadyExist(txtFirstName.Text))
+                    if (repository.PumpAttendants.AttendantNameAlreadyExist(fullName))
                     {
-                        isValidated = SetErrorMessage(txtFirstName, MessageHelper.DuplicateRecord(fullName));
+                        MessageAlert.Show(MessageHelper.DuplicateRecord(fullName), "Error", AlertType.Warning);
+
+                        isValidated = SetErrorMessage(txtFirstName, MessageHelper.DuplicateRecord(txtFirstName.Text));
+                        isValidated = SetErrorMessage(txtLastName, MessageHelper.DuplicateRecord(txtLastName.Text));
                         return isValidated;
                     }
 
@@ -376,6 +375,8 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
                     if (repository.PumpAttendants.AttendantNameAlreadyExist(fullName, pumpAttendantId))
                     {
                         isValidated = SetErrorMessage(txtFirstName, MessageHelper.DuplicateRecord(txtFirstName.Text.Trim()));
+                        isValidated = SetErrorMessage(txtLastName, MessageHelper.DuplicateRecord(txtLastName.Text));
+
                         return isValidated;
                     }
                 }
@@ -394,12 +395,10 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             return false;
         }
 
-        private void ClearErrors()
-        {
-            epPumpAttendants.Clear();
-        }
+        private void ClearErrors() => epPumpAttendants.Clear();
 
         #endregion
+    
         #region Button Themes
         private void InitializeButtonTabEvent() => SetPumpAttendantButtonTabEvent();
 

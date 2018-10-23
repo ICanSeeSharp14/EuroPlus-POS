@@ -177,6 +177,18 @@
     <Compile Include="Migrations\201810230715181_AlterTableEmployeesAddFullNameColumn.Designer.cs">
       <DependentUpon>201810230715181_AlterTableEmployeesAddFullNameColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810231214597_AlterTableEmployeeDropSetterOfFullNameField.cs" />
+    <Compile Include="Migrations\201810231214597_AlterTableEmployeeDropSetterOfFullNameField.Designer.cs">
+      <DependentUpon>201810231214597_AlterTableEmployeeDropSetterOfFullNameField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810231219255_AddFullNameFieldToEmployeeTable.cs" />
+    <Compile Include="Migrations\201810231219255_AddFullNameFieldToEmployeeTable.Designer.cs">
+      <DependentUpon>201810231219255_AddFullNameFieldToEmployeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810231239172_ChangedSomething.cs" />
+    <Compile Include="Migrations\201810231239172_ChangedSomething.Designer.cs">
+      <DependentUpon>201810231239172_ChangedSomething.cs</DependentUpon>
+    </Compile>
     <Compile Include="Monostates\AccountSession.cs" />
     <Compile Include="Persistence\Repositories\PumpAttendantRepository.cs" />
     <Compile Include="Dialogs\FlatMessageBox.cs">
@@ -443,6 +455,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810230715181_AlterTableEmployeesAddFullNameColumn.resx">
       <DependentUpon>201810230715181_AlterTableEmployeesAddFullNameColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810231214597_AlterTableEmployeeDropSetterOfFullNameField.resx">
+      <DependentUpon>201810231214597_AlterTableEmployeeDropSetterOfFullNameField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810231219255_AddFullNameFieldToEmployeeTable.resx">
+      <DependentUpon>201810231219255_AddFullNameFieldToEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810231239172_ChangedSomething.resx">
+      <DependentUpon>201810231239172_ChangedSomething.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Account\AccountCardView.resx">
       <DependentUpon>AccountCardView.cs</DependentUpon>

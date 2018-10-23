@@ -249,7 +249,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
 
         private void GoToProductList()
         {
-            tcProductMenu.SelectTab(tpAttendantList);
+            tcProductMenu.SelectTab(tpProductList);
         }
         private void CreateProduct()
         {

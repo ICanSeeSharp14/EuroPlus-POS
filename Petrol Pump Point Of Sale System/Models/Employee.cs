@@ -18,17 +18,8 @@ namespace Petrol_Pump_Point_Of_Sale_System.Models
         [StringLength(50)]
         public string LastName { get; set; }
 
-        private string _fullName;
-        public string FullName
-        {
-            get { return _fullName; }
-            set
-            {
-                _fullName = value;
-                _fullName = $"{FirstName} {LastName}";
-            }
-
-        } 
+      
+        public string FullName { get; set; } 
         public string Address { get;set; }
 
         [StringLength(15)]
