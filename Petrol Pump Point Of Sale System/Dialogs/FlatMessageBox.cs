@@ -166,7 +166,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.Dialogs
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            SelectedDialogButton = DialogButton.Save;
+            SelectedDialogButton = DialogButton.Yes;
             this.Close();
         }
 

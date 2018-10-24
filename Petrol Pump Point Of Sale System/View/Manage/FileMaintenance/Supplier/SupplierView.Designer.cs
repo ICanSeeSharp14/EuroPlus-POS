@@ -504,7 +504,6 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             // epSuppliers
             // 
             this.epSuppliers.ContainerControl = this;
-            this.epSuppliers.Icon = ((System.Drawing.Icon)(resources.GetObject("epSuppliers.Icon")));
             // 
             // tlpAttendantButtonTab
             // 

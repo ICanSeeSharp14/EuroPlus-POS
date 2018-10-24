@@ -192,22 +192,27 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             if (!ValidateDuplicateRecord()) return;
 
             var productRepository = repository;
-            var newProduct = new Products()
+            if (FlatMessageBox.Show("Do you want to save new product?", "Update Product", DialogButtons.YesNo,
+                    DialogType.Question) == DialogButton.Yes)
             {
-                ProductCode = txtProductCode.Text.Trim(),
-                ProductName = txtProductCode.Text.Trim(),
-                SalesRate = decimal.Parse(txtSalesRate.Text),
-                PurchaseRate = decimal.Parse(txtPurchaseRate.Text),
-                Unit = txtUnit.Text.Trim(),
-                Description = txtDescription.Text.Trim(),
-                Quantity = int.Parse(txtQuantity.Text),
-                DateTimeCreated = DateTime.Now,
-                IsActive = true
-                //CreatedBy = AccountSession.GetAccount.Id
-
-        };
-            productRepository.Products.Add(newProduct);
-            productRepository.Commit();
+                var newProduct = new Products()
+                {
+                    ProductCode = txtProductCode.Text.Trim(),
+                    ProductName = txtProductCode.Text.Trim(),
+                    SalesRate = decimal.Parse(txtSalesRate.Text),
+                    PurchaseRate = decimal.Parse(txtPurchaseRate.Text),
+                    Unit = txtUnit.Text.Trim(),
+                    Description = txtDescription.Text.Trim(),
+                    Quantity = int.Parse(txtQuantity.Text),
+                    DateTimeCreated = DateTime.Now,
+                    IsActive = true
+         
+                };
+                productRepository.Products.Add(newProduct);
+                productRepository.Commit();
+            }
+               
+          
             
             ResetToDefault();
             MessageAlert.Show("New product has successfully added.","New Product",AlertType.Info);
@@ -217,21 +222,24 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
         {
             if (!ValidateRequiredFields()) return;
             if (!ValidateDuplicateRecord()) return;
-
-            var repository = dbRepository;
-            var selectedProduct = repository.Products.GetById(GetProductId());
+            if (FlatMessageBox.Show("Do you want to update the changes?", "Update Product", DialogButtons.YesNo,
+                    DialogType.Question) == DialogButton.Yes)
             {
-                selectedProduct.ProductCode = txtProductCode.Text.Trim();
-                selectedProduct.ProductName = txtProductCode.Text.Trim();
-                selectedProduct.SalesRate = decimal.Parse(txtSalesRate.Text);
-                selectedProduct.PurchaseRate = decimal.Parse(txtPurchaseRate.Text);
-                selectedProduct.Unit = txtUnit.Text.Trim();
-                selectedProduct.Description = txtDescription.Text.Trim();
-                selectedProduct.Quantity = int.Parse(txtQuantity.Text);
-                selectedProduct.DateTimeModified = DateTime.Now;
-                //selectedProduct.ModifiedBy = AccountSession.GetAccount.Id;
-            };
-            repository.Commit();
+                var repository = dbRepository;
+                var selectedProduct = repository.Products.GetById(GetProductId());
+                {
+                    selectedProduct.ProductCode = txtProductCode.Text.Trim();
+                    selectedProduct.ProductName = txtProductCode.Text.Trim();
+                    selectedProduct.SalesRate = decimal.Parse(txtSalesRate.Text);
+                    selectedProduct.PurchaseRate = decimal.Parse(txtPurchaseRate.Text);
+                    selectedProduct.Unit = txtUnit.Text.Trim();
+                    selectedProduct.Description = txtDescription.Text.Trim();
+                    selectedProduct.Quantity = int.Parse(txtQuantity.Text);
+                    selectedProduct.DateTimeModified = DateTime.Now;
+                    //selectedProduct.ModifiedBy = AccountSession.GetAccount.Id;
+                };
+                repository.Commit();
+            }
 
             MessageAlert.Show("Successfully Changed");
             ResetToDefault();
@@ -289,15 +297,19 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
         {
             if (!ValidateSelectedRecord()) return;
 
-            using (var repository = new DbRepository(new DatabaseContext()))
+            if (FlatMessageBox.Show("Selected product will be deleted. Do you want to continue?", "Delete Product", DialogButtons.YesNo, DialogType.Question) ==
+                DialogButton.Yes)
             {
-                var selectedProduct = repository.Products.GetById(GetProductId());
-                if (selectedProduct != null)
+                using (var repository = new DbRepository(new DatabaseContext()))
                 {
-                    repository.Products.Remove(selectedProduct);
-                    repository.Commit();
-                    Notification.Show("Remove successful!","Successful",Notification.AlertColor.Green);
-                    ShowProducts();
+                    var selectedProduct = repository.Products.GetById(GetProductId());
+                    if (selectedProduct != null)
+                    {
+                        repository.Products.Remove(selectedProduct);
+                        repository.Commit();
+                        Notification.Show("Remove successful!", "Successful", Notification.AlertColor.Green);
+                        ShowProducts();
+                    }
                 }
                    
             }
