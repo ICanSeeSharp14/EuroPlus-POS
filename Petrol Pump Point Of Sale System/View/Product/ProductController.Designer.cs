@@ -297,7 +297,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
         {
             if (!ValidateSelectedRecord()) return;
 
-            if (FlatMessageBox.Show("Selected product will be deleted. Do you want to continue?", "Delete Product", DialogButtons.YesNo, DialogType.Question) ==
+            if (FlatMessageBox.Show("Selected product will be deleted. Do you want to continue?", "Delete Product", DialogButtons.YesNo, DialogType.Warning) ==
                 DialogButton.Yes)
             {
                 using (var repository = new DbRepository(new DatabaseContext()))
@@ -307,7 +307,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
                     {
                         repository.Products.Remove(selectedProduct);
                         repository.Commit();
-                        Notification.Show("Remove successful!", "Successful", Notification.AlertColor.Green);
+                        MessageAlert.Show("Product successfully removed from the list","Deleted",AlertType.Delete);
                         ShowProducts();
                     }
                 }

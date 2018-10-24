@@ -75,7 +75,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.Dialogs
             // 
             // lblMessage
             // 
-            this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.White;
             this.lblMessage.Location = new System.Drawing.Point(82, 32);
             this.lblMessage.Margin = new System.Windows.Forms.Padding(0);
