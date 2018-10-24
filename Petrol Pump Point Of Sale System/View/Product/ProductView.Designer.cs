@@ -56,6 +56,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.salesRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchaseRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsProducts = new System.Windows.Forms.BindingSource(this.components);
+            this.paginator = new Petrol_Pump_Point_Of_Sale_System.View.Custom.PaginatorView();
             this.tpProductDetails = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSaveChanges = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
@@ -81,7 +82,6 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.flatButton2 = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.bwProducts = new System.ComponentModel.BackgroundWorker();
             this.epProducts = new System.Windows.Forms.ErrorProvider(this.components);
-            this.paginator = new Petrol_Pump_Point_Of_Sale_System.View.Custom.PaginatorView();
             this.pnlButtonTab.SuspendLayout();
             this.tlpProductButtonTab.SuspendLayout();
             this.tcProductMenu.SuspendLayout();
@@ -332,7 +332,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.dgvProduct.EnableHeadersVisualStyles = false;
             this.dgvProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
             this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
-            this.dgvProduct.Location = new System.Drawing.Point(4, 67);
+            this.dgvProduct.Location = new System.Drawing.Point(4, 80);
             this.dgvProduct.Margin = new System.Windows.Forms.Padding(0);
             this.dgvProduct.MultiSelect = false;
             this.dgvProduct.Name = "dgvProduct";
@@ -363,7 +363,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             this.dgvProduct.ShowCellToolTips = false;
             this.dgvProduct.ShowEditingIcon = false;
             this.dgvProduct.ShowRowErrors = false;
-            this.dgvProduct.Size = new System.Drawing.Size(1049, 477);
+            this.dgvProduct.Size = new System.Drawing.Size(1049, 464);
             this.dgvProduct.TabIndex = 2;
             // 
             // idDataGridViewTextBoxColumn
@@ -427,6 +427,17 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             // bsProducts
             // 
             this.bsProducts.DataSource = typeof(Petrol_Pump_Point_Of_Sale_System.Models.Products);
+            // 
+            // paginator
+            // 
+            this.paginator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.paginator.GetCurrentPage = 1;
+            this.paginator.HasRecordCount = true;
+            this.paginator.HasRefresh = true;
+            this.paginator.Location = new System.Drawing.Point(4, 544);
+            this.paginator.Name = "paginator";
+            this.paginator.Size = new System.Drawing.Size(1049, 50);
+            this.paginator.TabIndex = 8;
             // 
             // tpProductDetails
             // 
@@ -914,17 +925,6 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Product
             // 
             this.epProducts.ContainerControl = this;
             this.epProducts.Icon = ((System.Drawing.Icon)(resources.GetObject("epProducts.Icon")));
-            // 
-            // paginator
-            // 
-            this.paginator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.paginator.GetCurrentPage = 1;
-            this.paginator.HasRecordCount = true;
-            this.paginator.HasRefresh = true;
-            this.paginator.Location = new System.Drawing.Point(4, 544);
-            this.paginator.Name = "paginator";
-            this.paginator.Size = new System.Drawing.Size(1049, 50);
-            this.paginator.TabIndex = 8;
             // 
             // ProductView
             // 

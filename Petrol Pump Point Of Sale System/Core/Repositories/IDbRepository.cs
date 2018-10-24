@@ -10,6 +10,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.Core.Repositories
         IRoleRepository Roles { get; }
         ISupplierRepository Suppliers { get; }
         IPumpAttendantRepository PumpAttendants { get; set; }
+        ICustomerRepository Customers { get; set; }
 
         int Commit();
 

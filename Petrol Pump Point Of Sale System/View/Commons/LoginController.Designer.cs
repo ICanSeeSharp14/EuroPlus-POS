@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading;
 using System.Windows.Forms;
 using Petrol_Pump_Point_Of_Sale_System.Commons.Enums;
 using Petrol_Pump_Point_Of_Sale_System.Dialogs;
@@ -65,7 +60,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Commons
 
         private void ShowErrorMessage()
         {
-            MessageAlert.Show("Invalid Credentials", "Error", alertType: AlertType.BadInfo);
+            MessageAlert.Show("Invalid Credentials", "Error", alertType: AlertType.Error);
 
         }
 

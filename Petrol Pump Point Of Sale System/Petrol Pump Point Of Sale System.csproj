@@ -167,6 +167,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Core\Filter.cs" />
+    <Compile Include="Core\Repositories\ICustomerRepository.cs" />
     <Compile Include="Core\Models\IEntity.cs" />
     <Compile Include="Core\Repositories\IPumpAttendantRepository.cs" />
     <Compile Include="Core\Repositories\ISupplierRepository.cs" />
@@ -190,8 +191,13 @@
     <Compile Include="Migrations\201810231239172_ChangedSomething.Designer.cs">
       <DependentUpon>201810231239172_ChangedSomething.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810240154077_CreateTableCustomers.cs" />
+    <Compile Include="Migrations\201810240154077_CreateTableCustomers.Designer.cs">
+      <DependentUpon>201810240154077_CreateTableCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Monostates\AccountSession.cs" />
+    <Compile Include="Persistence\Repositories\CustomerRepository.cs" />
     <Compile Include="Persistence\Repositories\PumpAttendantRepository.cs" />
     <Compile Include="Dialogs\FlatMessageBox.cs">
       <SubType>Form</SubType>
@@ -329,6 +335,13 @@
       <DependentUpon>DashboardView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ICommand.cs" />
+    <Compile Include="View\Manage\FileMaintenance\Customers\CustomerController.Designer.cs" />
+    <Compile Include="View\Manage\FileMaintenance\Customers\CustomerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Manage\FileMaintenance\Customers\CustomerView.Designer.cs">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Manage\FileMaintenance\Pump Attendant\PumpAttendantController.Designer.cs" />
     <Compile Include="View\Manage\FileMaintenance\Pump Attendant\PumpAttendantView.cs">
       <SubType>UserControl</SubType>
@@ -475,6 +488,9 @@
     <EmbeddedResource Include="Migrations\201810231239172_ChangedSomething.resx">
       <DependentUpon>201810231239172_ChangedSomething.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810240154077_CreateTableCustomers.resx">
+      <DependentUpon>201810240154077_CreateTableCustomers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Account\AccountCardView.resx">
       <DependentUpon>AccountCardView.cs</DependentUpon>
     </EmbeddedResource>
@@ -518,6 +534,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Home\DashboardView.resx">
       <DependentUpon>DashboardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Manage\FileMaintenance\Customers\CustomerView.resx">
+      <DependentUpon>CustomerView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Manage\FileMaintenance\Pump Attendant\PumpAttendantView.resx">
       <DependentUpon>PumpAttendantView.cs</DependentUpon>

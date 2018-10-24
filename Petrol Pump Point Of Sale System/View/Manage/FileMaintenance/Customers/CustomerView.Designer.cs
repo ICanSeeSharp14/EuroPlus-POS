@@ -1,8 +1,8 @@
 ﻿using Petrol_Pump_Point_Of_Sale_System.Components;
 
-namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
+namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Customers
 {
-    partial class SupplierView
+    partial class CustomerView
     {
         /// <summary> 
         /// Required designer variable.
@@ -36,51 +36,54 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customers.CustomerView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerView));
             this.tcPumpAttendantMenu = new MaterialSkin.Controls.MaterialTabControl();
-            this.tpSupplierList = new System.Windows.Forms.TabPage();
-            this.command = new Petrol_Pump_Point_Of_Sale_System.View.Custom.CommandView();
-            this.dgvSupplier = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTable();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tpCustomerList = new System.Windows.Forms.TabPage();
+            this.dgvCustomers = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTable();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contactNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bsSuppliers = new System.Windows.Forms.BindingSource(this.components);
-            this.paginator = new Petrol_Pump_Point_Of_Sale_System.View.Custom.PaginatorView();
-            this.tpSupplierDetails = new System.Windows.Forms.TabPage();
+            this.vehicleNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VehicleType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsCustomers = new System.Windows.Forms.BindingSource(this.components);
+            this.tpCustomerDetails = new System.Windows.Forms.TabPage();
+            this.txtVehicleType = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSaveChanges = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnCancel = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
-            this.txtEmail = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
+            this.txtVehicleNo = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtContactNo = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtAddress = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
+            this.txtCustomerCode = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSupplierName = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.bwSuppliers = new System.ComponentModel.BackgroundWorker();
-            this.epSuppliers = new System.Windows.Forms.ErrorProvider(this.components);
-            this.tlpAttendantButtonTab = new System.Windows.Forms.TableLayoutPanel();
+            this.bwCustomers = new System.ComponentModel.BackgroundWorker();
+            this.epCustomers = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tlpCustomerButtonTab = new System.Windows.Forms.TableLayoutPanel();
             this.btnDeactivate = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnList = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnDetails = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnRateHistory = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
+            this.command = new Petrol_Pump_Point_Of_Sale_System.View.Custom.CommandView();
+            this.paginator = new Petrol_Pump_Point_Of_Sale_System.View.Custom.PaginatorView();
             this.tcPumpAttendantMenu.SuspendLayout();
-            this.tpSupplierList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsSuppliers)).BeginInit();
-            this.tpSupplierDetails.SuspendLayout();
+            this.tpCustomerList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsCustomers)).BeginInit();
+            this.tpCustomerDetails.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.epSuppliers)).BeginInit();
-            this.tlpAttendantButtonTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epCustomers)).BeginInit();
+            this.tlpCustomerButtonTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcPumpAttendantMenu
             // 
-            this.tcPumpAttendantMenu.Controls.Add(this.tpSupplierList);
-            this.tcPumpAttendantMenu.Controls.Add(this.tpSupplierDetails);
+            this.tcPumpAttendantMenu.Controls.Add(this.tpCustomerList);
+            this.tcPumpAttendantMenu.Controls.Add(this.tpCustomerDetails);
             this.tcPumpAttendantMenu.Depth = 0;
             this.tcPumpAttendantMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcPumpAttendantMenu.Location = new System.Drawing.Point(0, 40);
@@ -90,49 +93,37 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.tcPumpAttendantMenu.Size = new System.Drawing.Size(1065, 624);
             this.tcPumpAttendantMenu.TabIndex = 13;
             // 
-            // tpSupplierList
+            // tpCustomerList
             // 
-            this.tpSupplierList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tpSupplierList.Controls.Add(this.command);
-            this.tpSupplierList.Controls.Add(this.dgvSupplier);
-            this.tpSupplierList.Controls.Add(this.paginator);
-            this.tpSupplierList.Location = new System.Drawing.Point(4, 22);
-            this.tpSupplierList.Margin = new System.Windows.Forms.Padding(0);
-            this.tpSupplierList.Name = "tpSupplierList";
-            this.tpSupplierList.Padding = new System.Windows.Forms.Padding(4);
-            this.tpSupplierList.Size = new System.Drawing.Size(1057, 598);
-            this.tpSupplierList.TabIndex = 0;
-            this.tpSupplierList.Text = "Pump Attendance List";
+            this.tpCustomerList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tpCustomerList.Controls.Add(this.command);
+            this.tpCustomerList.Controls.Add(this.dgvCustomers);
+            this.tpCustomerList.Controls.Add(this.paginator);
+            this.tpCustomerList.Location = new System.Drawing.Point(4, 22);
+            this.tpCustomerList.Margin = new System.Windows.Forms.Padding(0);
+            this.tpCustomerList.Name = "tpCustomerList";
+            this.tpCustomerList.Padding = new System.Windows.Forms.Padding(4);
+            this.tpCustomerList.Size = new System.Drawing.Size(1057, 598);
+            this.tpCustomerList.TabIndex = 0;
+            this.tpCustomerList.Text = "Pump Attendance List";
             // 
-            // command
+            // dgvCustomers
             // 
-            this.command.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.command.Dock = System.Windows.Forms.DockStyle.Top;
-            this.command.GetSearchedValue = "";
-            this.command.Location = new System.Drawing.Point(4, 4);
-            this.command.Name = "command";
-            this.command.ShowActionButtons = true;
-            this.command.ShowSearchBar = true;
-            this.command.Size = new System.Drawing.Size(1049, 53);
-            this.command.TabIndex = 7;
-            // 
-            // dgvSupplier
-            // 
-            this.dgvSupplier.AllowUserToAddRows = false;
-            this.dgvSupplier.AllowUserToDeleteRows = false;
-            this.dgvSupplier.AllowUserToResizeColumns = false;
-            this.dgvSupplier.AllowUserToResizeRows = false;
+            this.dgvCustomers.AllowUserToAddRows = false;
+            this.dgvCustomers.AllowUserToDeleteRows = false;
+            this.dgvCustomers.AllowUserToResizeColumns = false;
+            this.dgvCustomers.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.dgvSupplier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvSupplier.AutoGenerateColumns = false;
-            this.dgvSupplier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvSupplier.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgvSupplier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgvSupplier.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvSupplier.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvSupplier.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCustomers.AutoGenerateColumns = false;
+            this.dgvCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCustomers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvCustomers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgvCustomers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCustomers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvCustomers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -140,16 +131,17 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSupplier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvSupplier.ColumnHeadersHeight = 30;
-            this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvSupplier.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.SupplierName,
-            this.addressDataGridViewTextBoxColumn,
+            this.dgvCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCustomers.ColumnHeadersHeight = 30;
+            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.customerCodeDataGridViewTextBoxColumn,
+            this.customerNameDataGridViewTextBoxColumn,
             this.contactNoDataGridViewTextBoxColumn,
-            this.Email});
-            this.dgvSupplier.DataSource = this.bsSuppliers;
+            this.vehicleNoDataGridViewTextBoxColumn,
+            this.VehicleType});
+            this.dgvCustomers.DataSource = this.bsCustomers;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11.25F);
@@ -157,18 +149,18 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSupplier.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvSupplier.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvSupplier.EllipseOnDefault = 0;
-            this.dgvSupplier.EnableHeadersVisualStyles = false;
-            this.dgvSupplier.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
-            this.dgvSupplier.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
-            this.dgvSupplier.Location = new System.Drawing.Point(4, 75);
-            this.dgvSupplier.Margin = new System.Windows.Forms.Padding(0);
-            this.dgvSupplier.MultiSelect = false;
-            this.dgvSupplier.Name = "dgvSupplier";
-            this.dgvSupplier.ReadOnly = true;
-            this.dgvSupplier.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvCustomers.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvCustomers.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvCustomers.EllipseOnDefault = 0;
+            this.dgvCustomers.EnableHeadersVisualStyles = false;
+            this.dgvCustomers.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.dgvCustomers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.dgvCustomers.Location = new System.Drawing.Point(4, 75);
+            this.dgvCustomers.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvCustomers.MultiSelect = false;
+            this.dgvCustomers.Name = "dgvCustomers";
+            this.dgvCustomers.ReadOnly = true;
+            this.dgvCustomers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F);
@@ -176,48 +168,48 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSupplier.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvSupplier.RowHeadersVisible = false;
-            this.dgvSupplier.RowHeadersWidth = 10;
-            this.dgvSupplier.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvCustomers.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvCustomers.RowHeadersVisible = false;
+            this.dgvCustomers.RowHeadersWidth = 10;
+            this.dgvCustomers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSupplier.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvSupplier.RowTemplate.Height = 40;
-            this.dgvSupplier.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSupplier.ShowCellErrors = false;
-            this.dgvSupplier.ShowCellToolTips = false;
-            this.dgvSupplier.ShowEditingIcon = false;
-            this.dgvSupplier.ShowRowErrors = false;
-            this.dgvSupplier.Size = new System.Drawing.Size(1049, 469);
-            this.dgvSupplier.TabIndex = 2;
+            this.dgvCustomers.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvCustomers.RowTemplate.Height = 40;
+            this.dgvCustomers.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCustomers.ShowCellErrors = false;
+            this.dgvCustomers.ShowCellToolTips = false;
+            this.dgvCustomers.ShowEditingIcon = false;
+            this.dgvCustomers.ShowRowErrors = false;
+            this.dgvCustomers.Size = new System.Drawing.Size(1049, 469);
+            this.dgvCustomers.TabIndex = 2;
             // 
-            // Id
+            // idDataGridViewTextBoxColumn
             // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
-            // SupplierName
+            // customerCodeDataGridViewTextBoxColumn
             // 
-            this.SupplierName.DataPropertyName = "SupplierName";
-            this.SupplierName.HeaderText = "Supplier Name";
-            this.SupplierName.Name = "SupplierName";
-            this.SupplierName.ReadOnly = true;
+            this.customerCodeDataGridViewTextBoxColumn.DataPropertyName = "CustomerCode";
+            this.customerCodeDataGridViewTextBoxColumn.HeaderText = "Customer Code";
+            this.customerCodeDataGridViewTextBoxColumn.Name = "customerCodeDataGridViewTextBoxColumn";
+            this.customerCodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // addressDataGridViewTextBoxColumn
+            // customerNameDataGridViewTextBoxColumn
             // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
+            this.customerNameDataGridViewTextBoxColumn.HeaderText = "Customer Name";
+            this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
+            this.customerNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // contactNoDataGridViewTextBoxColumn
             // 
@@ -226,46 +218,83 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.contactNoDataGridViewTextBoxColumn.Name = "contactNoDataGridViewTextBoxColumn";
             this.contactNoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Email
+            // vehicleNoDataGridViewTextBoxColumn
             // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
+            this.vehicleNoDataGridViewTextBoxColumn.DataPropertyName = "VehicleNo";
+            this.vehicleNoDataGridViewTextBoxColumn.HeaderText = "Vehicle No";
+            this.vehicleNoDataGridViewTextBoxColumn.Name = "vehicleNoDataGridViewTextBoxColumn";
+            this.vehicleNoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // bsSuppliers
+            // VehicleType
             // 
-            this.bsSuppliers.DataSource = typeof(Petrol_Pump_Point_Of_Sale_System.Models.Supplier);
+            this.VehicleType.DataPropertyName = "VehicleType";
+            this.VehicleType.HeaderText = "Vehicle Type";
+            this.VehicleType.Name = "VehicleType";
+            this.VehicleType.ReadOnly = true;
             // 
-            // paginator
+            // bsCustomers
             // 
-            this.paginator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.paginator.GetCurrentPage = 1;
-            this.paginator.HasRecordCount = true;
-            this.paginator.HasRefresh = true;
-            this.paginator.Location = new System.Drawing.Point(4, 544);
-            this.paginator.Name = "paginator";
-            this.paginator.Size = new System.Drawing.Size(1049, 50);
-            this.paginator.TabIndex = 6;
+            this.bsCustomers.DataSource = typeof(Petrol_Pump_Point_Of_Sale_System.Models.Customer);
             // 
-            // tpSupplierDetails
+            // tpCustomerDetails
             // 
-            this.tpSupplierDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tpSupplierDetails.Controls.Add(this.tableLayoutPanel1);
-            this.tpSupplierDetails.Controls.Add(this.txtEmail);
-            this.tpSupplierDetails.Controls.Add(this.label7);
-            this.tpSupplierDetails.Controls.Add(this.txtContactNo);
-            this.tpSupplierDetails.Controls.Add(this.label6);
-            this.tpSupplierDetails.Controls.Add(this.txtAddress);
-            this.tpSupplierDetails.Controls.Add(this.label4);
-            this.tpSupplierDetails.Controls.Add(this.txtSupplierName);
-            this.tpSupplierDetails.Controls.Add(this.label1);
-            this.tpSupplierDetails.Location = new System.Drawing.Point(4, 22);
-            this.tpSupplierDetails.Name = "tpSupplierDetails";
-            this.tpSupplierDetails.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSupplierDetails.Size = new System.Drawing.Size(1057, 598);
-            this.tpSupplierDetails.TabIndex = 1;
-            this.tpSupplierDetails.Text = "tabPage1";
+            this.tpCustomerDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tpCustomerDetails.Controls.Add(this.txtVehicleType);
+            this.tpCustomerDetails.Controls.Add(this.label2);
+            this.tpCustomerDetails.Controls.Add(this.tableLayoutPanel1);
+            this.tpCustomerDetails.Controls.Add(this.txtVehicleNo);
+            this.tpCustomerDetails.Controls.Add(this.label7);
+            this.tpCustomerDetails.Controls.Add(this.txtContactNo);
+            this.tpCustomerDetails.Controls.Add(this.label6);
+            this.tpCustomerDetails.Controls.Add(this.txtCustomerCode);
+            this.tpCustomerDetails.Controls.Add(this.label4);
+            this.tpCustomerDetails.Controls.Add(this.txtSupplierName);
+            this.tpCustomerDetails.Controls.Add(this.label1);
+            this.tpCustomerDetails.Location = new System.Drawing.Point(4, 22);
+            this.tpCustomerDetails.Name = "tpCustomerDetails";
+            this.tpCustomerDetails.Padding = new System.Windows.Forms.Padding(3);
+            this.tpCustomerDetails.Size = new System.Drawing.Size(1057, 598);
+            this.tpCustomerDetails.TabIndex = 1;
+            this.tpCustomerDetails.Text = "Customer Details";
+            // 
+            // txtVehicleType
+            // 
+            this.txtVehicleType.BackColor = System.Drawing.Color.White;
+            this.txtVehicleType.BackColorOnEnter = System.Drawing.SystemColors.Control;
+            this.txtVehicleType.BackColorOnError = System.Drawing.Color.Empty;
+            this.txtVehicleType.BackColorOnLeave = System.Drawing.Color.White;
+            this.txtVehicleType.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtVehicleType.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.txtVehicleType.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtVehicleType.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtVehicleType.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.txtVehicleType.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtVehicleType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtVehicleType.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtVehicleType.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtVehicleType.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.AlphaNumeric;
+            this.txtVehicleType.Location = new System.Drawing.Point(404, 287);
+            this.txtVehicleType.Margin = new System.Windows.Forms.Padding(0);
+            this.txtVehicleType.Name = "txtVehicleType";
+            this.txtVehicleType.PlaceHolder = null;
+            this.txtVehicleType.Required = true;
+            this.txtVehicleType.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
+            this.txtVehicleType.RequiredForeColorOnLeave = System.Drawing.Color.White;
+            this.txtVehicleType.RequiredForeColorOnValidate = System.Drawing.Color.White;
+            this.txtVehicleType.Size = new System.Drawing.Size(363, 27);
+            this.txtVehicleType.TabIndex = 67;
+            this.txtVehicleType.ValidateOnLeave = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(280, 294);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 20);
+            this.label2.TabIndex = 66;
+            this.label2.Text = "Vehicle Type";
             // 
             // tableLayoutPanel1
             // 
@@ -275,7 +304,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Controls.Add(this.btnSaveChanges, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnCancel, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(336, 305);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(336, 352);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -345,44 +374,44 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // txtEmail
+            // txtVehicleNo
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.White;
-            this.txtEmail.BackColorOnEnter = System.Drawing.SystemColors.Control;
-            this.txtEmail.BackColorOnError = System.Drawing.Color.Empty;
-            this.txtEmail.BackColorOnLeave = System.Drawing.Color.White;
-            this.txtEmail.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
-            this.txtEmail.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtEmail.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
-            this.txtEmail.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtEmail.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtEmail.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtEmail.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.AlphaNumeric;
-            this.txtEmail.Location = new System.Drawing.Point(404, 249);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(0);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PlaceHolder = null;
-            this.txtEmail.Required = true;
-            this.txtEmail.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
-            this.txtEmail.RequiredForeColorOnLeave = System.Drawing.Color.White;
-            this.txtEmail.RequiredForeColorOnValidate = System.Drawing.Color.White;
-            this.txtEmail.Size = new System.Drawing.Size(363, 27);
-            this.txtEmail.TabIndex = 64;
-            this.txtEmail.ValidateOnLeave = false;
+            this.txtVehicleNo.BackColor = System.Drawing.Color.White;
+            this.txtVehicleNo.BackColorOnEnter = System.Drawing.SystemColors.Control;
+            this.txtVehicleNo.BackColorOnError = System.Drawing.Color.Empty;
+            this.txtVehicleNo.BackColorOnLeave = System.Drawing.Color.White;
+            this.txtVehicleNo.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtVehicleNo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.txtVehicleNo.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtVehicleNo.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtVehicleNo.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.txtVehicleNo.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtVehicleNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtVehicleNo.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtVehicleNo.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtVehicleNo.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.AlphaNumeric;
+            this.txtVehicleNo.Location = new System.Drawing.Point(404, 249);
+            this.txtVehicleNo.Margin = new System.Windows.Forms.Padding(0);
+            this.txtVehicleNo.Name = "txtVehicleNo";
+            this.txtVehicleNo.PlaceHolder = null;
+            this.txtVehicleNo.Required = true;
+            this.txtVehicleNo.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
+            this.txtVehicleNo.RequiredForeColorOnLeave = System.Drawing.Color.White;
+            this.txtVehicleNo.RequiredForeColorOnValidate = System.Drawing.Color.White;
+            this.txtVehicleNo.Size = new System.Drawing.Size(363, 27);
+            this.txtVehicleNo.TabIndex = 64;
+            this.txtVehicleNo.ValidateOnLeave = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(288, 256);
+            this.label7.Location = new System.Drawing.Point(280, 256);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 20);
+            this.label7.Size = new System.Drawing.Size(81, 20);
             this.label7.TabIndex = 63;
-            this.label7.Text = "Email Address";
+            this.label7.Text = "Vehicle No";
             // 
             // txtContactNo
             // 
@@ -417,50 +446,50 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(288, 212);
+            this.label6.Location = new System.Drawing.Point(286, 212);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 20);
             this.label6.TabIndex = 61;
             this.label6.Text = "Contact No.";
             // 
-            // txtAddress
+            // txtCustomerCode
             // 
-            this.txtAddress.BackColor = System.Drawing.Color.White;
-            this.txtAddress.BackColorOnEnter = System.Drawing.SystemColors.Control;
-            this.txtAddress.BackColorOnError = System.Drawing.Color.Empty;
-            this.txtAddress.BackColorOnLeave = System.Drawing.Color.White;
-            this.txtAddress.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
-            this.txtAddress.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtAddress.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
-            this.txtAddress.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtAddress.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtAddress.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txtAddress.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.Alphabet;
-            this.txtAddress.Location = new System.Drawing.Point(405, 164);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(0);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.PlaceHolder = null;
-            this.txtAddress.Required = true;
-            this.txtAddress.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
-            this.txtAddress.RequiredForeColorOnLeave = System.Drawing.Color.White;
-            this.txtAddress.RequiredForeColorOnValidate = System.Drawing.Color.White;
-            this.txtAddress.Size = new System.Drawing.Size(363, 27);
-            this.txtAddress.TabIndex = 58;
-            this.txtAddress.ValidateOnLeave = false;
+            this.txtCustomerCode.BackColor = System.Drawing.Color.White;
+            this.txtCustomerCode.BackColorOnEnter = System.Drawing.SystemColors.Control;
+            this.txtCustomerCode.BackColorOnError = System.Drawing.Color.Empty;
+            this.txtCustomerCode.BackColorOnLeave = System.Drawing.Color.White;
+            this.txtCustomerCode.BackColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtCustomerCode.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(165)))), ((int)(((byte)(30)))));
+            this.txtCustomerCode.BorderColorOnRequired = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtCustomerCode.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtCustomerCode.FontOnEnter = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.txtCustomerCode.FontOnLeave = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtCustomerCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtCustomerCode.ForeColorOnEnter = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtCustomerCode.ForeColorOnLeave = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txtCustomerCode.InputValidation = Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox.Validation.Alphabet;
+            this.txtCustomerCode.Location = new System.Drawing.Point(405, 164);
+            this.txtCustomerCode.Margin = new System.Windows.Forms.Padding(0);
+            this.txtCustomerCode.Name = "txtCustomerCode";
+            this.txtCustomerCode.PlaceHolder = null;
+            this.txtCustomerCode.Required = true;
+            this.txtCustomerCode.RequiredFontStyle = new System.Drawing.Font("Segoe UI Light", 11.25F);
+            this.txtCustomerCode.RequiredForeColorOnLeave = System.Drawing.Color.White;
+            this.txtCustomerCode.RequiredForeColorOnValidate = System.Drawing.Color.White;
+            this.txtCustomerCode.Size = new System.Drawing.Size(363, 27);
+            this.txtCustomerCode.TabIndex = 58;
+            this.txtCustomerCode.ValidateOnLeave = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(289, 171);
+            this.label4.Location = new System.Drawing.Point(280, 171);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 20);
+            this.label4.Size = new System.Drawing.Size(111, 20);
             this.label4.TabIndex = 57;
-            this.label4.Text = "Address";
+            this.label4.Text = "Customer Code";
             // 
             // txtSupplierName
             // 
@@ -495,36 +524,36 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(289, 131);
+            this.label1.Location = new System.Drawing.Point(275, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 20);
+            this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 51;
-            this.label1.Text = "Supplier Name";
+            this.label1.Text = "Customer Name";
             // 
-            // epSuppliers
+            // epCustomers
             // 
-            this.epSuppliers.ContainerControl = this;
-            this.epSuppliers.Icon = ((System.Drawing.Icon)(resources.GetObject("epSuppliers.Icon")));
+            this.epCustomers.ContainerControl = this;
+            this.epCustomers.Icon = ((System.Drawing.Icon)(resources.GetObject("epCustomers.Icon")));
             // 
-            // tlpAttendantButtonTab
+            // tlpCustomerButtonTab
             // 
-            this.tlpAttendantButtonTab.ColumnCount = 5;
-            this.tlpAttendantButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tlpAttendantButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tlpAttendantButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tlpAttendantButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tlpAttendantButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 465F));
-            this.tlpAttendantButtonTab.Controls.Add(this.btnDeactivate, 3, 0);
-            this.tlpAttendantButtonTab.Controls.Add(this.btnList, 0, 0);
-            this.tlpAttendantButtonTab.Controls.Add(this.btnDetails, 1, 0);
-            this.tlpAttendantButtonTab.Controls.Add(this.btnRateHistory, 2, 0);
-            this.tlpAttendantButtonTab.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpAttendantButtonTab.Location = new System.Drawing.Point(0, 0);
-            this.tlpAttendantButtonTab.Name = "tlpAttendantButtonTab";
-            this.tlpAttendantButtonTab.RowCount = 1;
-            this.tlpAttendantButtonTab.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpAttendantButtonTab.Size = new System.Drawing.Size(1065, 40);
-            this.tlpAttendantButtonTab.TabIndex = 14;
+            this.tlpCustomerButtonTab.ColumnCount = 5;
+            this.tlpCustomerButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tlpCustomerButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tlpCustomerButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tlpCustomerButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tlpCustomerButtonTab.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 465F));
+            this.tlpCustomerButtonTab.Controls.Add(this.btnDeactivate, 3, 0);
+            this.tlpCustomerButtonTab.Controls.Add(this.btnList, 0, 0);
+            this.tlpCustomerButtonTab.Controls.Add(this.btnDetails, 1, 0);
+            this.tlpCustomerButtonTab.Controls.Add(this.btnRateHistory, 2, 0);
+            this.tlpCustomerButtonTab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpCustomerButtonTab.Location = new System.Drawing.Point(0, 0);
+            this.tlpCustomerButtonTab.Name = "tlpCustomerButtonTab";
+            this.tlpCustomerButtonTab.RowCount = 1;
+            this.tlpCustomerButtonTab.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpCustomerButtonTab.Size = new System.Drawing.Size(1065, 40);
+            this.tlpCustomerButtonTab.TabIndex = 14;
             // 
             // btnDeactivate
             // 
@@ -580,7 +609,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.btnList.Name = "btnList";
             this.btnList.Size = new System.Drawing.Size(148, 36);
             this.btnList.TabIndex = 8;
-            this.btnList.Text = "Supplier List";
+            this.btnList.Text = "Customer List";
             this.btnList.ToolTip = "";
             this.btnList.UseVisualStyleBackColor = false;
             // 
@@ -609,7 +638,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Size = new System.Drawing.Size(148, 36);
             this.btnDetails.TabIndex = 9;
-            this.btnDetails.Text = "Supplier Details";
+            this.btnDetails.Text = "Customer Details";
             this.btnDetails.ToolTip = "";
             this.btnDetails.UseVisualStyleBackColor = false;
             this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
@@ -644,58 +673,84 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             this.btnRateHistory.UseVisualStyleBackColor = false;
             this.btnRateHistory.Visible = false;
             // 
-            // SupplierView
+            // command
+            // 
+            this.command.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.command.Dock = System.Windows.Forms.DockStyle.Top;
+            this.command.GetSearchedValue = "";
+            this.command.Location = new System.Drawing.Point(4, 4);
+            this.command.Name = "command";
+            this.command.ShowActionButtons = true;
+            this.command.ShowSearchBar = true;
+            this.command.Size = new System.Drawing.Size(1049, 53);
+            this.command.TabIndex = 7;
+            // 
+            // paginator
+            // 
+            this.paginator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.paginator.GetCurrentPage = 1;
+            this.paginator.HasRecordCount = true;
+            this.paginator.HasRefresh = true;
+            this.paginator.Location = new System.Drawing.Point(4, 544);
+            this.paginator.Name = "paginator";
+            this.paginator.Size = new System.Drawing.Size(1049, 50);
+            this.paginator.TabIndex = 8;
+            // 
+            // CustomerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.tcPumpAttendantMenu);
-            this.Controls.Add(this.tlpAttendantButtonTab);
-            this.Name = "SupplierView";
+            this.Controls.Add(this.tlpCustomerButtonTab);
+            this.Name = "CustomerView";
             this.Size = new System.Drawing.Size(1065, 664);
             this.tcPumpAttendantMenu.ResumeLayout(false);
-            this.tpSupplierList.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsSuppliers)).EndInit();
-            this.tpSupplierDetails.ResumeLayout(false);
-            this.tpSupplierDetails.PerformLayout();
+            this.tpCustomerList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsCustomers)).EndInit();
+            this.tpCustomerDetails.ResumeLayout(false);
+            this.tpCustomerDetails.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.epSuppliers)).EndInit();
-            this.tlpAttendantButtonTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.epCustomers)).EndInit();
+            this.tlpCustomerButtonTab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private MaterialSkin.Controls.MaterialTabControl tcPumpAttendantMenu;
-        private System.Windows.Forms.TabPage tpSupplierList;
-        private FlatTable dgvSupplier;
-        private System.ComponentModel.BackgroundWorker bwSuppliers;
-        private System.Windows.Forms.BindingSource bsSuppliers;
-        private System.Windows.Forms.ErrorProvider epSuppliers;
-        private System.Windows.Forms.TableLayoutPanel tlpAttendantButtonTab;
+        private System.Windows.Forms.TabPage tpCustomerList;
+        private FlatTable dgvCustomers;
+        private System.ComponentModel.BackgroundWorker bwCustomers;
+        private System.Windows.Forms.BindingSource bsCustomers;
+        private System.Windows.Forms.ErrorProvider epCustomers;
+        private System.Windows.Forms.TableLayoutPanel tlpCustomerButtonTab;
         private FlatButton btnDeactivate;
         private FlatButton btnList;
         private FlatButton btnDetails;
         private FlatButton btnRateHistory;
-        private System.Windows.Forms.TabPage tpSupplierDetails;
+        private System.Windows.Forms.TabPage tpCustomerDetails;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private FlatButton btnSaveChanges;
         private FlatButton btnCancel;
-        private FlatTextBox txtEmail;
+        private FlatTextBox txtVehicleNo;
         private System.Windows.Forms.Label label7;
         private FlatTextBox txtContactNo;
         private System.Windows.Forms.Label label6;
-        private FlatTextBox txtAddress;
+        private FlatTextBox txtCustomerCode;
         private System.Windows.Forms.Label label4;
         private FlatTextBox txtSupplierName;
         private System.Windows.Forms.Label label1;
-        private Custom.PaginatorView paginator;
-        private Custom.CommandView command;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SupplierName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contactNoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VehicleType;
+        private FlatTextBox txtVehicleType;
+        private System.Windows.Forms.Label label2;
+        private Custom.CommandView command;
+        private Custom.PaginatorView paginator;
     }
 }

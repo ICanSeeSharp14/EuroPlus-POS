@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Petrol_Pump_Point_Of_Sale_System.Entities;
+﻿using Petrol_Pump_Point_Of_Sale_System.Models;
 
 namespace Petrol_Pump_Point_Of_Sale_System.Core.Repositories
 {
-    public interface ICustomerRepository : IGenericRepository<Customer>
+    public interface ICustomerRepository : IRepository<Customer>
     {
-        IEnumerable<dynamic> GetAll(string filterValue = "", int pageIndex = 1, int pageSize = 50);
-
+        bool IsExist(string customerName);
+        bool IsExist(string customerName, int customerId);
     }
+
+    
 }

@@ -1,8 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using Petrol_Pump_Point_Of_Sale_System.Core.Models;
+using Petrol_Pump_Point_Of_Sale_System.View;
 
 namespace Petrol_Pump_Point_Of_Sale_System.Models
 {
-    public class Customer
+    public class Customer : IEntity
     {
         private bool _isActive;
 
@@ -32,5 +35,10 @@ namespace Petrol_Pump_Point_Of_Sale_System.Models
                 _isActive = true;
             }
         }
+
+        public DateTime? DateTimeCreated { get; set; }
+        public int CreatedBy { get; set; }
+        public DateTime? DateTimeModified { get; set; }
+        public int ModifiedBy { get; set; }
     }
 }

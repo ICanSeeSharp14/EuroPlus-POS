@@ -15,7 +15,7 @@ namespace Petrol_Pump_Point_Of_Sale_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainView());
+            Application.Run(new LoginView());
         }
     }
 }   

@@ -23,7 +23,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.Models
         public virtual DbSet<UserRole> UsersRole { get; set; }
         //public virtual DbSet<Vendor> Vendors { get; set; }
         public virtual DbSet<Products> Products { get; set; }
-        //public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
         //public virtual DbSet<Module> Modules { get; set;}
         public virtual DbSet<Employee> Employees { get; set; }
         //public virtual DbSet<Liquidation> Liquidations { get; set; }

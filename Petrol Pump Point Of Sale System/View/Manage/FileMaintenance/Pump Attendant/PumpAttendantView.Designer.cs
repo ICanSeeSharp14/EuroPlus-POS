@@ -1,4 +1,5 @@
 ﻿using Petrol_Pump_Point_Of_Sale_System.Components;
+using Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Customers;
 
 namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Attendant
 {
@@ -36,7 +37,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Supplier.SupplierView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerView));
             this.tcPumpAttendantMenu = new MaterialSkin.Controls.MaterialTabControl();
             this.tpAttendantList = new System.Windows.Forms.TabPage();
             this.command = new Petrol_Pump_Point_Of_Sale_System.View.Custom.CommandView();
