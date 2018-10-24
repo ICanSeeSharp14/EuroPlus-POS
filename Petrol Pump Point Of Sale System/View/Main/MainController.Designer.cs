@@ -12,6 +12,7 @@ using Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Attendan
 using Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier;
 using Petrol_Pump_Point_Of_Sale_System.View.POS;
 using Petrol_Pump_Point_Of_Sale_System.View.Product;
+using Petrol_Pump_Point_Of_Sale_System.View.Home;
 
 namespace Petrol_Pump_Point_Of_Sale_System.View.Main
 {
@@ -19,23 +20,20 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
     {
         
 
-        private void Initialize()
-        {
-            HomePage();
-        }
+        private void Initialize() => HomePage();
 
-      
+
         private List<Modules> GetManageModules()
         {
             return new List<Modules>
             {
-                new Modules { Title = "Consumables", Instance =  new AccountView() , Tab = tpHome},
-                new Modules { Title = "Stocks", Instance = new AccountView(), Tab = tpHome},
-                new Modules { Title = "Accounts", Instance =  new AccountView() , Tab = tpManageAccount},
-                new Modules { Title = "Products", Instance =  new ProductView(),Tab = tpManageProduct},
-                new Modules { Title = "Customers", Instance =  new ProductView() , Tab = tpManageCustomers},
-                new Modules { Title = "Pump Attendants", Instance =  new SupplierView() , Tab = tpManagePumpAttendants},
-                
+                new Modules { Title = "Home", Instance = new DashboardView(), Tab = tpHome},
+                new Modules { Title = "Account", Instance =  new AccountView() , Tab = tpManageAccount},
+                new Modules { Title = "Product", Instance =  new ProductView(),Tab = tpManageProduct},
+                new Modules { Title = "Customer", Instance =  new ProductView() , Tab = tpManageCustomers},
+                new Modules { Title = "Pump Attendant", Instance =  new PumpAttendantView() , Tab = tpManagePumpAttendants},
+                new Modules { Title = "Supplier", Instance =  new SupplierView() , Tab = tpManageSuppliers},
+
             };
         }
 
@@ -213,7 +211,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
                 : false;
         }
 
-        private bool Exit()
+        private bool ExitApplication()
         {
             if (ExitMessage())
             {

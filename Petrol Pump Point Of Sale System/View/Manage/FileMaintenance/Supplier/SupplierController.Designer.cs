@@ -23,12 +23,25 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
             IsNew = true;
             InitializeEvent();
             InitializeButtonTabEvent();
-            ShowSuppliers();
+            InitializeSupplierList();
+        }
+        private void InitializeSupplierList()
+        {
+            if (!bwSuppliers.IsBusy)
+            {
+                bwSuppliers.RunWorkerAsync();
+
+            }
         }
 
         #region Events
         private void InitializeEvent()
         {
+            #region Background Worker
+            bwSuppliers.DoWork += (s, e) => GetSuppliers();
+            bwSuppliers.RunWorkerCompleted += (s, e) => ShowSuppliers();
+            #endregion
+
             #region Pagination
             paginator.PageNavigationButtonClicked += (s, e) =>
             {
@@ -201,6 +214,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
                Email = txtEmail.Text,
                Address = txtAddress.Text.Trim(),
                IsActive = true,
+               DateTimeCreated = DateTime.Now
               
                
             //CreatedBy = AccountSession.GetAccount.Id
@@ -293,7 +307,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
         {
             using (var repository = new DbRepository(new DatabaseContext()))
             {
-                return repository.Suppliers.GetAll();
+                return repository.Suppliers.GetAll(paginator.GetCurrentPage, paginator.GetRecordsPerPage);
 
             }
         }
@@ -361,7 +375,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
                     {
                         MessageAlert.Show(MessageHelper.DuplicateRecord(fullName), "Error", AlertType.Warning);
 
-                        isValidated = SetErrorMessage(txtSupplierName, MessageHelper.DuplicateRecord(txtSupplierName.Text));
+                        //isValidated = SetErrorMessage(txtSupplierName, MessageHelper.DuplicateRecord(txtSupplierName.Text));
                         
                         return isValidated;
                     }
@@ -374,7 +388,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier
                     {
                         MessageAlert.Show(MessageHelper.DuplicateRecord(fullName), "Error", AlertType.Warning);
 
-                        isValidated = SetErrorMessage(txtSupplierName, MessageHelper.DuplicateRecord(txtSupplierName.Text));
+                        //isValidated = SetErrorMessage(txtSupplierName, MessageHelper.DuplicateRecord(txtSupplierName.Text));
 
                         return isValidated;
                     }

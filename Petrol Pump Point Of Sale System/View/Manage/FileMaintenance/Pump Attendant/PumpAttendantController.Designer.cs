@@ -23,12 +23,24 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             IsNew = true;
             InitializeEvent();
             InitializeButtonTabEvent();
-            ShowPumpAttendants();
+            InitializePumpAttendantList();
         }
+        private void InitializePumpAttendantList()
+        {
+            if (!bwAttendants.IsBusy)
+            {
+                bwAttendants.RunWorkerAsync();
 
+            }
+        }
         #region Events
         private void InitializeEvent()
         {
+            #region Background Worker
+            bwAttendants.DoWork += (s, e) => GetPumpAttendants();
+            bwAttendants.RunWorkerCompleted += (s, e) => ShowPumpAttendants();
+            #endregion
+
             #region Pagination
             paginator.PageNavigationButtonClicked += (s, e) =>
             {

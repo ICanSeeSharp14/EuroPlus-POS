@@ -53,6 +53,8 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.tpManageCustomers = new System.Windows.Forms.TabPage();
             this.tpPointOfSale = new System.Windows.Forms.TabPage();
             this.tpManagePumpAttendants = new System.Windows.Forms.TabPage();
+            this.pumpAttendantView1 = new Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Attendant.PumpAttendantView();
+            this.tpManageSuppliers = new System.Windows.Forms.TabPage();
             this.lblModuleTitle = new System.Windows.Forms.Label();
             this.pnlSubNavigation = new Petrol_Pump_Point_Of_Sale_System.View.Main.NavigationView();
             this.pnlSideNavigation = new Petrol_Pump_Point_Of_Sale_System.Components.FlatNavigationPanel();
@@ -62,7 +64,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.btnManage = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnPOS = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
             this.btnHome = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
-            this.tpManageSuppliers = new System.Windows.Forms.TabPage();
+            this.supplierView2 = new Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Supplier.SupplierView();
             this.pnlTopMenuContainer.SuspendLayout();
             this.pnlControlBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).BeginInit();
@@ -71,6 +73,8 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.tpManageProduct.SuspendLayout();
             this.tpManageAccount.SuspendLayout();
             this.tpHome.SuspendLayout();
+            this.tpManagePumpAttendants.SuspendLayout();
+            this.tpManageSuppliers.SuspendLayout();
             this.pnlSideNavigation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -343,11 +347,33 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             // tpManagePumpAttendants
             // 
             this.tpManagePumpAttendants.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tpManagePumpAttendants.Controls.Add(this.pumpAttendantView1);
             this.tpManagePumpAttendants.Location = new System.Drawing.Point(4, 22);
             this.tpManagePumpAttendants.Name = "tpManagePumpAttendants";
             this.tpManagePumpAttendants.Size = new System.Drawing.Size(1062, 631);
             this.tpManagePumpAttendants.TabIndex = 6;
             this.tpManagePumpAttendants.Text = "Manage Attendant";
+            // 
+            // pumpAttendantView1
+            // 
+            this.pumpAttendantView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pumpAttendantView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pumpAttendantView1.IsNew = true;
+            this.pumpAttendantView1.Location = new System.Drawing.Point(0, 0);
+            this.pumpAttendantView1.Name = "pumpAttendantView1";
+            this.pumpAttendantView1.Size = new System.Drawing.Size(1062, 631);
+            this.pumpAttendantView1.TabIndex = 0;
+            // 
+            // tpManageSuppliers
+            // 
+            this.tpManageSuppliers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tpManageSuppliers.Controls.Add(this.supplierView2);
+            this.tpManageSuppliers.Location = new System.Drawing.Point(4, 22);
+            this.tpManageSuppliers.Name = "tpManageSuppliers";
+            this.tpManageSuppliers.Padding = new System.Windows.Forms.Padding(3);
+            this.tpManageSuppliers.Size = new System.Drawing.Size(1062, 631);
+            this.tpManageSuppliers.TabIndex = 7;
+            this.tpManageSuppliers.Text = "Manage Suppliers";
             // 
             // lblModuleTitle
             // 
@@ -586,15 +612,15 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // tpManageSuppliers
+            // supplierView2
             // 
-            this.tpManageSuppliers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tpManageSuppliers.Location = new System.Drawing.Point(4, 22);
-            this.tpManageSuppliers.Name = "tpManageSuppliers";
-            this.tpManageSuppliers.Padding = new System.Windows.Forms.Padding(3);
-            this.tpManageSuppliers.Size = new System.Drawing.Size(1062, 631);
-            this.tpManageSuppliers.TabIndex = 7;
-            this.tpManageSuppliers.Text = "tabPage1";
+            this.supplierView2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.supplierView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.supplierView2.IsNew = true;
+            this.supplierView2.Location = new System.Drawing.Point(3, 3);
+            this.supplierView2.Name = "supplierView2";
+            this.supplierView2.Size = new System.Drawing.Size(1056, 625);
+            this.supplierView2.TabIndex = 0;
             // 
             // MainView
             // 
@@ -621,6 +647,8 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
             this.tpManageProduct.ResumeLayout(false);
             this.tpManageAccount.ResumeLayout(false);
             this.tpHome.ResumeLayout(false);
+            this.tpManagePumpAttendants.ResumeLayout(false);
+            this.tpManageSuppliers.ResumeLayout(false);
             this.pnlSideNavigation.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -656,8 +684,11 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
         private Account.AccountView _accountViewView3;
         private System.Windows.Forms.TabPage tpPointOfSale;
         private System.Windows.Forms.TabPage tpManagePumpAttendants;
-        private SupplierView _supplierView;
+        
         private Home.DashboardView dashboardView1;
         private System.Windows.Forms.TabPage tpManageSuppliers;
+        
+        private Manage.FileMaintenance.Pump_Attendant.PumpAttendantView pumpAttendantView1;
+        private SupplierView supplierView2;
     }
 }

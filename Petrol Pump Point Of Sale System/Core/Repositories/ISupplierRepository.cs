@@ -1,4 +1,5 @@
-﻿using Petrol_Pump_Point_Of_Sale_System.Models;
+﻿using System.Collections.Generic;
+using Petrol_Pump_Point_Of_Sale_System.Models;
 
 namespace Petrol_Pump_Point_Of_Sale_System.Core.Repositories
 {
@@ -6,6 +7,6 @@ namespace Petrol_Pump_Point_Of_Sale_System.Core.Repositories
     {
         bool IsExist(string supplierName);
         bool IsExist(string supplierName,int supplierId);
-
+        IEnumerable<Supplier> GetAll(string getSearchedValue, int getCurrentPage, int getRecordsPerPage);
     }
 }

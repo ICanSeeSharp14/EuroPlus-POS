@@ -2,6 +2,7 @@
 {
     public interface ICommand
     {
+        
          bool IsNew { get; set; }
     }
 }

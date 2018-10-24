@@ -75,19 +75,19 @@ namespace Petrol_Pump_Point_Of_Sale_System.Persistence.Repositories
         }
 
 
-        public new IEnumerable<dynamic> GetAll(string filterValue, int pageIndex = 1, int pageSize = 50)
-        {
-            return DatabaseContext
-                    .Products
-                    .Where(p => p.ProductName.Contains(filterValue) ||
-                                p.ProductCode.Contains(filterValue) &&
-                                p.IsActive)
-                    .OrderByDescending(p => p.Id)
-                    .Skip((pageIndex - 1) * pageSize)
-                    .Take(pageSize)
-                    .ToList();
+        //public new IEnumerable<dynamic> GetAll(string filterValue, int pageIndex = 1, int pageSize = 50)
+        //{
+        //    return DatabaseContext
+        //            .Products
+        //            .Where(p => p.ProductName.Contains(filterValue) ||
+        //                        p.ProductCode.Contains(filterValue) &&
+        //                        p.IsActive)
+        //            .OrderByDescending(p => p.Id)
+        //            .Skip((pageIndex - 1) * pageSize)
+        //            .Take(pageSize)
+        //            .ToList();
 
-        }
+        //}
 
         public int CountProduct(bool isActive = true)
         {

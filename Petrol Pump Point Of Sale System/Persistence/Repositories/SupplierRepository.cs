@@ -29,5 +29,10 @@ namespace Petrol_Pump_Point_Of_Sale_System.Persistence.Repositories
                                                         s.Id != supplierId) == 1;
 
         }
+
+        public IEnumerable<Supplier> GetAll(string getSearchedValue, int getCurrentPage, int getRecordsPerPage)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

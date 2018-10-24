@@ -570,6 +570,7 @@
     <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.PurchaseReturn.datasource" />
     <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.Sale.datasource" />
     <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.SalesInvoice.datasource" />
+    <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.Supplier.datasource" />
     <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.User.datasource" />
     <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.UserAccess.datasource" />
     <None Include="Properties\DataSources\Petrol_Pump_Point_Of_Sale_System.Models.UserRole.datasource" />

@@ -65,7 +65,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             this.txtAttendantCode = new Petrol_Pump_Point_Of_Sale_System.Components.FlatTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.bwAccounts = new System.ComponentModel.BackgroundWorker();
+            this.bwAttendants = new System.ComponentModel.BackgroundWorker();
             this.epPumpAttendants = new System.Windows.Forms.ErrorProvider(this.components);
             this.tlpAttendantButtonTab = new System.Windows.Forms.TableLayoutPanel();
             this.btnDeactivate = new Petrol_Pump_Point_Of_Sale_System.Components.FlatButton();
@@ -575,7 +575,6 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
             // epPumpAttendants
             // 
             this.epPumpAttendants.ContainerControl = this;
-            this.epPumpAttendants.Icon = ((System.Drawing.Icon)(resources.GetObject("epPumpAttendants.Icon")));
             // 
             // tlpAttendantButtonTab
             // 
@@ -752,7 +751,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Manage.FileMaintenance.Pump_Atte
         private MaterialSkin.Controls.MaterialTabControl tcPumpAttendantMenu;
         private System.Windows.Forms.TabPage tpAttendantList;
         private FlatTable dgvPumpAttendant;
-        private System.ComponentModel.BackgroundWorker bwAccounts;
+        private System.ComponentModel.BackgroundWorker bwAttendants;
         private System.Windows.Forms.BindingSource bsPumpAttendants;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeCodeDataGridViewTextBoxColumn;

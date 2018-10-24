@@ -13,7 +13,18 @@ namespace Petrol_Pump_Point_Of_Sale_System.Models
         public string RoleDescription { get; set; }
         public bool IsActive { get; set; }
         public DateTime? DateTimeCreated { get; set; }
-        public int CreatedBy { get; set; }
+        private int _createdBy;
+
+        public int CreatedBy
+        {
+            get { return _createdBy; }
+            set
+            {
+                _createdBy = value;
+                _createdBy = 0;
+            }
+        }
+
         public DateTime? DateTimeModified { get; set; }
         public int ModifiedBy { get; set; }
     }
