@@ -568,7 +568,6 @@
     <EmbeddedResource Include="View\SaleItemView.resx">
       <DependentUpon>SaleItemView.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Assets\Frameworks\MaterialSkin.0.2.1.nupkg" />
     <None Include="packages.config" />
     <None Include="DataSources\Petrol_Pump_Point_Of_Sale_System.Models.Product.datasource" />
     <None Include="DataSources\Petrol_Pump_Point_Of_Sale_System.Models.Products.datasource" />
@@ -614,11 +613,6 @@
     <Folder Include="Persistence\Configurations\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Info_48.png" />
-    <Content Include="Assets\Message_48.png" />
-    <Content Include="Assets\Question_48.png" />
-    <Content Include="Assets\Update_48.png" />
-    <Content Include="Assets\Warning_48.png" />
     <None Include="Resources\Warning_48.png" />
     <None Include="Resources\Users_96.png" />
     <None Include="Resources\Update_48.png" />
