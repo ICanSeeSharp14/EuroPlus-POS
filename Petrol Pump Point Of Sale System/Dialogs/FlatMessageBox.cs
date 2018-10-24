@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ITA_UI.Classes.Helpers;
 using Petrol_Pump_Point_Of_Sale_System.Classes.Helpers;
 using Petrol_Pump_Point_Of_Sale_System.Commons.Enums;
 using Petrol_Pump_Point_Of_Sale_System.Components;
@@ -17,24 +9,6 @@ namespace Petrol_Pump_Point_Of_Sale_System.Dialogs
 {
     public partial class FlatMessageBox : Form
     {
-        public FlatMessageBox()
-        {
-            InitializeComponent();
-        }
-
-        public static DialogButton Show(string message,
-            string messageTitle = "Info",
-            DialogButtons dialogButtons = DialogButtons.Ok,
-            DialogType dialogType = DialogType.Info)
-        {
-            using (var msg = new FlatMessageBox(message, messageTitle, dialogButtons, dialogType))
-            {
-                msg.ShowDialog();
-
-                return msg.SelectedDialogButton;
-            }
-        }
-
         #region Initialization
 
         public DialogButtons DialogButtons;
@@ -46,22 +20,21 @@ namespace Petrol_Pump_Point_Of_Sale_System.Dialogs
 
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
-
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        public FlatMessageBox(string message, string messageTitle, DialogButtons dialogButtonses, DialogType dialogType)
+        public FlatMessageBox(string message, string messageTitle, DialogButtons dialogButtons, DialogType dialogType)
         {
             InitializeComponent();
 
-            //lblMessage.Text = message;
-            //lblTitle.Text = messageTitle;
+            lblMessage.Text = message;
+            lblTitle.Text = messageTitle;
 
-            SelectedButton(dialogButtonses);
+            SelectedButton(dialogButtons);
 
             SetBackGroundColor(dialogType);
 
-            DialogButtons = dialogButtonses;
+            DialogButtons = dialogButtons;
 
             AllMouseMove(Controls);
         }
@@ -69,6 +42,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.Dialogs
         private void AllMouseMove(Control.ControlCollection coll)
         {
             foreach (Control c in coll)
+            {
                 if (!(c is FlatButton))
                 {
                     c.MouseMove += (sender, e) =>
@@ -81,6 +55,7 @@ namespace Petrol_Pump_Point_Of_Sale_System.Dialogs
 
                     AllMouseMove(c.Controls);
                 }
+            }
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -105,7 +80,6 @@ namespace Petrol_Pump_Point_Of_Sale_System.Dialogs
                             SelectedDialogButton = DialogButton.Save;
                             break;
                     }
-
                     Close();
                     break;
                 case Keys.Escape:
@@ -145,12 +119,12 @@ namespace Petrol_Pump_Point_Of_Sale_System.Dialogs
 
         private void SetButtonVisibility(bool ok, bool yes, bool no, bool apply, bool save, bool cancel)
         {
-            //btnOk.Visible = ok;
-            //btnYes.Visible = yes;
-            //btnNo.Visible = no;
-            //btnApply.Visible = apply;
-            //btnSave.Visible = save;
-            //btnCancel.Visible = cancel;
+            btnOk.Visible = ok;
+            btnYes.Visible = yes;
+            btnNo.Visible = no;
+            btnApply.Visible = apply;
+            btnSave.Visible = save;
+            btnCancel.Visible = cancel;
         }
 
         private void SetBackGroundColor(DialogType dialogType)
@@ -158,28 +132,78 @@ namespace Petrol_Pump_Point_Of_Sale_System.Dialogs
             switch (dialogType)
             {
                 case DialogType.Info:
-                    BackColor = ColorHelper.FlatBlueNormal;
+                    this.BackColor = ColorHelper.FlatBlueNormal;
                     break;
                 case DialogType.Question:
-                    BackColor = ColorHelper.FlatBlueNormal;
+                    this.BackColor = ColorHelper.FlatBlueNormal;
                     break;
                 case DialogType.Hand:
-                    BackColor = ColorHelper.FlatYellowNormal;
+                    this.BackColor = ColorHelper.FlatYellowNormal;
                     break;
                 case DialogType.Warning:
-                    BackColor = ColorHelper.FlatYellowNormal;
+                    this.BackColor = ColorHelper.FlatYellowNormal;
                     break;
                 case DialogType.Error:
-                    BackColor = ColorHelper.FlatBlueNormal;
+                    this.BackColor = ColorHelper.FlatBlueNormal;
                     break;
             }
         }
 
         #endregion
 
+       
+        private void btnNo_Click(object sender, EventArgs e)
+        {
+            SelectedDialogButton = DialogButton.No;
+            this.Close();
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            SelectedDialogButton = DialogButton.Ok;
+            this.Close();
+        }
+
+        private void btnYes_Click(object sender, EventArgs e)
+        {
+            SelectedDialogButton = DialogButton.Save;
+            this.Close();
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
+            SelectedDialogButton = DialogButton.Cancel;
+            this.Close();
+        }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            SelectedDialogButton = DialogButton.Cancel;
+            this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            SelectedDialogButton = DialogButton.Save;
+            this.Close();
+        }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            SelectedDialogButton = DialogButton.Apply;
+            this.Close();
+        }
+        public static DialogButton Show(string message,
+            string messageTitle = "Info",
+            DialogButtons dialogButtons = DialogButtons.Ok,
+            DialogType dialogType = DialogType.Info)
+        {
+            using (var msg = new FlatMessageBox(message, messageTitle, dialogButtons, dialogType))
+            {
+                msg.ShowDialog();
+
+                return msg.SelectedDialogButton;
+            }
         }
     }
 }
