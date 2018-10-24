@@ -32,9 +32,9 @@ namespace Petrol_Pump_Point_Of_Sale_System.View.Main
                 new Modules { Title = "Home", Instance = new DashboardView(), Tab = tpHome},
                 new Modules { Title = "Account", Instance =  new AccountView() , Tab = tpManageAccount},
                 new Modules { Title = "Product", Instance =  new ProductView(),Tab = tpManageProduct},
-                new Modules { Title = "Customer", Instance =  new ProductView() , Tab = tpManageCustomers},
+                new Modules { Title = "Customer", Instance =  new CustomerView() , Tab = tpManageCustomers},
                 new Modules { Title = "Pump Attendant", Instance =  new PumpAttendantView() , Tab = tpManagePumpAttendants},
-                new Modules { Title = "Supplier", Instance =  new CustomerView() , Tab = tpManageSuppliers},
+                new Modules { Title = "Supplier", Instance =  new SupplierView() , Tab = tpManageSuppliers},
 
             };
         }
